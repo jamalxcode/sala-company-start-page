@@ -3,7 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sala Company - Digital Innovation Hub</title>
+    <title>AI Tools & Games - Browser-Based AI | Sala Company</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Play AI-coded games like Breakout, Tetris, Galactic Defender. Try WebAI for private browser AI. Discover artificial intelligence tools.">
+    <meta name="keywords" content="AI games, artificial intelligence, browser AI, AI tools, AI coded games, private AI, WebAI, Breakout, Tetris, Galactic Defender, AI experiments">
+    <meta name="author" content="Sala Company">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AI Tools & Games - Browser-Based AI Experiments">
+    <meta property="og:description" content="Play AI-coded games and explore browser-based artificial intelligence tools. Experience the future of AI gaming and private AI applications.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sala.company">
+    <meta property="og:image" content="https://sala.company/og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Tools & Games - Browser-Based AI Experiments">
+    <meta name="twitter:description" content="Play AI-coded games and explore browser-based artificial intelligence tools.">
+    <meta name="twitter:image" content="https://sala.company/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Sala Company AI Tools",
+        "description": "Browser-based AI tools and games coded by artificial intelligence",
+        "url": "https://sala.company",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Sala Company"
+        }
+    }
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -12,169 +51,308 @@
         }
         
         body {
-            font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #333;
         }
         
         .container {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
             text-align: center;
-            max-width: 800px;
-            margin: 2rem;
+            margin-bottom: 60px;
+            padding: 40px 0;
         }
         
         h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease-out;
         }
         
         .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #666;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out 0.2s both;
         }
         
-        .features {
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
         }
         
-        .feature-card {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 15px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s ease-out 0.4s both;
         }
         
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
         }
         
-        .feature-card h3 {
-            color: #667eea;
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
         }
         
-        .feature-card p {
-            color: #666;
-            font-size: 0.9rem;
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2d3748;
         }
         
-        .main-link {
+        .card p {
+            color: #4a5568;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        
+        .btn {
             display: inline-block;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-decoration: none;
-            padding: 1rem 2rem;
+            padding: 12px 30px;
             border-radius: 50px;
             font-weight: 600;
-            font-size: 1.1rem;
-            margin-top: 2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .main-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-        }
-        
-        .section-links {
-            margin-top: 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-        }
-        
-        .section-link {
-            background: #f8f9fa;
-            color: #667eea;
-            text-decoration: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 25px;
-            font-weight: 500;
             transition: all 0.3s ease;
-            border: 2px solid transparent;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
         }
         
-        .section-link:hover {
-            background: #667eea;
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .featured {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
             color: white;
-            border-color: #667eea;
+            text-align: center;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .featured h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .featured .btn {
+            background: white;
+            color: #ee5a24;
+            margin-top: 20px;
+        }
+        
+        .featured .btn:hover {
+            background: #f8f9fa;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: rgba(255,255,255,0.8);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: white;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         @media (max-width: 768px) {
             .container {
-                padding: 2rem;
-                margin: 1rem;
+                padding: 15px;
             }
             
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            .features {
+            .grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
+            
+            .card {
+                padding: 25px;
+            }
+            
+            header {
+                margin-bottom: 40px;
+                padding: 20px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .card {
+                padding: 20px;
+            }
+            
+            .featured {
+                padding: 30px 20px;
+            }
+        }
+        
+        /* Accessibility improvements */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Sala Company</h1>
-        <p class="subtitle">Your Digital Innovation Hub</p>
+        <header>
+            <h1>AI Tools & Games</h1>
+            <p class="subtitle">Explore cutting-edge AI experiments, play games coded by artificial intelligence, and experience the future of browser-based AI technology</p>
+        </header>
         
-        <div class="features">
-            <div class="feature-card" onclick="window.open('https://go.sala.company/ai-tools', '_blank')">
-                <h3>🤖 AI Tools</h3>
-                <p>Powerful AI-driven tools for writing, productivity, and creativity</p>
+        <main>
+            <div class="featured">
+                <div class="icon">🤖</div>
+                <h2>WebAI — Private Browser AI</h2>
+                <p>Run AI directly in your browser with complete privacy. No servers, no APIs, no outside connections — experience a fully local artificial intelligence that respects your data.</p>
+                <a href="https://webai.sala.company" class="btn" aria-label="Try WebAI Private Browser AI">Try WebAI</a>
             </div>
-            <div class="feature-card" onclick="window.open('https://go.sala.company/games', '_blank')">
-                <h3>🎮 Games</h3>
-                <p>Engaging and fun games for entertainment and learning</p>
+            
+            <div class="grid">
+                <article class="card">
+                    <div class="icon">🎮</div>
+                    <h2>AI Coded Breakout Game</h2>
+                    <p>Play the classic Breakout arcade game recreated entirely with AI-generated code. Experience how artificial intelligence can rebuild beloved retro games with modern browser technology.</p>
+                    <a href="https://breakout.sala.company" class="btn" aria-label="Play AI Coded Breakout Game">Play Breakout</a>
+                </article>
+                
+                <article class="card">
+                    <div class="icon">🚀</div>
+                    <h2>Galactic Defender</h2>
+                    <p>Defend the galaxy in this Galaga-inspired space shooter coded by AI. Blast through waves of enemies and experience how artificial intelligence brings classic arcade action to life.</p>
+                    <a href="https://galacticdefender.sala.company" class="btn" aria-label="Play Galactic Defender AI Game">Play Game</a>
+                </article>
+                
+                <article class="card">
+                    <div class="icon">🧩</div>
+                    <h2>AI Coded Tetris</h2>
+                    <p>Experience the world's most popular puzzle game, Tetris, completely reprogrammed using artificial intelligence. A browser-based classic rebuilt with cutting-edge AI coding.</p>
+                    <a href="https://tetris.sala.company" class="btn" aria-label="Play AI Coded Tetris Game">Play Tetris</a>
+                </article>
+                
+                <article class="card">
+                    <div class="icon">🔬</div>
+                    <h2>AI Tools Collection</h2>
+                    <p>Discover a comprehensive collection of AI websites, tools, and experiments designed to help you learn and experience artificial intelligence applications in action.</p>
+                    <a href="https://ai.sala.company" class="btn" aria-label="Explore AI Tools and Resources">Explore Tools</a>
+                </article>
+                
+                <article class="card">
+                    <div class="icon">🏢</div>
+                    <h2>Sala Company Hub</h2>
+                    <p>Start here to see all the projects and tools sala.company has built. Your gateway to exploring our complete collection of AI innovations and experiments.</p>
+                    <a href="https://go.sala.company" class="btn" aria-label="Visit Sala Company Project Hub">Visit Hub</a>
+                </article>
+                
+                <article class="card">
+                    <div class="icon">🛒</div>
+                    <h2>Online Store & Blog</h2>
+                    <p>Visit our online store and blog with the latest updates. Stay informed about new AI developments, product releases, and industry insights from Sala Company.</p>
+                    <a href="https://sala.company" class="btn" aria-label="Visit Sala Company Store and Blog">Visit Store</a>
+                </article>
             </div>
-            <div class="feature-card" onclick="window.open('https://go.sala.company/ebooks', '_blank')">
-                <h3>📚 Ebook Store</h3>
-                <p>Browse and purchase ebooks across multiple genres</p>
-            </div>
-            <div class="feature-card" onclick="window.open('https://go.sala.company/blog', '_blank')">
-                <h3>📝 Blog</h3>
-                <p>Articles, tips, and updates about technology and digital trends</p>
-            </div>
-        </div>
+        </main>
         
-        <a href="https://go.sala.company/" class="main-link">Visit Sala Company</a>
-        
-        <div class="section-links">
-            <a href="https://go.sala.company/ai-tools" class="section-link">AI Tools</a>
-            <a href="https://go.sala.company/games" class="section-link">Games</a>
-            <a href="https://go.sala.company/ebooks" class="section-link">Ebooks</a>
-            <a href="https://go.sala.company/blog" class="section-link">Blog</a>
-        </div>
-        
-        <p style="margin-top: 2rem; color: #888; font-size: 0.9rem;">
-            Discover, learn, and explore with Sala's comprehensive digital platform at 
-            <a href="https://go.sala.company/" style="color: #667eea; text-decoration: none;">go.sala.company</a>
-        </p>
+        <footer>
+            <p>&copy; 2024 Sala Company. Pioneering the future of browser-based artificial intelligence.</p>
+        </footer>
     </div>
+    
+    <!-- Performance and Analytics -->
+    <script>
+        // Lazy loading for better performance
+        if ('IntersectionObserver' in window) {
+            const cards = document.querySelectorAll('.card');
+            const cardObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+            
+            cards.forEach(card => cardObserver.observe(card));
+        }
+        
+        // Simple analytics tracking
+        function trackClick(element, action) {
+            // Add your analytics tracking code here
+            console.log('Tracked:', action, element.href);
+        }
+        
+        // Add click tracking to all buttons
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                trackClick(e.target, 'button_click');
+            });
+        });
+    </script>
 </body>
 </html>
