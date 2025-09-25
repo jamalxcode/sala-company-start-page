@@ -1,11 +1,11 @@
 # Overview of the Homepage at go.sala.company
-
 The homepage for Sala Company is now located at [https://go.sala.company/](https://go.sala.company/). When you visit this URL, you'll find a modern, user-friendly landing page designed to help you discover, learn, and play with Sala's digital offerings.
 
 ## Key Features and Navigation
 
 - **AI Tools**: Access a suite of AI-powered tools for writing, productivity, and creativity by navigating to [https://go.sala.company/ai-tools](https://go.sala.company/ai-tools).
 - **Games**: Enjoy a variety of engaging games at [https://go.sala.company/games](https://go.sala.company/games).
+- **Secret Message Tool**: Transform ordinary emojis into secret messengers at [https://secret.sala.company/](https://secret.sala.company/). Pick an emoji and hide a secret message inside it using clever Unicode tricks. Your message is safely encoded within the emoji, making it invisible to anyone who doesn't know the trick. Copy and paste this special emoji anywhere—like in a chat or email—to secretly send your hidden message. Recipients can use the same site to reveal (decrypt) your secret message from the emoji. It's a fun and sneaky way to share secrets!
 - **Ebook Store**: Browse and purchase ebooks across multiple genres at [https://go.sala.company/ebooks](https://go.sala.company/ebooks). Our Shopify-powered online store features secure checkout, instant digital access to purchased ebooks, and a seamless shopping experience for all your digital reading needs.
 - **Blog**: Read articles, tips, and updates about technology, AI, and digital trends at [https://go.sala.company/blog](https://go.sala.company/blog). Our regularly updated blog features the latest insights, product announcements, and industry news to keep you informed about new AI developments and digital innovations.
 - **Online Store**: Visit our comprehensive Shopify-powered online store with secure payment processing, instant product delivery, and customer support at [https://go.sala.company/store](https://go.sala.company/store).
@@ -24,4 +24,4 @@ Sala Company's platform provides a comprehensive digital experience with:
 
 ## Design and Usability
 
-The site is designed to be mobile-friendly and visually appealing, with a focus on intuitive navigation and quick access to Sala's core services ([https://go.sala.company/](https://go.sala.company/)). Whether you're interested in AI tools, ebooks, games, or shopping in our secure online store, the homepage at [https://go.sala.company/](https://go.sala.company/) serves as your central hub for all things Sala.
+The site is designed to be mobile-friendly and visually appealing, with a focus on intuitive navigation and quick access to Sala's core services ([https://go.sala.company/](https://go.sala.company/)). Whether you're interested in AI tools, secret messaging, ebooks, games, or shopping in our secure online store, the homepage at [https://go.sala.company/](https://go.sala.company/) serves as your central hub for all things Sala.
