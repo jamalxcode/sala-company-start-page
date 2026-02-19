@@ -4,368 +4,590 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Tools & Games - Browser-Based AI | Sala Company</title>
-    
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Play AI games, learn how AI works, hide messages in emojis, try private browser AI. Explore educational content, tools, and innovative applications.">
-    <meta name="keywords" content="AI games, artificial intelligence, learn AI, how AI works, neural networks, AI education, browser AI, AI tools, secret emoji, WebAI, Breakout, Tetris, language models">
+    <meta name="description" content="Play AI games, learn how AI works, hide messages in emojis, try private browser AI, solve a 3D Rubik's Cube, and listen to music. Explore Sala Company's interactive tools and experiments.">
+    <meta name="keywords" content="AI games, artificial intelligence, learn AI, how AI works, neural networks, AI education, browser AI, AI tools, secret emoji, WebAI, Breakout, Tetris, Rubik's Cube, iPod player, language models">
     <meta name="author" content="Sala Company">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="AI Tools & Games - Browser-Based AI Experiments">
-    <meta property="og:description" content="Play AI games, learn how AI works, hide messages in emojis, and explore innovative browser tools. Experience AI education, gaming, and creative applications.">
+    <meta property="og:description" content="Play AI games, learn how AI works, solve a 3D Rubik's Cube, and explore innovative browser tools from Sala Company.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sala.company">
+    <meta property="og:url" content="https://go.sala.company">
     <meta property="og:image" content="https://sala.company/og-image.jpg">
-    
-    <!-- Twitter Card Meta Tags -->
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI Tools & Games - Browser-Based AI Experiments">
     <meta name="twitter:description" content="Play AI games, learn how AI works, hide messages in emojis, and explore innovative browser tools.">
     <meta name="twitter:image" content="https://sala.company/twitter-image.jpg">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "Sala Company AI Tools",
-        "description": "Browser-based AI tools, educational content, games, and creative applications including AI learning resources and interactive experiences",
-        "url": "https://sala.company",
-        "publisher": {
-            "@type": "Organization",
-            "name": "Sala Company"
-        }
+        "name": "Sala Company — AI Tools & Games",
+        "description": "Browser-based AI tools, educational content, games, and creative applications from Sala Company.",
+        "url": "https://go.sala.company",
+        "publisher": { "@type": "Organization", "name": "Sala Company" }
     }
     </script>
-    
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* ── Reset ─────────────────────────────────────────────── */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* ── Tokens ─────────────────────────────────────────────── */
+        :root {
+            --bg-start:   #0f0c29;
+            --bg-mid:     #1a1050;
+            --bg-end:     #24243e;
+            --surface:    rgba(255,255,255,0.05);
+            --surface-h:  rgba(255,255,255,0.09);
+            --border:     rgba(255,255,255,0.08);
+            --text:        #e2e8f0;
+            --text-muted:  #94a3b8;
+            --accent:      #818cf8;
+
+            /* category accent gradients */
+            --games-g:  linear-gradient(90deg, #f59e0b, #ef4444);
+            --tools-g:  linear-gradient(90deg, #06b6d4, #6366f1);
+            --learn-g:  linear-gradient(90deg, #10b981, #3b82f6);
+            --shop-g:   linear-gradient(90deg, #f97316, #ec4899);
         }
-        
+
+        /* ── Base ─────────────────────────────────────────────── */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-mid) 50%, var(--bg-end) 100%);
+            background-attachment: fixed;
             min-height: 100vh;
+            color: var(--text);
+            line-height: 1.6;
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+        /* ── Header ───────────────────────────────────────────── */
         header {
             text-align: center;
-            margin-bottom: 60px;
-            padding: 40px 0;
+            padding: 56px 20px 48px;
         }
-        
+
+        .logo {
+            font-size: 3rem;
+            display: inline-block;
+            margin-bottom: 16px;
+            animation: floatLogo 4s ease-in-out infinite;
+        }
+
         h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
-            color: white;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            animation: fadeInUp 1s ease-out;
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, #c4b5fd 0%, #818cf8 40%, #67e8f9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 14px;
+            animation: fadeInUp 0.8s ease-out both;
         }
-        
+
         .subtitle {
-            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-            color: rgba(255,255,255,0.9);
-            max-width: 600px;
-            margin: 0 auto;
-            animation: fadeInUp 1s ease-out 0.2s both;
+            font-size: clamp(1rem, 2.2vw, 1.25rem);
+            color: var(--text-muted);
+            max-width: 580px;
+            margin: 0 auto 32px;
+            animation: fadeInUp 0.8s ease-out 0.15s both;
         }
-        
+
+        /* ── Search ───────────────────────────────────────────── */
+        .search-wrap {
+            max-width: 480px;
+            margin: 0 auto 28px;
+            position: relative;
+            animation: fadeInUp 0.8s ease-out 0.25s both;
+        }
+
+        .search-wrap svg {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px; height: 18px;
+            stroke: var(--text-muted);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            pointer-events: none;
+        }
+
+        #search {
+            width: 100%;
+            padding: 12px 16px 12px 44px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.25s, box-shadow 0.25s;
+        }
+
+        #search::placeholder { color: var(--text-muted); }
+        #search:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(129,140,248,0.25);
+        }
+
+        /* ── Category Tabs ────────────────────────────────────── */
+        .tabs {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 44px;
+            animation: fadeInUp 0.8s ease-out 0.35s both;
+        }
+
+        .tab {
+            padding: 7px 20px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            letter-spacing: 0.02em;
+        }
+
+        .tab:hover { background: var(--surface-h); color: var(--text); }
+        .tab.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+            box-shadow: 0 0 18px rgba(129,140,248,0.45);
+        }
+
+        /* ── Featured (WebAI) ─────────────────────────────────── */
+        .featured {
+            background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 36px;
+            text-align: center;
+            box-shadow: 0 24px 48px rgba(124,58,237,0.35);
+            animation: fadeInUp 0.8s ease-out 0.45s both;
+        }
+
+        .featured .feat-icon { font-size: 2.5rem; margin-bottom: 12px; }
+        .featured h2 { font-size: 1.9rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+        .featured p  { color: rgba(255,255,255,0.85); max-width: 540px; margin: 0 auto; font-size: 1.05rem; }
+
+        .featured .btn {
+            margin-top: 24px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.4);
+            color: #fff;
+            backdrop-filter: blur(8px);
+        }
+        .featured .btn:hover {
+            background: rgba(255,255,255,0.25);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+
+        /* ── Grid ─────────────────────────────────────────────── */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+            gap: 24px;
             margin-bottom: 60px;
         }
-        
+
+        /* ── Cards ────────────────────────────────────────────── */
         .card {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 28px;
             position: relative;
             overflow: hidden;
-            animation: fadeInUp 1s ease-out 0.4s both;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+            opacity: 0;
+            transform: translateY(28px);
         }
-        
+
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s, background 0.3s;
+        }
+
         .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 28px 56px rgba(0,0,0,0.4);
+            background: var(--surface-h);
         }
-        
+
+        /* Top accent bar */
         .card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            top: 0; left: 0; right: 0;
+            height: 3px;
         }
-        
+
+        .card[data-cat="games"]::before { background: var(--games-g); }
+        .card[data-cat="tools"]::before { background: var(--tools-g); }
+        .card[data-cat="learn"]::before { background: var(--learn-g); }
+        .card[data-cat="shop"]::before  { background: var(--shop-g);  }
+
+        /* Card icon */
+        .card-icon {
+            width: 54px; height: 54px;
+            border-radius: 13px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+        }
+
+        .card[data-cat="games"] .card-icon { background: linear-gradient(135deg, rgba(245,158,11,.2), rgba(239,68,68,.2)); }
+        .card[data-cat="tools"] .card-icon { background: linear-gradient(135deg, rgba(6,182,212,.2), rgba(99,102,241,.2)); }
+        .card[data-cat="learn"] .card-icon { background: linear-gradient(135deg, rgba(16,185,129,.2), rgba(59,130,246,.2)); }
+        .card[data-cat="shop"]  .card-icon { background: linear-gradient(135deg, rgba(249,115,22,.2), rgba(236,72,153,.2)); }
+
+        /* Card text */
+        .card-title-row {
+            display: flex; align-items: center; gap: 10px;
+            margin-bottom: 12px;
+        }
+
         .card h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #2d3748;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text);
         }
-        
+
         .card p {
-            color: #4a5568;
-            margin-bottom: 25px;
-            line-height: 1.7;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 22px;
+            line-height: 1.65;
         }
-        
+
+        /* NEW badge */
+        .badge-new {
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            color: #fff;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        /* ── Button ───────────────────────────────────────────── */
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            padding: 11px 26px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.9rem;
             text-decoration: none;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+            letter-spacing: 0.02em;
         }
-        
+
+        /* Per-category button colors */
+        .card[data-cat="games"] .btn { background: var(--games-g); color: #fff; box-shadow: 0 4px 14px rgba(239,68,68,0.3); }
+        .card[data-cat="tools"] .btn { background: var(--tools-g); color: #fff; box-shadow: 0 4px 14px rgba(99,102,241,0.3); }
+        .card[data-cat="learn"] .btn { background: var(--learn-g); color: #fff; box-shadow: 0 4px 14px rgba(16,185,129,0.3); }
+        .card[data-cat="shop"]  .btn { background: var(--shop-g);  color: #fff; box-shadow: 0 4px 14px rgba(249,115,22,0.3); }
+
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            filter: brightness(1.1);
         }
-        
-        .featured {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-            color: white;
+
+        /* ── No Results ───────────────────────────────────────── */
+        #no-results {
+            display: none;
             text-align: center;
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 40px;
-            animation: fadeInUp 1s ease-out 0.6s both;
+            color: var(--text-muted);
+            padding: 48px 16px;
+            font-size: 1.1rem;
+            grid-column: 1 / -1;
         }
-        
-        .featured h2 {
-            color: white;
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-        
-        .featured .btn {
-            background: white;
-            color: #ee5a24;
-            margin-top: 20px;
-        }
-        
-        .featured .btn:hover {
-            background: #f8f9fa;
-        }
-        
+
+        /* ── Footer ───────────────────────────────────────────── */
         footer {
             text-align: center;
-            padding: 40px 0;
-            color: rgba(255,255,255,0.8);
-            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 36px 0 40px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
-        
-        .icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: white;
-        }
-        
+
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* ── Animations ───────────────────────────────────────── */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-            
-            .grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .card {
-                padding: 25px;
-            }
-            
-            header {
-                margin-bottom: 40px;
-                padding: 20px 0;
-            }
+
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-10px); }
         }
-        
-        @media (max-width: 480px) {
-            .card {
-                padding: 20px;
-            }
-            
-            .featured {
-                padding: 30px 20px;
-            }
+
+        /* ── Responsive ───────────────────────────────────────── */
+        @media (max-width: 640px) {
+            .grid { grid-template-columns: 1fr; gap: 16px; }
+            .featured { padding: 28px 20px; }
+            header { padding: 40px 16px 36px; }
         }
-        
-        /* Accessibility improvements */
+
+        @media (min-width: 641px) and (max-width: 1023px) {
+            .grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        /* Hidden card (filtered out) */
+        .card.hidden { display: none; }
+
+        /* ── Reduced motion ───────────────────────────────────── */
         @media (prefers-reduced-motion: reduce) {
-            * {
+            *, *::before, *::after {
                 animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
             }
         }
-        
+
+        /* ── Accessibility ────────────────────────────────────── */
         .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
+            position: absolute; width: 1px; height: 1px;
+            padding: 0; margin: -1px; overflow: hidden;
+            clip: rect(0,0,0,0); white-space: nowrap; border: 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
+
+        <!-- ── Header ──────────────────────────────────────────── -->
         <header>
-            <h1>AI Tools & Games</h1>
-            <p class="subtitle">Explore cutting-edge AI experiments, play games coded by artificial intelligence, and experience the future of browser-based AI technology</p>
-        </header>
-        
-        <main>
-            <div class="featured">
-                <div class="icon">🤖</div>
-                <h2>WebAI — Private Browser AI</h2>
-                <p>Run AI directly in your browser with complete privacy. No servers, no APIs, no outside connections — experience a fully local artificial intelligence that respects your data.</p>
-                <a href="https://webai.sala.company" class="btn" aria-label="Try WebAI Private Browser AI">Try WebAI</a>
+            <div class="logo" aria-hidden="true">🚀</div>
+            <h1>Sala Company</h1>
+            <p class="subtitle">AI tools, retro games, and interactive experiments — all running right in your browser.</p>
+
+            <!-- Search -->
+            <div class="search-wrap">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <input type="search" id="search" placeholder="Search projects…" aria-label="Search projects">
             </div>
-            
-            <div class="grid">
-                <article class="card">
-                    <div class="icon">🎮</div>
-                    <h2>AI Coded Breakout Game</h2>
-                    <p>Play the classic Breakout arcade game recreated entirely with AI-generated code. Experience how artificial intelligence can rebuild beloved retro games with modern browser technology.</p>
-                    <a href="https://breakout.sala.company" class="btn" aria-label="Play AI Coded Breakout Game">Play Breakout</a>
+
+            <!-- Category tabs -->
+            <nav class="tabs" role="tablist" aria-label="Filter by category">
+                <button class="tab active" data-filter="all"   role="tab" aria-selected="true">All</button>
+                <button class="tab"        data-filter="games" role="tab" aria-selected="false">🎮 Games</button>
+                <button class="tab"        data-filter="tools" role="tab" aria-selected="false">🔧 Tools</button>
+                <button class="tab"        data-filter="learn" role="tab" aria-selected="false">🧠 Learn</button>
+                <button class="tab"        data-filter="shop"  role="tab" aria-selected="false">🛒 Shop</button>
+            </nav>
+        </header>
+
+        <main>
+            <!-- ── Featured: WebAI ─────────────────────────────── -->
+            <section class="featured" aria-label="Featured project">
+                <div class="feat-icon" aria-hidden="true">🤖</div>
+                <h2>WebAI — Private Browser AI</h2>
+                <p>Run AI directly in your browser with complete privacy. No servers, no APIs, no outside connections — a fully local AI that keeps your data yours.</p>
+                <a href="https://webai.sala.company" class="btn" aria-label="Try WebAI Private Browser AI">Try WebAI →</a>
+            </section>
+
+            <!-- ── Card grid ────────────────────────────────────── -->
+            <div class="grid" id="card-grid" role="list">
+
+                <!-- Breakout — Games -->
+                <article class="card" data-cat="games" data-tags="breakout arcade retro game ai" role="listitem">
+                    <div class="card-icon" aria-hidden="true">🎮</div>
+                    <div class="card-title-row">
+                        <h2>AI Coded Breakout</h2>
+                    </div>
+                    <p>The classic Breakout arcade game recreated entirely with AI-generated code. Experience how AI can rebuild beloved retro games with modern browser tech.</p>
+                    <a href="https://breakout.sala.company" class="btn" aria-label="Play AI Coded Breakout">Play Breakout</a>
                 </article>
-                
-                <article class="card">
-                    <div class="icon">🚀</div>
-                    <h2>Galactic Defender</h2>
-                    <p>Defend the galaxy in this Galaga-inspired space shooter coded by AI. Blast through waves of enemies and experience how artificial intelligence brings classic arcade action to life.</p>
-                    <a href="https://galacticdefender.sala.company" class="btn" aria-label="Play Galactic Defender AI Game">Play Game</a>
+
+                <!-- Galactic Defender — Games -->
+                <article class="card" data-cat="games" data-tags="galactic defender space shooter galaga arcade game ai" role="listitem">
+                    <div class="card-icon" aria-hidden="true">🚀</div>
+                    <div class="card-title-row">
+                        <h2>Galactic Defender</h2>
+                    </div>
+                    <p>Defend the galaxy in this Galaga-inspired space shooter coded by AI. Blast through waves of enemies in this fast-paced, browser-based classic.</p>
+                    <a href="https://galacticdefender.sala.company" class="btn" aria-label="Play Galactic Defender">Play Game</a>
                 </article>
-                
-                <article class="card">
-                    <div class="icon">🧩</div>
-                    <h2>AI Coded Tetris</h2>
-                    <p>Experience the world's most popular puzzle game, Tetris, completely reprogrammed using artificial intelligence. A browser-based classic rebuilt with cutting-edge AI coding.</p>
-                    <a href="https://tetris.sala.company" class="btn" aria-label="Play AI Coded Tetris Game">Play Tetris</a>
+
+                <!-- Tetris — Games -->
+                <article class="card" data-cat="games" data-tags="tetris puzzle blocks game ai" role="listitem">
+                    <div class="card-icon" aria-hidden="true">🧩</div>
+                    <div class="card-title-row">
+                        <h2>AI Coded Tetris</h2>
+                    </div>
+                    <p>The world's most popular puzzle game, completely reprogrammed using AI. Stack blocks and clear lines in this browser-based classic rebuilt with AI code.</p>
+                    <a href="https://tetris.sala.company" class="btn" aria-label="Play AI Coded Tetris">Play Tetris</a>
                 </article>
-                
-                <article class="card">
-                    <div class="icon">🔬</div>
-                    <h2>AI Tools Collection</h2>
-                    <p>Discover a comprehensive collection of AI websites, tools, and experiments designed to help you learn and experience artificial intelligence applications in action.</p>
-                    <a href="https://ai.sala.company" class="btn" aria-label="Explore AI Tools and Resources">Explore Tools</a>
+
+                <!-- Rubik's Cube — Games (NEW) -->
+                <article class="card" data-cat="games" data-tags="rubik cube 3d puzzle game three.js react" role="listitem">
+                    <div class="card-icon" aria-hidden="true">🎲</div>
+                    <div class="card-title-row">
+                        <h2>3D Rubik's Cube</h2>
+                        <span class="badge-new" aria-label="New">NEW</span>
+                    </div>
+                    <p>An interactive 3D Rubik's Cube built with React and Three.js. Scramble, solve, and get hints — all rendered live in your browser with smooth animations.</p>
+                    <a href="https://cube.sala.company" class="btn" aria-label="Play 3D Rubik's Cube">Play Cube</a>
                 </article>
-                
-                <article class="card">
-                    <div class="icon">🤫</div>
-                    <h2>Secret Emoji Messenger</h2>
-                    <p>Hide secret messages inside emojis using clever Unicode tricks. Your message is safely encoded within the emoji, making it invisible to anyone who doesn't know the trick. Copy and paste the special emoji anywhere to secretly send hidden messages.</p>
+
+                <!-- AI Tools Collection — Tools -->
+                <article class="card" data-cat="tools" data-tags="ai tools collection resources websites experiments" role="listitem">
+                    <div class="card-icon" aria-hidden="true">🔬</div>
+                    <div class="card-title-row">
+                        <h2>AI Tools Collection</h2>
+                    </div>
+                    <p>A curated collection of AI websites, tools, and experiments to help you explore and experience artificial intelligence applications in the real world.</p>
+                    <a href="https://ai.sala.company" class="btn" aria-label="Explore AI Tools Collection">Explore Tools</a>
+                </article>
+
+                <!-- Secret Emoji — Tools -->
+                <article class="card" data-cat="tools" data-tags="secret emoji hidden message steganography unicode encode" role="listitem">
+                    <div class="card-icon" aria-hidden="true">🤫</div>
+                    <div class="card-title-row">
+                        <h2>Secret Emoji Messenger</h2>
+                    </div>
+                    <p>Hide secret messages inside emojis using Unicode tricks. Your text is invisibly encoded in an emoji so you can send hidden messages anywhere you can paste.</p>
                     <a href="https://secret.sala.company" class="btn" aria-label="Try Secret Emoji Messenger">Hide Message</a>
                 </article>
-                
-                <article class="card">
-                    <div class="icon">🧠</div>
-                    <h2>Explaining How AI Works</h2>
-                    <p>Learn what AI really is through simple examples and interactive illustrations. From rule-based systems to neural networks, tokens, and language models. Discover how AI evolved from autocomplete to intelligent agents shaping daily life.</p>
+
+                <!-- iPod Classic Player — Tools (NEW) -->
+                <article class="card" data-cat="tools" data-tags="ipod music player classic mp3 audio browser" role="listitem">
+                    <div class="card-icon" aria-hidden="true">🎵</div>
+                    <div class="card-title-row">
+                        <h2>iPod Classic Player</h2>
+                        <span class="badge-new" aria-label="New">NEW</span>
+                    </div>
+                    <p>A faithful browser-based iPod Classic MP3 player. Load your own music files and enjoy that iconic retro interface — no install, no account, no limits.</p>
+                    <a href="https://music.sala.company" class="btn" aria-label="Open iPod Classic Player">Open Player</a>
+                </article>
+
+                <!-- Explaining AI — Learn -->
+                <article class="card" data-cat="learn" data-tags="learn ai how artificial intelligence neural networks language models explainer education" role="listitem">
+                    <div class="card-icon" aria-hidden="true">🧠</div>
+                    <div class="card-title-row">
+                        <h2>How AI Works</h2>
+                    </div>
+                    <p>Simple explanations and interactive illustrations of AI — from rule-based systems to neural networks and large language models. Learn without the jargon.</p>
                     <a href="https://understand.sala.company" class="btn" aria-label="Learn How AI Works">Learn AI</a>
                 </article>
-                
-                <article class="card">
-                    <div class="icon">🏢</div>
-                    <h2>Sala Company Hub</h2>
-                    <p>Start here to see all the projects and tools sala.company has built. Your gateway to exploring our complete collection of AI innovations and experiments.</p>
-                    <a href="https://go.sala.company" class="btn" aria-label="Visit Sala Company Project Hub">Visit Hub</a>
+
+                <!-- Online Store — Shop -->
+                <article class="card" data-cat="shop" data-tags="store shop buy products sala company" role="listitem">
+                    <div class="card-icon" aria-hidden="true">🛒</div>
+                    <div class="card-title-row">
+                        <h2>Online Store</h2>
+                    </div>
+                    <p>Visit the official Sala Company store at www.sala.company. Browse and purchase products directly from us.</p>
+                    <a href="https://www.sala.company" class="btn" aria-label="Visit Sala Company Online Store">Visit Store</a>
                 </article>
-                
-                <article class="card">
-                    <div class="icon">🛒</div>
-                    <h2>Online Store & Blog</h2>
-                    <p>Visit our online store and blog with the latest updates. Stay informed about new AI developments, product releases, and industry insights from Sala Company.</p>
-                    <a href="https://sala.company" class="btn" aria-label="Visit Sala Company Store and Blog">Visit Store</a>
-                </article>
-            </div>
+
+            </div><!-- /.grid -->
+
+            <p id="no-results" aria-live="polite">No projects match your search. Try a different keyword or clear the filter.</p>
+
         </main>
-        
+
         <footer>
-            <p>&copy; 2024 Sala Company. Pioneering the future of browser-based artificial intelligence.</p>
+            <p>&copy; 2026 <a href="https://www.sala.company">Sala Company</a>. Pioneering the future of browser-based AI.</p>
         </footer>
-    </div>
-    
-    <!-- Performance and Analytics -->
+
+    </div><!-- /.container -->
+
     <script>
-        // Lazy loading for better performance
-        if ('IntersectionObserver' in window) {
-            const cards = document.querySelectorAll('.card');
-            const cardObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
+        // ── Scroll-in animation via IntersectionObserver ──────────
+        const cards = document.querySelectorAll('.card');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    // Stagger each visible card slightly
+                    setTimeout(() => entry.target.classList.add('visible'), i * 60);
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+
+        cards.forEach(card => io.observe(card));
+
+        // ── Filter logic ──────────────────────────────────────────
+        let activeCategory = 'all';
+        let searchQuery    = '';
+
+        function applyFilters() {
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const cat  = card.dataset.cat || '';
+                const tags = (card.dataset.tags || '') + ' ' + (card.querySelector('h2')?.textContent || '') + ' ' + (card.querySelector('p')?.textContent || '');
+                const catMatch    = activeCategory === 'all' || cat === activeCategory;
+                const searchMatch = !searchQuery   || tags.toLowerCase().includes(searchQuery);
+
+                if (catMatch && searchMatch) {
+                    card.classList.remove('hidden');
+                    // Re-trigger scroll animation if card became visible again
+                    if (!card.classList.contains('visible')) {
+                        setTimeout(() => card.classList.add('visible'), visibleCount * 60);
                     }
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            document.getElementById('no-results').style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        // Category tabs
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
                 });
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+                activeCategory = tab.dataset.filter;
+                applyFilters();
             });
-            
-            cards.forEach(card => cardObserver.observe(card));
-        }
-        
-        // Simple analytics tracking
-        function trackClick(element, action) {
-            // Add your analytics tracking code here
-            console.log('Tracked:', action, element.href);
-        }
-        
-        // Add click tracking to all buttons
-        document.querySelectorAll('.btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                trackClick(e.target, 'button_click');
-            });
+        });
+
+        // Search
+        document.getElementById('search').addEventListener('input', (e) => {
+            searchQuery = e.target.value.trim().toLowerCase();
+            applyFilters();
         });
     </script>
 </body>
