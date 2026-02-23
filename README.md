@@ -29,6 +29,9 @@ The Sala Company start page lives at [https://www.sala.company](https://www.sala
 ### Learn
 - **How AI Works** ([understand.sala.company](https://understand.sala.company)): Educational presentation covering neural networks, language models, and how modern AI systems are built. Authored in [Gamma](https://gamma.app).
 - **Early Wake Up Club** ([mutawa.substack.com](https://mutawa.substack.com)): Newsletter covering technology, business, and AI — from the AI chip race to crypto trends and big tech moves. Published on Substack.
+  - [The Trillion Dollar Club](https://mutawa.substack.com/p/the-trillion-dollar-club) — Jan 2026
+  - [From Mining Bitcoin to Powering ChatGPT: The Great Crypto Pivot](https://mutawa.substack.com/p/from-mining-bitcoin-to-powering-chatgpt) — Dec 2025
+  - [The Great AI Chip War: How China and America Are Fighting for the Future](https://mutawa.substack.com/p/the-great-ai-chip-war-how-china-and) — Nov 2025
 
 ### Shop
 - **Online Store** ([www.sala.company](https://www.sala.company)): Official Sala Company merchandise and digital products with secure checkout.
