@@ -1,27 +1,44 @@
-# Overview of the Homepage at go.sala.company
-The homepage for Sala Company is now located at [https://go.sala.company/](https://go.sala.company/). When you visit this URL, you'll find a modern, user-friendly landing page designed to help you discover, learn, and play with Sala's digital offerings.
+# Sala Company — Start Page
 
-## Key Features and Navigation
+The Sala Company start page lives at [https://www.sala.company](https://www.sala.company) and serves as a central hub for all of Sala's browser-based projects. It features a searchable, filterable directory of games, tools, learning resources, and the online store — all running directly in your browser.
 
-- **AI Tools**: Access a suite of AI-powered tools for writing, productivity, and creativity by navigating to [https://go.sala.company/ai-tools](https://go.sala.company/ai-tools).
-- **Games**: Enjoy a variety of engaging games at [https://go.sala.company/games](https://go.sala.company/games).
-- **Secret Message Tool**: Transform ordinary emojis into secret messengers at [https://secret.sala.company/](https://secret.sala.company/). Pick an emoji and hide a secret message inside it using clever Unicode tricks. Your message is safely encoded within the emoji, making it invisible to anyone who doesn't know the trick. Copy and paste this special emoji anywhere—like in a chat or email—to secretly send your hidden message. Recipients can use the same site to reveal (decrypt) your secret message from the emoji. It's a fun and sneaky way to share secrets!
-- **Ebook Store**: Browse and purchase ebooks across multiple genres at [https://go.sala.company/ebooks](https://go.sala.company/ebooks). Our Shopify-powered online store features secure checkout, instant digital access to purchased ebooks, and a seamless shopping experience for all your digital reading needs.
-- **Blog**: Read articles, tips, and updates about technology, AI, and digital trends at [https://go.sala.company/blog](https://go.sala.company/blog). Our regularly updated blog features the latest insights, product announcements, and industry news to keep you informed about new AI developments and digital innovations.
-- **Online Store**: Visit our comprehensive Shopify-powered online store with secure payment processing, instant product delivery, and customer support at [https://go.sala.company/store](https://go.sala.company/store).
-- **Upcoming Features**: The homepage also teases new features and services, encouraging users to check back at [https://go.sala.company/](https://go.sala.company/) for the latest updates.
+## What's New
 
-Each section is presented as a clickable card or menu item, making it easy to navigate directly from the homepage. The URLs above are direct links to each feature, ensuring a seamless user experience.
+- **WebAI** — Private, in-browser AI (featured project)
+- **3D Rubik's Cube** — Interactive 3D puzzle built with React and Three.js
+- **iPod Classic Player** — Retro browser-based MP3 player
+- **Learn category** — Educational content on how AI works
+- **Search & category filtering** — Quickly find projects by name or category
 
-## Enhanced Shopping & Content Experience
+## Projects
 
-Sala Company's platform provides a comprehensive digital experience with:
+### Featured
+- **WebAI — Private Browser AI** ([webai.sala.company](https://webai.sala.company)): Run AI directly in your browser with complete privacy. No servers, no APIs, no outside connections.
 
-- **Secure Shopify Infrastructure**: Our online store is built on Shopify's robust e-commerce platform, ensuring secure transactions and reliable service
-- **Instant Digital Access**: Purchase and immediately access digital products including ebooks, AI tools, and premium content
-- **Regular Content Updates**: Our blog is consistently updated with fresh content covering AI developments, digital trends, and product announcements
-- **Seamless User Experience**: All services are integrated into a cohesive platform accessible through the main hub at [https://go.sala.company/](https://go.sala.company/)
+### Games
+- **AI Coded Breakout** ([breakout.sala.company](https://breakout.sala.company)): Classic arcade Breakout recreated with AI-generated code.
+- **Galactic Defender** ([galacticdefender.sala.company](https://galacticdefender.sala.company)): Galaga-inspired space shooter.
+- **AI Coded Tetris** ([tetris.sala.company](https://tetris.sala.company)): The classic puzzle game, reprogrammed using AI.
+- **3D Rubik's Cube** ([cube.sala.company](https://cube.sala.company)): Interactive 3D puzzle built with React and Three.js.
 
-## Design and Usability
+### Tools
+- **AI Tools Collection** ([ai.sala.company](https://ai.sala.company)): A curated collection of AI websites and browser experiments.
+- **Secret Emoji Messenger** ([secret.sala.company](https://secret.sala.company)): Hide secret messages inside emojis using Unicode steganography. Encode a message into any emoji and share it anywhere — only those who know the trick can decode it.
+- **iPod Classic Player** ([music.sala.company](https://music.sala.company)): A browser-based retro MP3 player styled after the original iPod Classic.
 
-The site is designed to be mobile-friendly and visually appealing, with a focus on intuitive navigation and quick access to Sala's core services ([https://go.sala.company/](https://go.sala.company/)). Whether you're interested in AI tools, secret messaging, ebooks, games, or shopping in our secure online store, the homepage at [https://go.sala.company/](https://go.sala.company/) serves as your central hub for all things Sala.
+### Learn
+- **How AI Works** ([understand.sala.company](https://understand.sala.company)): Educational content covering neural networks, language models, and how modern AI systems are built.
+
+### Shop
+- **Online Store** ([www.sala.company](https://www.sala.company)): Official Sala Company merchandise and digital products with secure checkout.
+
+## Features
+
+- **In-browser search** — Filter the project directory by name in real time.
+- **Category tabs** — Browse by All, Games, Tools, Learn, or Shop.
+- **No installs required** — Every project runs entirely in the browser.
+
+## Tech
+
+- Pure HTML/CSS/JS — no build step, no dependencies.
+- Hosted via GitHub Pages with a custom CNAME (`www.sala.company`).
