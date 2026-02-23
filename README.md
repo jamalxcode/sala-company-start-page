@@ -27,7 +27,7 @@ The Sala Company start page lives at [https://www.sala.company](https://www.sala
 - **iPod Classic Player** ([music.sala.company](https://music.sala.company)) — [[repo]](https://github.com/jamalxcode/retro-tunes-player): A browser-based retro MP3 player styled after the original iPod Classic.
 
 ### Learn
-- **How AI Works** ([understand.sala.company](https://understand.sala.company)): Educational content covering neural networks, language models, and how modern AI systems are built.
+- **How AI Works** ([understand.sala.company](https://understand.sala.company)): Educational presentation covering neural networks, language models, and how modern AI systems are built. Authored in [Gamma](https://gamma.app).
 
 ### Shop
 - **Online Store** ([www.sala.company](https://www.sala.company)): Official Sala Company merchandise and digital products with secure checkout.
