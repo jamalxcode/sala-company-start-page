@@ -13,18 +13,18 @@ The Sala Company start page lives at [https://www.sala.company](https://www.sala
 ## Projects
 
 ### Featured
-- **WebAI — Private Browser AI** ([webai.sala.company](https://webai.sala.company)): Run AI directly in your browser with complete privacy. No servers, no APIs, no outside connections.
+- **WebAI — Private Browser AI** ([webai.sala.company](https://webai.sala.company)) — [[repo]](https://github.com/jamalxcode/webllm-onefile): Run AI directly in your browser with complete privacy. No servers, no APIs, no outside connections.
 
 ### Games
-- **AI Coded Breakout** ([breakout.sala.company](https://breakout.sala.company)): Classic arcade Breakout recreated with AI-generated code.
-- **Galactic Defender** ([galacticdefender.sala.company](https://galacticdefender.sala.company)): Galaga-inspired space shooter.
+- **AI Coded Breakout** ([breakout.sala.company](https://breakout.sala.company)) — [[repo]](https://github.com/jamalxcode/breakout-game-html): Classic arcade Breakout recreated with AI-generated code.
+- **Galactic Defender** ([galacticdefender.sala.company](https://galacticdefender.sala.company)) — [[repo]](https://github.com/jamalxcode/galactic_defender): Galaga-inspired space shooter.
 - **AI Coded Tetris** ([tetris.sala.company](https://tetris.sala.company)): The classic puzzle game, reprogrammed using AI.
-- **3D Rubik's Cube** ([cube.sala.company](https://cube.sala.company)): Interactive 3D puzzle built with React and Three.js.
+- **3D Rubik's Cube** ([cube.sala.company](https://cube.sala.company)) — [[repo]](https://github.com/jamalxcode/cube): Interactive 3D puzzle built with React and Three.js.
 
 ### Tools
 - **AI Tools Collection** ([ai.sala.company](https://ai.sala.company)): A curated collection of AI websites and browser experiments.
-- **Secret Emoji Messenger** ([secret.sala.company](https://secret.sala.company)): Hide secret messages inside emojis using Unicode steganography. Encode a message into any emoji and share it anywhere — only those who know the trick can decode it.
-- **iPod Classic Player** ([music.sala.company](https://music.sala.company)): A browser-based retro MP3 player styled after the original iPod Classic.
+- **Secret Emoji Messenger** ([secret.sala.company](https://secret.sala.company)) — [[repo]](https://github.com/jamalxcode/hidetext): Hide secret messages inside emojis using Unicode steganography. Encode a message into any emoji and share it anywhere — only those who know the trick can decode it.
+- **iPod Classic Player** ([music.sala.company](https://music.sala.company)) — [[repo]](https://github.com/jamalxcode/retro-tunes-player): A browser-based retro MP3 player styled after the original iPod Classic.
 
 ### Learn
 - **How AI Works** ([understand.sala.company](https://understand.sala.company)): Educational content covering neural networks, language models, and how modern AI systems are built.
