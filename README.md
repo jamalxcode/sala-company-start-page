@@ -38,6 +38,10 @@ The Sala Company start page lives at [https://www.sala.company](https://www.sala
 - **Category tabs** — Browse by All, Games, Tools, Learn, or Shop.
 - **No installs required** — Every project runs entirely in the browser.
 
+## Writing
+
+**[Early Wake Up Club](https://mutawa.substack.com)** — Newsletter covering technology, business, and AI. Topics include crypto, the AI chip race, and big tech.
+
 ## Tech
 
 - Pure HTML/CSS/JS — no build step, no dependencies.
