@@ -28,6 +28,7 @@ The Sala Company start page lives at [https://www.sala.company](https://www.sala
 
 ### Learn
 - **How AI Works** ([understand.sala.company](https://understand.sala.company)): Educational presentation covering neural networks, language models, and how modern AI systems are built. Authored in [Gamma](https://gamma.app).
+- **Early Wake Up Club** ([mutawa.substack.com](https://mutawa.substack.com)): Newsletter covering technology, business, and AI — from the AI chip race to crypto trends and big tech moves. Published on Substack.
 
 ### Shop
 - **Online Store** ([www.sala.company](https://www.sala.company)): Official Sala Company merchandise and digital products with secure checkout.
