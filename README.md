@@ -1,6 +1,6 @@
 # Sala Company — Start Page
 
-The Sala Company start page lives at [https://www.sala.company](https://www.sala.company) and serves as a central hub for all of Sala's browser-based projects. It features a searchable, filterable directory of games, tools, learning resources, and the online store — all running directly in your browser.
+The Sala Company start page lives at [https://go.sala.company](https://go.sala.company) and serves as a central hub for all of Sala's browser-based projects. It features a searchable, filterable directory of games, tools, learning resources, and the online store — all running directly in your browser.
 
 ## What's New
 
