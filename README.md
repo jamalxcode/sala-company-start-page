@@ -4,6 +4,7 @@ The Sala Company start page lives at [https://go.sala.company](https://go.sala.c
 
 ## What's New
 
+- **Heat** — Crypto heatmap with self-checking 🚀/😢 signals (new tool, beta)
 - **Harmony** — AI-powered Suno prompt builder (new tool)
 - **WebAI** — Private, in-browser AI (featured project)
 - **3D Rubik's Cube** — Interactive 3D puzzle built with React and Three.js
@@ -27,6 +28,7 @@ The Sala Company start page lives at [https://go.sala.company](https://go.sala.c
 
 ### Tools
 
+- **Heat — Crypto Heatmap** ([heat.sala.company](https://heat.sala.company)) — [[repo]](https://github.com/jamalxcode/heat): Top 50 coins colored by price move, with RSI, trend and Bollinger squeeze signals shown as 🚀/😢 on every tile. A daily scorecard checks the signals against the next day's moves, and a weekly tuner adjusts them. Prices refresh every 10 minutes. Beta, not financial advice.
 - **Harmony** ([harmony.sala.company](https://harmony.sala.company)): Harmony is your local AI co-producer: feed it a rough concept and it runs a rapid draft-then-refine loop—spitting out tuned titles, genre tags, lyric skeletons, and clean exclude lists—so you hit Suno's Custom Mode with production-grade prompts in seconds. Zero accounts, zero cloud, pure creative momentum.
 - **AI Tools Collection** ([ai.sala.company](https://ai.sala.company)) — [[repo]](https://github.com/jamalxcode/ai-sala-company): A curated collection of AI websites and browser experiments.
 - **Sala News** ([news.sala.company](https://news.sala.company)) — Live news aggregator and topic heatmap. Track trending headlines and visualize what the world is talking about — all in your browser.
