@@ -3,45 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Tools & Games - Browser-Based AI | Sala Company</title>
+    <title>Free Browser AI Tools, Games &amp; Crypto Heatmap | Sala Company</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Play AI games, learn how AI works, hide messages in emojis, try private browser AI, solve a 3D Rubik's Cube, and listen to music. Explore Sala Company's interactive tools and experiments.">
-    <meta name="keywords" content="AI games, artificial intelligence, learn AI, how AI works, neural networks, AI education, browser AI, AI tools, secret emoji, WebAI, Breakout, Tetris, Rubik's Cube, iPod player, language models">
+    <meta name="description" content="Free tools that run in your browser: private local AI, AI-coded retro games, a 3D Rubik's Cube, a crypto heatmap, a Suno prompt helper and more. No sign-up.">
+    <meta name="keywords" content="browser AI, private AI, local AI, AI games, retro games, Breakout, Tetris, Rubik's Cube, crypto heatmap, Suno prompts, secret emoji, iPod player, how AI works">
     <meta name="author" content="Sala Company">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#1a1050">
         <meta name="google-site-verification" content="LjxJzI_WdWVjPSrXVIuK3ZUKzkQnvFWQ4S6rG7Hor7s" />
         <meta name="msvalidate.01" content="AB401577A0F811D3E64D7B79DFC6D1DB" />
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="AI Tools & Games - Browser-Based AI Experiments">
-    <meta property="og:description" content="Play AI games, learn how AI works, solve a 3D Rubik's Cube, and explore innovative browser tools from Sala Company.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://go.sala.company">
-    <meta property="og:image" content="https://sala.company/og-image.jpg">
     <link rel="canonical" href="https://go.sala.company/">
-<meta property="og:site_name" content="Sala Company">
+
+    <!-- Open Graph Meta Tags (link previews) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sala Company">
+    <meta property="og:url" content="https://go.sala.company/">
+    <meta property="og:title" content="Free Browser AI Tools, Retro Games &amp; Crypto Heatmap">
+    <meta property="og:description" content="Private local AI, AI-coded retro games, a 3D Rubik's Cube, a crypto heatmap and more, all free and running in your browser.">
+    <meta property="og:image" content="https://go.sala.company/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="The Sala Company page of free browser tools and games">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI Tools & Games - Browser-Based AI Experiments">
-    <meta name="twitter:description" content="Play AI games, learn how AI works, hide messages in emojis, and explore innovative browser tools.">
-    <meta name="twitter:image" content="https://sala.company/twitter-image.jpg">
+    <meta name="twitter:title" content="Free Browser AI Tools, Retro Games &amp; Crypto Heatmap">
+    <meta name="twitter:description" content="Private local AI, AI-coded retro games, a 3D Rubik's Cube, a crypto heatmap and more, all free in your browser.">
+    <meta name="twitter:image" content="https://go.sala.company/og-image.png">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-    <!-- Structured Data -->
+    <!-- Structured Data: the site (its search box takes ?q=), the company, and the list of projects on the page -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Sala Company — AI Tools & Games",
-        "description": "Browser-based AI tools, educational content, games, and creative applications from Sala Company.",
-        "url": "https://go.sala.company",
-        "publisher": { "@type": "Organization", "name": "Sala Company" },
-  "potentialAction": { "@type": "SearchAction", "target": "https://go.sala.company/?q={search_term_string}", "query-input": "required name=search_term_string" }
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://go.sala.company/#website",
+                "name": "Sala Company: AI Tools & Games",
+                "description": "Free browser-based AI tools, retro games, a crypto heatmap and interactive experiments from Sala Company.",
+                "url": "https://go.sala.company/",
+                "publisher": { "@id": "https://go.sala.company/#org" },
+                "potentialAction": { "@type": "SearchAction", "target": "https://go.sala.company/?q={search_term_string}", "query-input": "required name=search_term_string" }
+            },
+            {
+                "@type": "Organization",
+                "@id": "https://go.sala.company/#org",
+                "name": "Sala Company",
+                "url": "https://www.sala.company/",
+                "logo": "https://go.sala.company/apple-touch-icon.png",
+                "sameAs": ["https://mutawa.substack.com"]
+            },
+            {
+                "@type": "ItemList",
+                "name": "Sala Company projects",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1,  "name": "WebAI: Private Browser AI", "url": "https://webai.sala.company" },
+                    { "@type": "ListItem", "position": 2,  "name": "AI Coded Breakout", "url": "https://breakout.sala.company" },
+                    { "@type": "ListItem", "position": 3,  "name": "Galactic Defender", "url": "https://galacticdefender.sala.company" },
+                    { "@type": "ListItem", "position": 4,  "name": "AI Coded Tetris", "url": "https://tetris.sala.company" },
+                    { "@type": "ListItem", "position": 5,  "name": "3D Rubik's Cube", "url": "https://cube.sala.company" },
+                    { "@type": "ListItem", "position": 6,  "name": "Harmony: local AI co-producer for Suno prompts", "url": "https://harmony.sala.company" },
+                    { "@type": "ListItem", "position": 7,  "name": "Heat: Crypto Heatmap", "url": "https://heat.sala.company" },
+                    { "@type": "ListItem", "position": 8,  "name": "AI Tools Collection", "url": "https://ai.sala.company" },
+                    { "@type": "ListItem", "position": 9,  "name": "Sala News", "url": "https://news.sala.company" },
+                    { "@type": "ListItem", "position": 10, "name": "Secret Emoji Messenger", "url": "https://secret.sala.company" },
+                    { "@type": "ListItem", "position": 11, "name": "iPod Classic Player", "url": "https://music.sala.company" },
+                    { "@type": "ListItem", "position": 12, "name": "How AI Works", "url": "https://understand.sala.company" },
+                    { "@type": "ListItem", "position": 13, "name": "Early Wake Up Club newsletter", "url": "https://mutawa.substack.com" },
+                    { "@type": "ListItem", "position": 14, "name": "Sala Company Online Store", "url": "https://www.sala.company" }
+                ]
+            }
+        ]
     }
     </script>
 
@@ -481,13 +519,13 @@
                 </article>
 
                 <!-- Heat – Tools (NEW, Beta) -->
-                <article class="card" data-cat="tools" data-tags="heat crypto heatmap bitcoin coins market prices rsi trend moving average bollinger signals rocket scorecard" role="listitem">
+                <article class="card" data-cat="tools" data-tags="heat crypto heatmap bitcoin coins market prices rsi trend moving average bollinger signals rocket scorecard heatmap bitcoin rsi" role="listitem">
                     <div class="card-icon" aria-hidden="true">🔥</div>
                     <div class="card-title-row">
                         <h2>Heat — Crypto Heatmap</h2>
                         <span class="badge-new" aria-label="New">NEW</span> <span class="badge-wip" aria-label="Beta - Work in Progress">BETA</span>
                     </div>
-                    <p><span class="badge-wip" aria-label="Work in Progress - Beta">⚠️ Beta</span> <strong>Work in progress. Not financial advice.</strong> A heatmap of the top 50 coins, colored by price move, with RSI, trend and Bollinger squeeze signals shown as 🚀 and 😢 on every tile. A daily scorecard checks the signals against what actually happened next, and they re-tune themselves weekly. Prices refresh every 10 minutes.</p>
+                    <p><span class="badge-wip" aria-label="Work in Progress - Beta">⚠️ Beta</span> <strong>Work in progress. Not financial advice.</strong> A heatmap of the top 100 coins (stablecoins excluded), colored by price move, with RSI, the 50/200-day trend, point &amp; figure, 30-day momentum and suggested stop-losses on every tile. A daily scorecard checks the signals against what actually happened next, and they re-tune themselves weekly. Prices refresh every 10 minutes.</p>
                     <a href="https://heat.sala.company" class="btn" aria-label="Open Heat crypto heatmap">Open Heat →</a>
                 </article>
 
@@ -543,7 +581,7 @@
                 </article>
 
                 <!-- Early Wake Up Club — Learn -->
-                <article class="card" data-cat="learn" data-tags="newsletter blog articles technology business ai crypto substack read writing" role="listitem">
+                <article class="card" data-cat="learn" data-tags="newsletter blog articles technology business ai crypto substack read writing heatmap bitcoin rsi" role="listitem">
                     <div class="card-icon" aria-hidden="true">✍️</div>
                     <div class="card-title-row">
                         <h2>Early Wake Up Club</h2>
@@ -641,6 +679,15 @@
             searchQuery = e.target.value.trim().toLowerCase();
             applyFilters();
         });
+
+        // ?q=… in the address (e.g. go.sala.company/?q=heat) starts with that search, as the site's structured data promises
+        const q = new URLSearchParams(location.search).get('q');
+        if (q) {
+            const box = document.getElementById('search');
+            box.value = q;
+            searchQuery = q.trim().toLowerCase();
+            applyFilters();
+        }
     </script>
 </body>
 </html>

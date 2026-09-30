@@ -28,7 +28,7 @@ The Sala Company start page lives at [https://go.sala.company](https://go.sala.c
 
 ### Tools
 
-- **Heat — Crypto Heatmap** ([heat.sala.company](https://heat.sala.company)) — [[repo]](https://github.com/jamalxcode/heat): Top 50 coins colored by price move, with RSI, trend and Bollinger squeeze signals shown as 🚀/😢 on every tile. A daily scorecard checks the signals against the next day's moves, and a weekly tuner adjusts them. Prices refresh every 10 minutes. Beta, not financial advice.
+- **Heat — Crypto Heatmap** ([heat.sala.company](https://heat.sala.company)) — [[repo]](https://github.com/jamalxcode/heat): Top 100 coins (stablecoins excluded) colored by price move, with RSI, the 50/200-day trend, point & figure, 30-day momentum and suggested stop-losses on every tile. A daily scorecard checks the signals against the next moves, and a weekly tuner adjusts them. Prices refresh every 10 minutes. Beta, not financial advice.
 - **Harmony** ([harmony.sala.company](https://harmony.sala.company)): Harmony is your local AI co-producer: feed it a rough concept and it runs a rapid draft-then-refine loop—spitting out tuned titles, genre tags, lyric skeletons, and clean exclude lists—so you hit Suno's Custom Mode with production-grade prompts in seconds. Zero accounts, zero cloud, pure creative momentum.
 - **AI Tools Collection** ([ai.sala.company](https://ai.sala.company)) — [[repo]](https://github.com/jamalxcode/ai-sala-company): A curated collection of AI websites and browser experiments.
 - **Sala News** ([news.sala.company](https://news.sala.company)) — Live news aggregator and topic heatmap. Track trending headlines and visualize what the world is talking about — all in your browser.
@@ -49,7 +49,7 @@ The Sala Company start page lives at [https://go.sala.company](https://go.sala.c
 
 ## Features
 
-- **In-browser search** — Filter the project directory by name in real time.
+- **In-browser search** — Filter the project directory by name in real time. A link like `go.sala.company/?q=heat` opens with that search already applied.
 - **Category tabs** — Browse by All, Games, Tools, Learn, or Shop.
 - **No installs required** — Every project runs entirely in the browser.
 
@@ -60,4 +60,13 @@ The Sala Company start page lives at [https://go.sala.company](https://go.sala.c
 ## Tech
 
 - Pure HTML/CSS/JS — no build step, no dependencies.
-- Hosted via GitHub Pages with a custom CNAME (`www.sala.company`).
+- Hosted via GitHub Pages with a custom CNAME (`go.sala.company`).
+
+## Search engines and link previews
+
+- **Title and description** written for search results, within Google's display limits.
+- **Canonical URL** `https://go.sala.company/`, plus Google and Bing site-verification tags.
+- **Link previews** (Open Graph and X): `og-image.png`, a 1200×630 screenshot of this page.
+- **Icons:** `favicon.svg`, `favicon-48.png` and `favicon.ico` for browsers and search results, and `apple-touch-icon.png` (180×180) for phone home screens.
+- **Structured data** (JSON-LD): the `WebSite` with its search (`?q=`, which really works), the `Organization`, and an `ItemList` of every project on the page. When a card is added or removed, update the `ItemList` too.
+- **`robots.txt`** and **`sitemap.xml`**. Update the sitemap's `lastmod` date when the page changes.
