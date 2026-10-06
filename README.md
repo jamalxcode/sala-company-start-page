@@ -25,9 +25,9 @@ The page itself has a matching **What's new** box under the WebAI banner; update
 
 ### Games
 
-- **AI Coded Breakout** ([breakout.sala.company](https://breakout.sala.company)) — [[repo]](https://github.com/jamalxcode/breakout-game-html): Classic arcade Breakout recreated with AI-generated code.
+- **Vibe Coded Breakout** ([breakout.sala.company](https://breakout.sala.company)) — [[repo]](https://github.com/jamalxcode/breakout-game-html): Classic arcade Breakout, vibe coded from the start.
 - **Galactic Defender** ([galacticdefender.sala.company](https://galacticdefender.sala.company)) — [[repo]](https://github.com/jamalxcode/galactic_defender): Galaga-inspired space shooter.
-- **AI Coded Tetris** ([tetris.sala.company](https://tetris.sala.company)) — [[repo]](https://github.com/jamalxcode/tetris3): The classic puzzle game, reprogrammed using AI.
+- **Vibe Coded Tetris** ([tetris.sala.company](https://tetris.sala.company)) — [[repo]](https://github.com/jamalxcode/tetris3): The classic puzzle game, vibe coded from the start.
 - **3D Rubik's Cube** ([cube.sala.company](https://cube.sala.company)) — [[repo]](https://github.com/jamalxcode/cube): Interactive 3D puzzle built with React and Three.js.
 - **Rizq — A Kuwaiti Roguelike** ([rizq.sala.company](https://rizq.sala.company)) — [[repo]](https://github.com/jamalxcode/rizq): A Brogue-inspired roguelike set in modern Kuwait. Hustle from the Friday market to the deep desert, win over camels with dates, trade and bank at diwaniyas and camps, and dodge charging bull camels and howling wolf packs. Reach 100,000 KD net worth, then make it home. Includes a daily run where everyone gets the same map.
 
