@@ -4,21 +4,24 @@ The Sala Company start page lives at [https://go.sala.company](https://go.sala.c
 
 ## What's New
 
-- **Rizq** — A Brogue-inspired roguelike set in modern Kuwait (new game). Now with traders and banking, a ride home for your herd, smarter animals and a daily run
-- **Heat** — Crypto heatmap with self-checking 🚀/😢 signals (new tool, beta)
+The page itself has a matching **What's new** box under the WebAI banner; update both together.
+
+- **Sala News** — Out of beta: a new look, about 95 live sources, breaking-news alerts and videos from 29 news channels ([news.sala.company](https://news.sala.company))
+- **Heat Rates** — Official government bond yield curves for 14 markets, with real yields and ten years of history ([heat.sala.company/rates/](https://heat.sala.company/rates/))
+- **Rizq** — A Brogue-inspired roguelike set in modern Kuwait (new game). Now with traders and banking, a pickup truck home for your herd, smarter animals and a daily run
+- **Heat** — Crypto, forex, metals and energy heatmaps with self-checking 🚀/😢 signals (beta)
 - **Harmony** — AI-powered Suno prompt builder (new tool)
 - **WebAI** — Private, in-browser AI (featured project)
 - **3D Rubik's Cube** — Interactive 3D puzzle built with React and Three.js
 - **iPod Classic Player** — Retro browser-based MP3 player
 - **Learn category** — Educational content on how AI works
 - **Search & category filtering** — Quickly find projects by name or category
-- **Sala News** — Live news aggregator and topic heatmap ([news.sala.company](https://news.sala.company))
 
 ## Projects
 
 ### Featured
 
-- **WebAI — Private Browser AI** ([webai.sala.company](https://webai.sala.company)) — [[repo]](https://github.com/jamalxcode/webllm-onefile): Run AI directly in your browser with complete privacy. No servers, no APIs, no outside connections.
+- **WebAI — Private Browser AI** ([webai.sala.company](https://webai.sala.company)) — [[repo]](https://github.com/jamalxcode/webllm-onefile): Chat with open AI models (Llama, Phi, Mistral, Qwen, Gemma, TinyLlama) running entirely on your device through WebGPU. No servers, no API keys, no account.
 
 ### Games
 
@@ -30,10 +33,10 @@ The Sala Company start page lives at [https://go.sala.company](https://go.sala.c
 
 ### Tools
 
-- **Heat — Crypto & Forex Heatmaps** ([heat.sala.company](https://heat.sala.company), [forex](https://heat.sala.company/forex/)) — [[repo]](https://github.com/jamalxcode/heat): Top 100 coins (stablecoins excluded) colored by price move, with RSI, the 50/200-day trend, point & figure, 30-day momentum and suggested stop-losses on every tile. A daily scorecard checks the signals against the next moves, and a weekly tuner adjusts them. Prices refresh every 10 minutes. A forex page shows 48 currencies against the US dollar from official ECB rates. Beta, not financial advice.
+- **Heat — Crypto, Forex, Metals, Energy & Bond Yield Heatmaps** ([heat.sala.company](https://heat.sala.company), [forex](https://heat.sala.company/forex/), [metals](https://heat.sala.company/metals/), [energy](https://heat.sala.company/energy/), [rates](https://heat.sala.company/rates/)) — [[repo]](https://github.com/jamalxcode/heat): Top 100 coins (stablecoins excluded) colored by price move, with RSI, the 50/200-day trend, point & figure, 30-day momentum and suggested stop-losses on every tile. A daily scorecard checks the signals against the next moves, and a weekly tuner adjusts them. Prices refresh every 10 minutes. A forex page shows 48 currencies against the US dollar from official ECB rates; metals and energy pages cover gold, silver, platinum, palladium, crude, diesel, gasoline and natural gas; and a rates page shows official government bond yield curves for 14 markets (normal, flat or inverted). Beta, not financial advice.
 - **Harmony** ([harmony.sala.company](https://harmony.sala.company)): Harmony is your local AI co-producer: feed it a rough concept and it runs a rapid draft-then-refine loop—spitting out tuned titles, genre tags, lyric skeletons, and clean exclude lists—so you hit Suno's Custom Mode with production-grade prompts in seconds. Zero accounts, zero cloud, pure creative momentum.
 - **AI Tools Collection** ([ai.sala.company](https://ai.sala.company)) — [[repo]](https://github.com/jamalxcode/ai-sala-company): A curated collection of AI websites and browser experiments.
-- **Sala News** ([news.sala.company](https://news.sala.company)) — Live news aggregator and topic heatmap. Track trending headlines and visualize what the world is talking about — all in your browser.
+- **Sala News — The World Now** ([news.sala.company](https://news.sala.company)) — [[repo]](https://github.com/jamalxcode/the-world-now): Live world headlines from about 95 news, OSINT and disaster sources, refreshed every few minutes, with breaking-news alerts, videos from 29 news channels and search links under every headline.
 - **Secret Emoji Messenger** ([secret.sala.company](https://secret.sala.company)) — [[repo]](https://github.com/jamalxcode/hidetext): Hide secret messages inside emojis using Unicode steganography. Encode a message into any emoji and share it anywhere — only those who know the trick can decode it.
 - **iPod Classic Player** ([music.sala.company](https://music.sala.company)) — [[repo]](https://github.com/jamalxcode/retro-tunes-player): A browser-based retro MP3 player styled after the original iPod Classic.
 
@@ -70,5 +73,6 @@ The Sala Company start page lives at [https://go.sala.company](https://go.sala.c
 - **Canonical URL** `https://go.sala.company/`, plus Google and Bing site-verification tags.
 - **Link previews** (Open Graph and X): `og-image.png`, a 1200×630 screenshot of this page.
 - **Icons:** `favicon.svg`, `favicon-48.png` and `favicon.ico` for browsers and search results, and `apple-touch-icon.png` (180×180) for phone home screens.
-- **Structured data** (JSON-LD): the `WebSite` with its search (`?q=`, which really works), the `Organization`, and an `ItemList` of every project on the page. When a card is added or removed, update the `ItemList` too.
+- **Structured data** (JSON-LD): the `WebSite` with its search (`?q=`, which really works), the `WebPage` (with `dateModified`), the `Organization`, and an `ItemList` of every project on the page, each typed as a free `WebApplication`, `VideoGame` or `WebSite` with its own description. When a card is added or removed, update the `ItemList` (and `numberOfItems`) too.
+- **Crawlable text:** a "What's new" box and an About / FAQ section give search engines plain text about each project, and a `<noscript>` rule shows the cards without JavaScript.
 - **`robots.txt`** and **`sitemap.xml`**. Update the sitemap's `lastmod` date when the page changes.
