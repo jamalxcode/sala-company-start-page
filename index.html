@@ -6,13 +6,14 @@
     <title>Free Browser AI, Games, News &amp; Market Heatmaps | Sala Company</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Free in your browser: private AI chat, live world news with breaking alerts, crypto, forex and bond yield heatmaps, a Kuwaiti roguelike and retro games.">
-    <meta name="keywords" content="vibe coded, vibe coding, browser AI, private AI, local AI chat, WebLLM, WebGPU, live world news, breaking news alerts, news aggregator, crypto heatmap, forex heatmap, gold price, oil price, bond yield curve, inverted yield curve, roguelike, Kuwait game, browser games, Breakout, Tetris, Rubik's Cube, Suno prompts, secret emoji, iPod player, how AI works">
+    <meta name="description" content="Free in your browser: live world news with breaking alerts, crypto, forex and bond yield heatmaps, a Kuwaiti roguelike, private AI chat and retro games.">
     <meta name="author" content="Sala Company">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="theme-color" content="#1a1050">
-        <meta name="google-site-verification" content="LjxJzI_WdWVjPSrXVIuK3ZUKzkQnvFWQ4S6rG7Hor7s" />
-        <meta name="msvalidate.01" content="AB401577A0F811D3E64D7B79DFC6D1DB" />
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e1016" media="(prefers-color-scheme: dark)">
+    <meta name="google-site-verification" content="LjxJzI_WdWVjPSrXVIuK3ZUKzkQnvFWQ4S6rG7Hor7s" />
+    <meta name="msvalidate.01" content="AB401577A0F811D3E64D7B79DFC6D1DB" />
     <link rel="canonical" href="https://go.sala.company/">
 
     <!-- Open Graph Meta Tags (link previews) -->
@@ -21,7 +22,7 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://go.sala.company/">
     <meta property="og:title" content="Free Browser AI, Games, Live News &amp; Market Heatmaps">
-    <meta property="og:description" content="Private local AI chat, live world news, crypto, forex, metals, energy and bond yield heatmaps, a Kuwaiti roguelike and retro games. Free, in your browser.">
+    <meta property="og:description" content="Live world news, crypto, forex, metals, energy and bond yield heatmaps, a Kuwaiti roguelike, private AI chat and retro games. Free, in your browser.">
     <meta property="og:image" content="https://go.sala.company/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -30,7 +31,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Free Browser AI, Games, Live News &amp; Market Heatmaps">
-    <meta name="twitter:description" content="Private local AI chat, live world news, market heatmaps, a Kuwaiti roguelike and retro games. Free, in your browser.">
+    <meta name="twitter:description" content="Live world news, market heatmaps, a Kuwaiti roguelike, private AI chat and retro games. Free, in your browser.">
     <meta name="twitter:image" content="https://go.sala.company/og-image.png">
 
     <!-- Favicon -->
@@ -38,7 +39,15 @@
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-    <!-- Structured Data: the site (its search box takes ?q=), this page, the company, and every project on the page. Keep the ItemList in step with the cards. -->
+    <!-- Inter, hosted here (no calls to Google), as on heat and news -->
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Theme before first paint: a saved choice (light / dark) wins over the system setting -->
+    <script>
+        try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+    </script>
+
+    <!-- Structured Data: the site (its search box takes ?q=), this page, the company, and every project on the page in page order. Keep the ItemList in step with the cards. -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -48,7 +57,7 @@
                 "@id": "https://go.sala.company/#website",
                 "name": "Sala Company: AI Tools & Games",
                 "alternateName": "Sala Company",
-                "description": "Free browser-based AI tools, live world news, market heatmaps, games and interactive experiments from Sala Company.",
+                "description": "Free browser-based live news, market heatmaps, games and AI tools from Sala Company.",
                 "url": "https://go.sala.company/",
                 "inLanguage": "en",
                 "publisher": { "@id": "https://go.sala.company/#org" },
@@ -79,25 +88,25 @@
                 "name": "Sala Company projects",
                 "numberOfItems": 19,
                 "itemListElement": [
-                    { "@type": "ListItem", "position": 1,  "item": { "@type": "WebApplication", "name": "WebAI: Private Browser AI Chat", "url": "https://webai.sala.company", "description": "Chat with open AI models (Llama, Phi, Mistral, Qwen, Gemma, TinyLlama) that run entirely on your device through WebGPU. Nothing you type leaves the browser.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
-                    { "@type": "ListItem", "position": 2,  "item": { "@type": "WebApplication", "name": "Sala News: The World Now", "url": "https://news.sala.company", "description": "Live world headlines from about 95 news, OSINT and disaster sources, refreshed every few minutes, with breaking-news alerts and videos from 29 news channels.", "applicationCategory": "NewsApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
-                    { "@type": "ListItem", "position": 3,  "item": { "@type": "WebApplication", "name": "Heat: Crypto Heatmap", "url": "https://heat.sala.company", "description": "Heatmap of the top 100 coins with RSI, trend, point & figure, momentum and suggested stop-losses, plus a daily signal scorecard.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
-                    { "@type": "ListItem", "position": 4,  "item": { "@type": "WebApplication", "name": "Heat: Forex Heatmap", "url": "https://heat.sala.company/forex/", "description": "48 currencies against the US dollar from official ECB rates, with trend and momentum readings.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
-                    { "@type": "ListItem", "position": 5,  "item": { "@type": "WebApplication", "name": "Heat: Precious Metals Heatmap", "url": "https://heat.sala.company/metals/", "description": "Gold, silver, platinum and palladium per ounce, next to tokenized gold and Bitcoin.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
-                    { "@type": "ListItem", "position": 6,  "item": { "@type": "WebApplication", "name": "Heat: Oil and Gas Energy Heatmap", "url": "https://heat.sala.company/energy/", "description": "WTI and Brent crude, diesel, gasoline, and US and European natural gas from the futures markets.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
-                    { "@type": "ListItem", "position": 7,  "item": { "@type": "WebApplication", "name": "Heat: Government Bond Yield Curves", "url": "https://heat.sala.company/rates/", "description": "Official government bond yield curves for the US, euro area, UK, Japan, China, India and more: 10-year and real yields, ten years of history, and whether each curve is normal, flat or inverted.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
-                    { "@type": "ListItem", "position": 8,  "item": { "@type": "VideoGame", "name": "Rizq: A Kuwaiti Roguelike", "url": "https://rizq.sala.company", "description": "A Brogue-inspired roguelike set in modern Kuwait: build a camel herd, trade and bank, survive the desert and reach 100,000 KD. Free on desktop and phone.", "genre": "Roguelike", "applicationCategory": "GameApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
-                    { "@type": "ListItem", "position": 9,  "item": { "@type": "VideoGame", "name": "Vibe Coded Breakout", "url": "https://breakout.sala.company", "description": "The classic Breakout arcade game, vibe coded from the start.", "genre": "Arcade", "applicationCategory": "GameApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
-                    { "@type": "ListItem", "position": 10, "item": { "@type": "VideoGame", "name": "Galactic Defender", "url": "https://galacticdefender.sala.company", "description": "A vibe coded, Galaga-inspired space shooter.", "genre": "Shooter", "applicationCategory": "GameApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
-                    { "@type": "ListItem", "position": 11, "item": { "@type": "VideoGame", "name": "Vibe Coded Tetris", "url": "https://tetris.sala.company", "description": "Classic Tetris, vibe coded from the start.", "genre": "Puzzle", "applicationCategory": "GameApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
-                    { "@type": "ListItem", "position": 12, "item": { "@type": "VideoGame", "name": "3D Rubik's Cube", "url": "https://cube.sala.company", "description": "An interactive 3D Rubik's Cube with scramble, solve and hints, built with React and Three.js.", "genre": "Puzzle", "applicationCategory": "GameApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
-                    { "@type": "ListItem", "position": 13, "item": { "@type": "WebApplication", "name": "Harmony: local AI co-producer for Suno prompts", "url": "https://harmony.sala.company", "description": "Turns a rough song idea into titles, genre tags, lyric skeletons and exclude lists for Suno's Custom Mode.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
-                    { "@type": "ListItem", "position": 14, "item": { "@type": "WebSite", "name": "AI Tools Collection", "url": "https://ai.sala.company", "description": "A curated directory of AI websites, tools and experiments." } },
-                    { "@type": "ListItem", "position": 15, "item": { "@type": "WebApplication", "name": "Secret Emoji Messenger", "url": "https://secret.sala.company", "description": "Hide secret text inside an emoji with Unicode steganography.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
-                    { "@type": "ListItem", "position": 16, "item": { "@type": "WebApplication", "name": "iPod Classic Player", "url": "https://music.sala.company", "description": "A browser-based iPod Classic MP3 player for your own music files.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
-                    { "@type": "ListItem", "position": 17, "item": { "@type": "WebSite", "name": "How AI Works", "url": "https://understand.sala.company", "description": "Plain-language explanations of AI, from rule-based systems to neural networks and large language models." } },
-                    { "@type": "ListItem", "position": 18, "item": { "@type": "Blog", "name": "Early Wake Up Club newsletter", "url": "https://mutawa.substack.com", "description": "A newsletter on technology, business and AI." } },
-                    { "@type": "ListItem", "position": 19, "item": { "@type": "OnlineStore", "name": "Sala Company Online Store", "url": "https://www.sala.company", "description": "The official Sala Company store." } }
+                    { "@type": "ListItem", "position": 1,  "item": { "@type": "WebApplication", "name": "Sala News: The World Now", "url": "https://news.sala.company", "image": "https://go.sala.company/img/news.jpg", "description": "Live world headlines from about 95 news, OSINT and disaster sources, refreshed every few minutes, with breaking-news alerts and videos from 29 news channels.", "applicationCategory": "NewsApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                    { "@type": "ListItem", "position": 2,  "item": { "@type": "WebApplication", "name": "Heat: Crypto Heatmap", "url": "https://heat.sala.company", "image": "https://go.sala.company/img/heat.jpg", "description": "Heatmap of the top 100 coins with RSI, trend, point & figure, momentum and suggested stop-losses, plus a daily signal scorecard.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                    { "@type": "ListItem", "position": 3,  "item": { "@type": "WebApplication", "name": "Heat: Forex Heatmap", "url": "https://heat.sala.company/forex/", "description": "48 currencies against the US dollar from official ECB rates, with trend and momentum readings.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                    { "@type": "ListItem", "position": 4,  "item": { "@type": "WebApplication", "name": "Heat: Precious Metals Heatmap", "url": "https://heat.sala.company/metals/", "description": "Gold, silver, platinum and palladium per ounce, next to tokenized gold and Bitcoin.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                    { "@type": "ListItem", "position": 5,  "item": { "@type": "WebApplication", "name": "Heat: Oil and Gas Energy Heatmap", "url": "https://heat.sala.company/energy/", "description": "WTI and Brent crude, diesel, gasoline, and US and European natural gas from the futures markets.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                    { "@type": "ListItem", "position": 6,  "item": { "@type": "WebApplication", "name": "Heat: Government Bond Yield Curves", "url": "https://heat.sala.company/rates/", "image": "https://go.sala.company/img/rates.jpg", "description": "Official government bond yield curves for the US, euro area, UK, Japan, China, India and more: 10-year and real yields, ten years of history, and whether each curve is normal, flat or inverted.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                    { "@type": "ListItem", "position": 7,  "item": { "@type": "VideoGame", "name": "Rizq: A Kuwaiti Roguelike", "url": "https://rizq.sala.company", "image": "https://go.sala.company/img/rizq.jpg", "description": "A Brogue-inspired roguelike set in modern Kuwait: build a camel herd, trade and bank, survive the desert and reach 100,000 KD. Free on desktop and phone.", "genre": "Roguelike", "applicationCategory": "GameApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                    { "@type": "ListItem", "position": 8,  "item": { "@type": "VideoGame", "name": "3D Rubik's Cube", "url": "https://cube.sala.company", "image": "https://go.sala.company/img/cube.jpg", "description": "An interactive 3D Rubik's Cube with scramble, solve and hints, built with React and Three.js.", "genre": "Puzzle", "applicationCategory": "GameApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                    { "@type": "ListItem", "position": 9,  "item": { "@type": "VideoGame", "name": "Vibe Coded Breakout", "url": "https://breakout.sala.company", "image": "https://go.sala.company/img/breakout.jpg", "description": "The classic Breakout arcade game, vibe coded from the start.", "genre": "Arcade", "applicationCategory": "GameApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                    { "@type": "ListItem", "position": 10, "item": { "@type": "VideoGame", "name": "Galactic Defender", "url": "https://galacticdefender.sala.company", "image": "https://go.sala.company/img/galactic.jpg", "description": "A vibe coded, Galaga-inspired space shooter.", "genre": "Shooter", "applicationCategory": "GameApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                    { "@type": "ListItem", "position": 11, "item": { "@type": "VideoGame", "name": "Vibe Coded Tetris", "url": "https://tetris.sala.company", "image": "https://go.sala.company/img/tetris.jpg", "description": "Classic Tetris, vibe coded from the start.", "genre": "Puzzle", "applicationCategory": "GameApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                    { "@type": "ListItem", "position": 12, "item": { "@type": "WebApplication", "name": "WebAI: Private Browser AI Chat", "url": "https://webai.sala.company", "image": "https://go.sala.company/img/webai.jpg", "description": "Chat with open AI models (Llama, Phi, Mistral, Qwen, Gemma, TinyLlama) that run entirely on your device through WebGPU. Nothing you type leaves the browser.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser with WebGPU)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                    { "@type": "ListItem", "position": 13, "item": { "@type": "WebApplication", "name": "Harmony: local AI co-producer for Suno prompts", "url": "https://harmony.sala.company", "image": "https://go.sala.company/img/harmony.jpg", "description": "Turns a rough song idea into titles, genre tags, lyric skeletons and exclude lists for Suno's Custom Mode.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                    { "@type": "ListItem", "position": 14, "item": { "@type": "WebSite", "name": "How AI Works", "url": "https://understand.sala.company", "image": "https://go.sala.company/img/understand.jpg", "description": "Plain-language explanations of AI, from rule-based systems to neural networks and large language models." } },
+                    { "@type": "ListItem", "position": 15, "item": { "@type": "WebSite", "name": "AI Tools Collection", "url": "https://ai.sala.company", "image": "https://go.sala.company/img/ai.jpg", "description": "A curated directory of AI websites and tools, sorted by what they do and whether they are free." } },
+                    { "@type": "ListItem", "position": 16, "item": { "@type": "WebApplication", "name": "Secret Emoji Messenger", "url": "https://secret.sala.company", "image": "https://go.sala.company/img/secret.jpg", "description": "Hide secret text inside an emoji with Unicode steganography.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                    { "@type": "ListItem", "position": 17, "item": { "@type": "WebApplication", "name": "iPod Classic Player", "url": "https://music.sala.company", "image": "https://go.sala.company/img/music.jpg", "description": "A browser-based iPod Classic MP3 player for your own music files.", "applicationCategory": "MultimediaApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } } },
+                    { "@type": "ListItem", "position": 18, "item": { "@type": "Blog", "name": "Early Wake Up Club newsletter", "url": "https://mutawa.substack.com", "image": "https://go.sala.company/img/substack.jpg", "description": "A newsletter on technology, business and AI." } },
+                    { "@type": "ListItem", "position": 19, "item": { "@type": "OnlineStore", "name": "Sala Company Online Store", "url": "https://www.sala.company", "image": "https://go.sala.company/img/store.jpg", "description": "Ebooks from Sala Company: sci-fi thrillers, AI guides, business and children's books." } }
                 ]
             }
         ]
@@ -105,690 +114,672 @@
     </script>
 
     <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('/fonts/inter-latin.woff2') format('woff2');
+            font-weight: 100 900;
+            font-display: swap;
+        }
+
         /* ── Reset ─────────────────────────────────────────────── */
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* ── Tokens ─────────────────────────────────────────────── */
+        /* ── Tokens: light by default, dark from the system or the ◐ button ── */
         :root {
-            --bg-start:   #0f0c29;
-            --bg-mid:     #1a1050;
-            --bg-end:     #24243e;
-            --surface:    rgba(255,255,255,0.05);
-            --surface-h:  rgba(255,255,255,0.09);
-            --border:     rgba(255,255,255,0.08);
-            --text:        #e2e8f0;
-            --text-muted:  #94a3b8;
-            --accent:      #818cf8;
-
-            /* category accent gradients */
-            --games-g:  linear-gradient(90deg, #f59e0b, #ef4444);
-            --tools-g:  linear-gradient(90deg, #06b6d4, #6366f1);
-            --learn-g:  linear-gradient(90deg, #10b981, #3b82f6);
-            --shop-g:   linear-gradient(90deg, #f97316, #ec4899);
+            --bg:          #f6f7f9;
+            --surface:     #ffffff;
+            --surface-2:   #f0f1f4;
+            --border:      #e3e5ea;
+            --text:        #111827;
+            --text-muted:  #4b5563;   /* 7.5:1 on white */
+            --accent:      #4f46e5;   /* 6.3:1 on white */
+            --accent-ink:  #ffffff;
+            --accent-soft: #eef0ff;
+            --new-bg:      #dc2626;
+            --new-ink:     #ffffff;
+            --beta-bg:     #fef3c7;
+            --beta-ink:    #92400e;
+            --shadow:      0 1px 2px rgba(16,24,40,.06), 0 8px 24px rgba(16,24,40,.06);
+            --shadow-h:    0 2px 4px rgba(16,24,40,.08), 0 16px 40px rgba(16,24,40,.12);
+            --dot-live:    #ef4444;
+            --dot-games:   #f59e0b;
+            --dot-ai:      #6366f1;
+            --dot-more:    #10b981;
         }
+
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                --bg:          #0e1016;
+                --surface:     #171a22;
+                --surface-2:   #1f232d;
+                --border:      #2a2f3b;
+                --text:        #e7e9ee;
+                --text-muted:  #a3aab6;   /* 7:1 on the card */
+                --accent:      #8b93fa;
+                --accent-ink:  #0b0d12;
+                --accent-soft: #23264a;
+                --new-bg:      #f87171;
+                --new-ink:     #1a0505;
+                --beta-bg:     #3b2f0b;
+                --beta-ink:    #fde68a;
+                --shadow:      0 1px 2px rgba(0,0,0,.4);
+                --shadow-h:    0 12px 32px rgba(0,0,0,.5);
+            }
+        }
+        :root[data-theme="dark"] {
+            --bg:          #0e1016;
+            --surface:     #171a22;
+            --surface-2:   #1f232d;
+            --border:      #2a2f3b;
+            --text:        #e7e9ee;
+            --text-muted:  #a3aab6;
+            --accent:      #8b93fa;
+            --accent-ink:  #0b0d12;
+            --accent-soft: #23264a;
+            --new-bg:      #f87171;
+            --new-ink:     #1a0505;
+            --beta-bg:     #3b2f0b;
+            --beta-ink:    #fde68a;
+            --shadow:      0 1px 2px rgba(0,0,0,.4);
+            --shadow-h:    0 12px 32px rgba(0,0,0,.5);
+            color-scheme: dark;
+        }
+        :root[data-theme="light"] { color-scheme: light; }
 
         /* ── Base ─────────────────────────────────────────────── */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-mid) 50%, var(--bg-end) 100%);
-            background-attachment: fixed;
-            min-height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        a { color: var(--accent); }
+        .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
         /* ── Header ───────────────────────────────────────────── */
-        header {
-            text-align: center;
-            padding: 56px 20px 48px;
+        .top {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 22px 0 6px;
         }
-
-        .logo {
-            font-size: 3rem;
-            display: inline-block;
-            margin-bottom: 16px;
-            animation: floatLogo 4s ease-in-out infinite;
-        }
-
-        h1 {
-            font-size: clamp(2.2rem, 5vw, 3.8rem);
-            font-weight: 800;
-            background: linear-gradient(135deg, #c4b5fd 0%, #818cf8 40%, #67e8f9 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 14px;
-            animation: fadeInUp 0.8s ease-out both;
-        }
-
-        .subtitle {
-            font-size: clamp(1rem, 2.2vw, 1.25rem);
-            color: var(--text-muted);
-            max-width: 580px;
-            margin: 0 auto 32px;
-            animation: fadeInUp 0.8s ease-out 0.15s both;
-        }
-
-        /* ── Search ───────────────────────────────────────────── */
-        .search-wrap {
-            max-width: 480px;
-            margin: 0 auto 28px;
-            position: relative;
-            animation: fadeInUp 0.8s ease-out 0.25s both;
-        }
-
-        .search-wrap svg {
-            position: absolute;
-            left: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 18px; height: 18px;
-            stroke: var(--text-muted);
-            fill: none;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            pointer-events: none;
-        }
-
-        #search {
-            width: 100%;
-            padding: 12px 16px 12px 44px;
-            border-radius: 999px;
+        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+        .brand svg { width: 40px; height: 40px; flex-shrink: 0; }
+        h1 { font-size: 1.45rem; font-weight: 800; letter-spacing: -0.02em; }
+        .theme-btn {
+            margin-left: auto;
             border: 1px solid var(--border);
             background: var(--surface);
             color: var(--text);
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.25s, box-shadow 0.25s;
-        }
-
-        #search::placeholder { color: var(--text-muted); }
-        #search:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(129,140,248,0.25);
-        }
-
-        /* ── Category Tabs ────────────────────────────────────── */
-        .tabs {
-            display: flex;
-            gap: 8px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 44px;
-            animation: fadeInUp 0.8s ease-out 0.35s both;
-        }
-
-        .tab {
-            padding: 7px 20px;
             border-radius: 999px;
-            border: 1px solid var(--border);
-            background: var(--surface);
-            color: var(--text-muted);
-            font-size: 0.875rem;
+            padding: 7px 14px;
+            font: inherit;
+            font-size: 0.85rem;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.2s;
-            letter-spacing: 0.02em;
         }
+        .theme-btn:hover { background: var(--surface-2); }
 
-        .tab:hover { background: var(--surface-h); color: var(--text); }
-        .tab.active {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: #fff;
-            box-shadow: 0 0 18px rgba(129,140,248,0.45);
-        }
-
-        /* ── Featured (WebAI) ─────────────────────────────────── */
-        .featured {
-            background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 36px;
-            text-align: center;
-            box-shadow: 0 24px 48px rgba(124,58,237,0.35);
-            animation: fadeInUp 0.8s ease-out 0.45s both;
-        }
-
-        .featured .feat-icon { font-size: 2.5rem; margin-bottom: 12px; }
-        .featured h2 { font-size: 1.9rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
-        .featured p  { color: rgba(255,255,255,0.85); max-width: 540px; margin: 0 auto; font-size: 1.05rem; }
-
-        .featured .btn {
-            margin-top: 24px;
-            background: rgba(255,255,255,0.15);
-            border: 1px solid rgba(255,255,255,0.4);
-            color: #fff;
-            backdrop-filter: blur(8px);
-        }
-        .featured .btn:hover {
-            background: rgba(255,255,255,0.25);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-        }
-
-        /* ── Grid ─────────────────────────────────────────────── */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-            gap: 24px;
-            margin-bottom: 60px;
-        }
-
-        /* ── Cards ────────────────────────────────────────────── */
-        .card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 28px;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-            opacity: 0;
-            transform: translateY(28px);
-        }
-
-        .card.visible {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s, background 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 28px 56px rgba(0,0,0,0.4);
-            background: var(--surface-h);
-        }
-
-        /* Top accent bar */
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-        }
-
-        .card[data-cat="games"]::before { background: var(--games-g); }
-        .card[data-cat="tools"]::before { background: var(--tools-g); }
-        .card[data-cat="learn"]::before { background: var(--learn-g); }
-        .card[data-cat="shop"]::before  { background: var(--shop-g);  }
-
-        /* Card icon */
-        .card-icon {
-            width: 54px; height: 54px;
-            border-radius: 13px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.6rem;
+        .intro {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 640px;
             margin-bottom: 18px;
         }
 
-        .card[data-cat="games"] .card-icon { background: linear-gradient(135deg, rgba(245,158,11,.2), rgba(239,68,68,.2)); }
-        .card[data-cat="tools"] .card-icon { background: linear-gradient(135deg, rgba(6,182,212,.2), rgba(99,102,241,.2)); }
-        .card[data-cat="learn"] .card-icon { background: linear-gradient(135deg, rgba(16,185,129,.2), rgba(59,130,246,.2)); }
-        .card[data-cat="shop"]  .card-icon { background: linear-gradient(135deg, rgba(249,115,22,.2), rgba(236,72,153,.2)); }
-
-        /* Card text */
-        .card-title-row {
-            display: flex; align-items: center; gap: 10px;
-            margin-bottom: 12px;
+        /* ── Toolbar: search + filters, stays in reach while scrolling ── */
+        .toolbar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            background: var(--bg);
+            border-bottom: 1px solid transparent;
         }
+        .toolbar.stuck { border-bottom-color: var(--border); }
 
-        .card h2 {
-            font-size: 1.25rem;
-            font-weight: 700;
+        .search-wrap { position: relative; flex: 1 1 240px; max-width: 380px; }
+        .search-wrap svg {
+            position: absolute; left: 13px; top: 50%; transform: translateY(-50%);
+            width: 16px; height: 16px;
+            stroke: var(--text-muted); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+            pointer-events: none;
+        }
+        #search {
+            width: 100%;
+            padding: 9px 14px 9px 38px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: var(--surface);
             color: var(--text);
-        }
-
-        .card p {
-            color: var(--text-muted);
+            font: inherit;
             font-size: 0.95rem;
-            margin-bottom: 22px;
-            line-height: 1.65;
         }
+        #search::placeholder { color: var(--text-muted); }
+        #search:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
 
-        /* NEW badge */
-        .badge-new {
-            font-size: 0.65rem;
-            font-weight: 800;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            padding: 2px 8px;
+        .filters { display: flex; flex-wrap: wrap; gap: 6px; }
+        .filter {
+            padding: 7px 14px;
             border-radius: 999px;
-            background: linear-gradient(135deg, #f59e0b, #ef4444);
-            color: #fff;
-            white-space: nowrap;
-            flex-shrink: 0;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text);
+            font: inherit;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
         }
-
-        /* BETA badge */
-        .badge-wip {
-            font-size: 0.65rem;
-            font-weight: 800;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            padding: 2px 8px;
-            border-radius: 999px;
-            background: rgba(250,204,21,0.15);
-            border: 1px solid rgba(250,204,21,0.45);
-            color: #fde68a;
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-        .card p .badge-wip { margin-right: 4px; }
-
-        /* Cards with several links (Heat) */
-        .btn-row { display: flex; flex-wrap: wrap; gap: 8px; }
-        .btn-row .btn { padding: 9px 18px; }
-
-        /* ── Button ───────────────────────────────────────────── */
-        .btn {
-            display: inline-block;
-            padding: 11px 26px;
-            border-radius: 999px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-            letter-spacing: 0.02em;
-        }
-
-        /* Per-category button colors */
-        .card[data-cat="games"] .btn { background: var(--games-g); color: #fff; box-shadow: 0 4px 14px rgba(239,68,68,0.3); }
-        .card[data-cat="tools"] .btn { background: var(--tools-g); color: #fff; box-shadow: 0 4px 14px rgba(99,102,241,0.3); }
-        .card[data-cat="learn"] .btn { background: var(--learn-g); color: #fff; box-shadow: 0 4px 14px rgba(16,185,129,0.3); }
-        .card[data-cat="shop"]  .btn { background: var(--shop-g);  color: #fff; box-shadow: 0 4px 14px rgba(249,115,22,0.3); }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.1);
-        }
-
-        /* ── No Results ───────────────────────────────────────── */
-        #no-results {
-            display: none;
-            text-align: center;
-            color: var(--text-muted);
-            padding: 48px 16px;
-            font-size: 1.1rem;
-            grid-column: 1 / -1;
-        }
+        .filter:hover { background: var(--surface-2); }
+        .filter[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 
         /* ── What's new ───────────────────────────────────────── */
         .whats-new {
-            background: var(--surface);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 6px 20px;
+            margin: 10px 0 4px;
+            padding: 12px 16px;
             border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 24px 28px;
-            margin-bottom: 36px;
-            animation: fadeInUp 0.8s ease-out 0.5s both;
+            border-radius: 12px;
+            background: var(--surface);
+            font-size: 0.9rem;
         }
-        .whats-new h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
-        .whats-new h2 time { color: var(--text-muted); font-weight: 600; font-size: 0.9rem; margin-left: 6px; }
-        .whats-new ul { list-style: none; display: grid; gap: 8px; }
-        .whats-new li { color: var(--text-muted); font-size: 0.95rem; }
-        .whats-new li strong { color: var(--text); }
-        .whats-new a { color: var(--accent); text-decoration: none; }
+        .whats-new h2 { font-size: 0.9rem; font-weight: 700; white-space: nowrap; }
+        .whats-new h2 time { color: var(--text-muted); font-weight: 500; margin-left: 4px; }
+        .whats-new ul { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 20px; }
+        .whats-new li { color: var(--text-muted); }
+        .whats-new a { font-weight: 600; text-decoration: none; }
         .whats-new a:hover { text-decoration: underline; }
 
+        /* ── Sections ─────────────────────────────────────────── */
+        .group { margin-top: 34px; }
+        .group > h2 {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 1.2rem; font-weight: 700; letter-spacing: -0.01em;
+            margin-bottom: 4px;
+        }
+        .group > h2::before { content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--dot); }
+        .group > p { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 14px; }
+        #live  { --dot: var(--dot-live); }
+        #games { --dot: var(--dot-games); }
+        #ai    { --dot: var(--dot-ai); }
+        #more  { --dot: var(--dot-more); }
+
+        .grid {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+            gap: 18px;
+        }
+        .grid.wide { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+
+        /* A featured card (Rizq) takes a 2×2 block on wider screens, its screenshot filling the extra height */
+        @media (min-width: 820px) {
+            .item.feature { grid-column: span 2; grid-row: span 2; }
+            .item.feature .shot { flex: 1; min-height: 0; aspect-ratio: auto; object-position: center; }
+            .item.feature h3 { font-size: 1.2rem; }
+        }
+
+        /* ── Cards: the whole card is one link (the title), with any extra links raised above it ── */
+        .card {
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: box-shadow .2s, transform .2s, border-color .2s;
+        }
+        .card:hover { box-shadow: var(--shadow-h); transform: translateY(-2px); border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
+        .card:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+        .shot {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            object-position: top center;
+            background: var(--surface-2);
+            border-bottom: 1px solid var(--border);
+        }
+        .wide .shot { aspect-ratio: 2 / 1; }
+
+        .card-body { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px 16px; flex: 1; }
+        .item.feature .card-body { flex: 0 0 auto; }
+        .card-title-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
+        .card h3 { font-size: 1.05rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.01em; }
+        .wide .card h3 { font-size: 1.2rem; }
+        .card h3 a { color: inherit; text-decoration: none; }
+        .card h3 a::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+        .card h3 a:focus-visible { outline: none; }
+        .card p { color: var(--text-muted); font-size: 0.92rem; }
+        .card .note { font-size: 0.8rem; }
+
+        .badge {
+            font-size: 0.66rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+        .badge-new     { background: var(--new-bg); color: var(--new-ink); }
+        .badge-updated { background: var(--accent-soft); color: var(--accent); }
+        .badge-beta    { background: var(--beta-bg); color: var(--beta-ink); }
+
+        /* The button is the visual call to action; the title link above covers the card */
+        .actions { margin-top: auto; padding-top: 6px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
+        .btn {
+            display: inline-block;
+            padding: 7px 16px;
+            border-radius: 999px;
+            background: var(--accent);
+            color: var(--accent-ink);
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+        .card:hover .btn { filter: brightness(1.08); }
+
+        .sublinks { position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 0.85rem; }
+        .sublinks a { font-weight: 600; text-decoration: none; }
+        .sublinks a:hover { text-decoration: underline; }
+        .card ul.sublinks { list-style: none; flex-direction: column; gap: 4px; }
+
+        /* ── No results ───────────────────────────────────────── */
+        #no-results { display: none; text-align: center; color: var(--text-muted); padding: 48px 16px; font-size: 1.05rem; }
+
+        [hidden] { display: none !important; }
+
         /* ── About / FAQ ──────────────────────────────────────── */
-        .about { max-width: 820px; margin: 0 auto 56px; color: var(--text-muted); }
-        .about h2 { color: var(--text); font-size: 1.4rem; margin-bottom: 12px; }
-        .about h3 { color: var(--text); font-size: 1.05rem; margin: 20px 0 6px; }
-        .about p  { margin-bottom: 10px; }
-        .about a  { color: var(--accent); text-decoration: none; }
+        .about { max-width: 760px; margin: 64px 0 56px; color: var(--text-muted); }
+        .about h2 { color: var(--text); font-size: 1.3rem; margin-bottom: 10px; }
+        .about h3 { color: var(--text); font-size: 1rem; margin: 20px 0 4px; }
+        .about p  { margin-bottom: 8px; }
+        .about a  { text-decoration: none; font-weight: 600; }
         .about a:hover { text-decoration: underline; }
 
         /* ── Footer ───────────────────────────────────────────── */
         footer {
-            text-align: center;
-            padding: 36px 0 40px;
+            padding: 28px 0 40px;
             border-top: 1px solid var(--border);
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
+            display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between;
         }
-
-        footer a { color: var(--accent); text-decoration: none; }
+        footer a { text-decoration: none; font-weight: 600; }
         footer a:hover { text-decoration: underline; }
 
-        /* ── Animations ───────────────────────────────────────── */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(24px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes floatLogo {
-            0%, 100% { transform: translateY(0); }
-            50%       { transform: translateY(-10px); }
-        }
-
-        /* ── Responsive ───────────────────────────────────────── */
+        /* ── Phones ───────────────────────────────────────────── */
         @media (max-width: 640px) {
-            .grid { grid-template-columns: 1fr; gap: 16px; }
-            .featured { padding: 28px 20px; }
-            header { padding: 40px 16px 36px; }
+            .wrap { padding: 0 16px; }
+            .top { padding-top: 16px; }
+            h1 { font-size: 1.25rem; }
+            .intro { font-size: 0.98rem; }
+            .search-wrap { max-width: none; flex-basis: 100%; }
+            .grid, .grid.wide { grid-template-columns: 1fr; }
+            .whats-new ul { flex-direction: column; }
         }
 
-        @media (min-width: 641px) and (max-width: 1023px) {
-            .grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        /* Hidden card (filtered out) */
-        .card.hidden { display: none; }
-
-        /* ── Reduced motion ───────────────────────────────────── */
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                transition-duration: 0.01ms !important;
-            }
+            .card { transition: none; }
+            .card:hover { transform: none; }
         }
 
-        /* ── Accessibility ────────────────────────────────────── */
         .sr-only {
             position: absolute; width: 1px; height: 1px;
             padding: 0; margin: -1px; overflow: hidden;
             clip: rect(0,0,0,0); white-space: nowrap; border: 0;
         }
     </style>
-    <!-- Without JavaScript the scroll-in animation never runs, so show the cards straight away -->
-    <noscript><style>.card { opacity: 1; transform: none; }</style></noscript>
 </head>
 <body>
-    <div class="container">
+    <div class="wrap">
 
         <!-- ── Header ──────────────────────────────────────────── -->
         <header>
-            <div class="logo" aria-hidden="true">🚀</div>
-            <h1>Sala Company</h1>
-            <p class="subtitle">Free AI tools, live world news, market heatmaps and games — all running right in your browser. No sign-up, no install.</p>
-
-            <!-- Search -->
-            <div class="search-wrap">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                </svg>
-                <input type="search" id="search" placeholder="Search projects…" aria-label="Search projects">
+            <div class="top">
+                <a class="brand" href="/" aria-label="Sala Company home">
+                    <svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="mark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs><rect width="100" height="100" rx="24" fill="url(#mark)"/><path d="M67 27H43a11.5 11.5 0 0 0 0 23h14a11.5 11.5 0 0 1 0 23H33" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <h1>Sala Company</h1>
+                </a>
+                <button class="theme-btn" id="theme-btn" type="button" aria-label="Colour theme: automatic">◐ Auto</button>
             </div>
-
-            <!-- Category tabs -->
-            <nav class="tabs" role="tablist" aria-label="Filter by category">
-                <button class="tab active" data-filter="all"   role="tab" aria-selected="true">All</button>
-                <button class="tab"        data-filter="games" role="tab" aria-selected="false">🎮 Games</button>
-                <button class="tab"        data-filter="tools" role="tab" aria-selected="false">🔧 Tools</button>
-                <button class="tab"        data-filter="learn" role="tab" aria-selected="false">🧠 Learn</button>
-                <button class="tab"        data-filter="shop"  role="tab" aria-selected="false">🛒 Shop</button>
-            </nav>
+            <p class="intro">Free web apps, live data and games that run right in your browser. No sign-up, no install.</p>
         </header>
 
+        <!-- Search + category filters -->
+        <div class="toolbar" id="toolbar">
+            <div class="search-wrap">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="search" id="search" placeholder="Search projects…" aria-label="Search projects">
+            </div>
+            <div class="filters" role="group" aria-label="Show category">
+                <button class="filter" type="button" data-filter="all"   aria-pressed="true">All</button>
+                <button class="filter" type="button" data-filter="live"  aria-pressed="false">Live data</button>
+                <button class="filter" type="button" data-filter="games" aria-pressed="false">Games</button>
+                <button class="filter" type="button" data-filter="ai"    aria-pressed="false">AI</button>
+                <button class="filter" type="button" data-filter="more"  aria-pressed="false">More</button>
+            </div>
+        </div>
+
         <main>
-            <!-- ── Featured: WebAI ─────────────────────────────── -->
-            <section class="featured" aria-label="Featured project">
-                <div class="feat-icon" aria-hidden="true">🤖</div>
-                <h2>WebAI — Private Browser AI Chat</h2>
-                <p>Chat with open AI models — Llama, Phi, Mistral, Qwen, Gemma and TinyLlama — running entirely on your own device through WebGPU. No servers, no API keys, no account: nothing you type ever leaves your browser.</p>
-                <a href="https://webai.sala.company" class="btn" aria-label="Try WebAI private browser AI chat">Try WebAI →</a>
-            </section>
-
-            <!-- ── What's new (update the date and items with each release) ── -->
-            <section class="whats-new" aria-labelledby="whats-new-title">
-                <h2 id="whats-new-title">What's new <time datetime="2026-10">October 2026</time></h2>
+            <!-- ── What's new: keep to the last month or so; mirror it in the README ── -->
+            <section class="whats-new" id="whats-new" aria-labelledby="whats-new-title">
+                <h2 id="whats-new-title">What's new <time datetime="2026-10">Oct 2026</time></h2>
                 <ul>
-                    <li>📰 <strong><a href="https://news.sala.company">Sala News</a> is out of beta</strong> — a new look, about 95 live sources, breaking-news alerts and videos from 29 news channels.</li>
-                    <li>📈 <strong><a href="https://heat.sala.company/rates/">Heat Rates</a></strong> — official government bond yield curves for 14 markets, with real yields, ten years of history and an inverted-curve check.</li>
-                    <li>🐪 <strong><a href="https://rizq.sala.company">Rizq</a></strong> — traders and banking, a pickup truck home for your herd, smarter animals and a daily run.</li>                </ul>
+                    <li><a href="https://news.sala.company">Sala News</a> is out of beta, with breaking-news alerts</li>
+                    <li><a href="https://heat.sala.company/rates/">Heat Rates</a>: bond yield curves for 14 markets</li>
+                    <li><a href="https://rizq.sala.company">Rizq</a>: traders, banking and a daily run</li>
+                </ul>
             </section>
 
-            <!-- ── Card grid ────────────────────────────────────── -->
-            <div class="grid" id="card-grid" role="list">
+            <!-- ── Live data ─────────────────────────────────────── -->
+            <section class="group" id="live" data-cat="live" aria-labelledby="live-title">
+                <h2 id="live-title">Live data</h2>
+                <p>Refreshed every few minutes, all day.</p>
+                <ul class="grid wide">
+                    <li class="item" data-tags="news live world news headlines breaking alerts aggregator osint disaster earthquake video youtube bluesky telegram trending the world now">
+                        <article class="card">
+                            <img class="shot" src="img/news.jpg" width="640" height="400" alt="Sala News: a feed of live world headlines, newest first" fetchpriority="high">
+                            <div class="card-body">
+                                <div class="card-title-row">
+                                    <h3><a href="https://news.sala.company">Sala News — The World Now</a></h3>
+                                    <span class="badge badge-updated">Updated</span>
+                                </div>
+                                <p>Live world headlines from about 95 news, OSINT and disaster sources, newest first and refreshed every few minutes. Stories are flagged <strong>Breaking</strong> when several sources report them at once.</p>
+                                <div class="actions"><span class="btn" aria-hidden="true">Open News →</span></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="item" data-tags="heat crypto heatmap bitcoin coins market prices rsi trend moving average signals scorecard stop loss forex currency currencies exchange rates dollar euro metals precious gold silver platinum palladium energy oil crude wti brent diesel gasoline natural gas rates bonds bond yields yield curve treasury gilts bunds inverted recession interest">
+                        <article class="card">
+                            <img class="shot" src="img/heat.jpg" width="640" height="400" alt="Heat: a crypto heatmap of coin tiles coloured blue for gains and red for losses" fetchpriority="high">
+                            <div class="card-body">
+                                <div class="card-title-row">
+                                    <h3><a href="https://heat.sala.company">Heat — Market Heatmaps</a></h3>
+                                    <span class="badge badge-new">New</span>
+                                    <span class="badge badge-beta">Beta</span>
+                                </div>
+                                <p>Crypto, currencies, metals, oil and gas, and now government bond yield curves, refreshed every 10 minutes. A daily scorecard checks whether the signals on each tile actually worked.</p>
+                                <p class="note">Work in progress. Not financial advice.</p>
+                                <div class="actions">
+                                    <span class="btn" aria-hidden="true">Open Heat →</span>
+                                    <nav class="sublinks" aria-label="Heat markets">
+                                        <a href="https://heat.sala.company/forex/">Forex</a>
+                                        <a href="https://heat.sala.company/metals/">Metals</a>
+                                        <a href="https://heat.sala.company/energy/">Energy</a>
+                                        <a href="https://heat.sala.company/rates/">Rates</a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </section>
 
-                <!-- Breakout — Games -->
-                <article class="card" data-cat="games" data-tags="breakout arcade retro game ai" role="listitem">
-                    <div class="card-icon" aria-hidden="true">🎮</div>
-                    <div class="card-title-row">
-                        <h2>Vibe Coded Breakout</h2>
-                    </div>
-                    <p>The classic Breakout arcade game, vibe coded from the start. See how far vibe coding can take a beloved retro game in a modern browser.</p>
-                    <a href="https://breakout.sala.company" class="btn" aria-label="Play Vibe Coded Breakout">Play Breakout</a>
-                </article>
+            <!-- ── Games ─────────────────────────────────────────── -->
+            <section class="group" id="games" data-cat="games" aria-labelledby="games-title">
+                <h2 id="games-title">Games</h2>
+                <p>Free to play on desktop and phone. Most were vibe coded from the start.</p>
+                <ul class="grid">
+                    <li class="item feature" data-tags="rizq roguelike rogue brogue kuwait dungeon desert camel ascii daily trader diwaniya herd">
+                        <article class="card">
+                            <img class="shot" src="img/rizq.jpg" width="720" height="720" alt="Rizq: the title screen of the Kuwaiti roguelike, with its goals and the New run and Daily run buttons" loading="lazy">
+                            <div class="card-body">
+                                <div class="card-title-row">
+                                    <h3><a href="https://rizq.sala.company">Rizq — A Kuwaiti Roguelike</a></h3>
+                                    <span class="badge badge-new">New</span>
+                                </div>
+                                <p>Build a camel herd with dates, trade at diwaniyas and survive the deep desert. Reach 100,000 KD and make it home, with one life and a daily run on the same map for everyone.</p>
+                                <div class="actions"><span class="btn" aria-hidden="true">Play Rizq →</span></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="item" data-tags="rubik cube 3d puzzle game three.js react">
+                        <article class="card">
+                            <img class="shot" src="img/cube.jpg" width="640" height="400" alt="A 3D Rubik's Cube in the browser" loading="lazy">
+                            <div class="card-body">
+                                <div class="card-title-row"><h3><a href="https://cube.sala.company">3D Rubik's Cube</a></h3></div>
+                                <p>Scramble, turn and solve a 3D Rubik's Cube, with hints when you're stuck. Built with React and Three.js.</p>
+                                <div class="actions"><span class="btn" aria-hidden="true">Play Cube →</span></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="item" data-tags="breakout arcade retro game vibe coded">
+                        <article class="card">
+                            <img class="shot" src="img/breakout.jpg" width="640" height="400" alt="Breakout: rows of coloured bricks above a paddle and ball" loading="lazy">
+                            <div class="card-body">
+                                <div class="card-title-row"><h3><a href="https://breakout.sala.company">Vibe Coded Breakout</a></h3></div>
+                                <p>The arcade classic, vibe coded from the start: clear the wall of bricks with a ball and paddle.</p>
+                                <div class="actions"><span class="btn" aria-hidden="true">Play Breakout →</span></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="item" data-tags="galactic defender space shooter galaga arcade game vibe coded">
+                        <article class="card">
+                            <img class="shot" src="img/galactic.jpg" width="640" height="400" alt="Galactic Defender: the neon start screen of the space shooter" loading="lazy">
+                            <div class="card-body">
+                                <div class="card-title-row"><h3><a href="https://galacticdefender.sala.company">Galactic Defender</a></h3></div>
+                                <p>A vibe coded, Galaga-inspired space shooter. Blast through waves of enemies with keyboard or touch controls.</p>
+                                <div class="actions"><span class="btn" aria-hidden="true">Play Galactic Defender →</span></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="item" data-tags="tetris puzzle blocks game vibe coded">
+                        <article class="card">
+                            <img class="shot" src="img/tetris.jpg" width="640" height="400" alt="Tetris: the playing field with score, level and controls" loading="lazy">
+                            <div class="card-body">
+                                <div class="card-title-row"><h3><a href="https://tetris.sala.company">Vibe Coded Tetris</a></h3></div>
+                                <p>The world's most popular puzzle game, vibe coded from the start. Stack blocks and clear lines.</p>
+                                <div class="actions"><span class="btn" aria-hidden="true">Play Tetris →</span></div>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </section>
 
-                <!-- Galactic Defender — Games -->
-                <article class="card" data-cat="games" data-tags="galactic defender space shooter galaga arcade game ai" role="listitem">
-                    <div class="card-icon" aria-hidden="true">🚀</div>
-                    <div class="card-title-row">
-                        <h2>Galactic Defender</h2>
-                    </div>
-                    <p>Defend the galaxy in this vibe coded, Galaga-inspired space shooter. Blast through waves of enemies in this fast-paced, browser-based classic.</p>
-                    <a href="https://galacticdefender.sala.company" class="btn" aria-label="Play Galactic Defender">Play Galactic Defender</a>
-                </article>
+            <!-- ── AI ────────────────────────────────────────────── -->
+            <section class="group" id="ai" data-cat="ai" aria-labelledby="ai-title">
+                <h2 id="ai-title">AI</h2>
+                <p>Private AI in your browser, and plain-language guides to how it works.</p>
+                <ul class="grid">
+                    <li class="item" data-tags="webai web ai private local chat llm llama phi mistral qwen gemma tinyllama webgpu webllm offline">
+                        <article class="card">
+                            <img class="shot" src="img/webai.jpg" width="640" height="400" alt="WebAI: a chat window with a model picker" loading="lazy">
+                            <div class="card-body">
+                                <div class="card-title-row"><h3><a href="https://webai.sala.company">WebAI — Private Browser AI Chat</a></h3></div>
+                                <p>Chat with open models such as Llama, Phi, Mistral, Qwen and Gemma, running on your own device. Nothing you type leaves your browser.</p>
+                                <p class="note">Needs a browser with WebGPU, such as recent Chrome or Edge.</p>
+                                <div class="actions"><span class="btn" aria-hidden="true">Open WebAI →</span></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="item" data-tags="harmony suno ai music song prompt builder lyrics">
+                        <article class="card">
+                            <img class="shot" src="img/harmony.jpg" width="640" height="400" alt="Harmony: the song idea form and generated prompt output" loading="lazy">
+                            <div class="card-body">
+                                <div class="card-title-row"><h3><a href="https://harmony.sala.company">Harmony</a></h3></div>
+                                <p>A local AI co-producer for Suno: turn a rough song idea into titles, genre tags, lyric skeletons and exclude lists for Custom Mode.</p>
+                                <div class="actions"><span class="btn" aria-hidden="true">Open Harmony →</span></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="item" data-tags="learn ai how artificial intelligence neural networks language models explainer education">
+                        <article class="card">
+                            <img class="shot" src="img/understand.jpg" width="640" height="400" alt="How AI Works: the opening page, AI Explained" loading="lazy">
+                            <div class="card-body">
+                                <div class="card-title-row"><h3><a href="https://understand.sala.company">How AI Works</a></h3></div>
+                                <p>Plain-language explanations and illustrations of AI, from rule-based systems to neural networks and large language models.</p>
+                                <div class="actions"><span class="btn" aria-hidden="true">Open How AI Works →</span></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="item" data-tags="ai tools collection directory resources websites experiments free">
+                        <article class="card">
+                            <img class="shot" src="img/ai.jpg" width="640" height="400" alt="AI Tools Collection: a table of AI websites and what they're best for" loading="lazy">
+                            <div class="card-body">
+                                <div class="card-title-row"><h3><a href="https://ai.sala.company">AI Tools Collection</a></h3></div>
+                                <p>A curated directory of AI websites and tools, grouped by what they do and whether you can use them free.</p>
+                                <div class="actions"><span class="btn" aria-hidden="true">Open AI Tools →</span></div>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </section>
 
-                <!-- Tetris — Games -->
-                <article class="card" data-cat="games" data-tags="tetris puzzle blocks game ai" role="listitem">
-                    <div class="card-icon" aria-hidden="true">🧩</div>
-                    <div class="card-title-row">
-                        <h2>Vibe Coded Tetris</h2>
-                    </div>
-                    <p>The world's most popular puzzle game, vibe coded from the start. Stack blocks and clear lines in this browser-based classic.</p>
-                    <a href="https://tetris.sala.company" class="btn" aria-label="Play Vibe Coded Tetris">Play Tetris</a>
-                </article>
+            <!-- ── More ──────────────────────────────────────────── -->
+            <section class="group" id="more" data-cat="more" aria-labelledby="more-title">
+                <h2 id="more-title">More</h2>
+                <p>Small tools, writing and the store.</p>
+                <ul class="grid">
+                    <li class="item" data-tags="secret emoji hidden message steganography unicode encode">
+                        <article class="card">
+                            <img class="shot" src="img/secret.jpg" width="640" height="400" alt="Secret Emoji Messenger: encode and decode panels with an emoji picker" loading="lazy">
+                            <div class="card-body">
+                                <div class="card-title-row"><h3><a href="https://secret.sala.company">Secret Emoji Messenger</a></h3></div>
+                                <p>Hide a secret message inside an emoji with invisible Unicode characters, then paste it anywhere.</p>
+                                <div class="actions"><span class="btn" aria-hidden="true">Open Secret Emoji →</span></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="item" data-tags="ipod music player classic mp3 audio browser">
+                        <article class="card">
+                            <img class="shot" src="img/music.jpg" width="640" height="400" alt="iPod Classic Player: a white iPod with a click wheel" loading="lazy">
+                            <div class="card-body">
+                                <div class="card-title-row"><h3><a href="https://music.sala.company">iPod Classic Player</a></h3></div>
+                                <p>A faithful iPod Classic in your browser. Load your own MP3s and scroll with the click wheel.</p>
+                                <div class="actions"><span class="btn" aria-hidden="true">Open iPod Player →</span></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="item" data-tags="newsletter blog articles technology business ai crypto substack read writing early wake up club">
+                        <article class="card">
+                            <img class="shot" src="img/substack.jpg" width="640" height="400" alt="Early Wake Up Club newsletter on Substack" loading="lazy">
+                            <div class="card-body">
+                                <div class="card-title-row"><h3><a href="https://mutawa.substack.com">Early Wake Up Club</a></h3></div>
+                                <p>A newsletter on technology, business and AI, from the AI chip race to crypto and big tech.</p>
+                                <ul class="sublinks" aria-label="Recent articles">
+                                    <li><a href="https://mutawa.substack.com/p/the-trillion-dollar-club">The Trillion Dollar Club</a></li>
+                                    <li><a href="https://mutawa.substack.com/p/from-mining-bitcoin-to-powering-chatgpt">From Mining Bitcoin to Powering ChatGPT</a></li>
+                                    <li><a href="https://mutawa.substack.com/p/the-great-ai-chip-war-how-china-and">The Great AI Chip War</a></li>
+                                </ul>
+                                <div class="actions"><span class="btn" aria-hidden="true">Read the newsletter →</span></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="item" data-tags="store shop buy ebooks books sci-fi fiction ai guides business children sala company">
+                        <article class="card">
+                            <img class="shot" src="img/store.jpg" width="640" height="400" alt="The Sala Company store with ebook listings" loading="lazy">
+                            <div class="card-body">
+                                <div class="card-title-row"><h3><a href="https://www.sala.company">Sala Company Store</a></h3></div>
+                                <p>Ebooks from Sala Company: sci-fi thrillers like <em>The Boy Who Defied the Machine</em>, AI guides, business and children's books.</p>
+                                <div class="actions"><span class="btn" aria-hidden="true">Visit the store →</span></div>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </section>
 
-                <!-- Rubik's Cube — Games (NEW) -->
-                <article class="card" data-cat="games" data-tags="rubik cube 3d puzzle game three.js react" role="listitem">
-                    <div class="card-icon" aria-hidden="true">🎲</div>
-                    <div class="card-title-row">
-                        <h2>3D Rubik's Cube</h2>
-                        <span class="badge-new" aria-label="New">NEW</span>
-                    </div>
-                    <p>An interactive 3D Rubik's Cube built with React and Three.js. Scramble, solve, and get hints — all rendered live in your browser with smooth animations.</p>
-                    <a href="https://cube.sala.company" class="btn" aria-label="Play 3D Rubik's Cube">Play Cube</a>
-                </article>
-
-                <!-- Rizq — Games (NEW) -->
-                <article class="card" data-cat="games" data-tags="rizq roguelike rogue brogue kuwait dungeon desert camel ascii daily trader diwaniya herd" role="listitem">
-                    <div class="card-icon" aria-hidden="true">🐪</div>
-                    <div class="card-title-row">
-                        <h2>Rizq — A Kuwaiti Roguelike</h2>
-                        <span class="badge-new" aria-label="New">NEW</span>
-                    </div>
-                    <p>A free Brogue-inspired roguelike set in modern Kuwait, for desktop and phone. Hustle from the Friday market through Shuwaikh's container yards, the Wafra farms and the winter camps into the deep desert. Win over camels with dates, trade and bank at Bu Fahad's diwaniya and six other stops, and dodge charging bull camels, wolf packs, hidden vipers and sandstorms. Reach 100,000 KD, then make it home. One life. <strong>New:</strong> traders and banking, a pickup truck that brings your herd home (if you survive until it arrives), smarter animals, and a daily run where everyone gets the same map.</p>
-                    <a href="https://rizq.sala.company" class="btn" aria-label="Play Rizq, the Kuwaiti roguelike">Play Rizq</a>
-                </article>
-
-                <!-- Harmony – Tools (NEW) -->
-                <article class="card" data-cat="tools" data-tags="harmony suno ai music song prompt builder lyrics" role="listitem">
-                    <div class="card-icon" aria-hidden="true">🎶</div>
-                    <div class="card-title-row">
-                        <h2>Harmony</h2>
-                        <span class="badge-new" aria-label="New">NEW</span>
-                    </div>
-                    <p>Harmony is your local AI co-producer: feed it a rough concept and it runs a rapid draft-then-refine loop—spitting out tuned titles, genre tags, lyric skeletons, and clean exclude lists—so you hit Suno's Custom Mode with production-grade prompts in seconds. Zero accounts, zero cloud, pure creative momentum.</p>
-                    <a href="https://harmony.sala.company" class="btn" aria-label="Try Harmony">Try Harmony →</a>
-                </article>
-
-                <!-- Heat – Tools (NEW, Beta) -->
-                <article class="card" data-cat="tools" data-tags="heat crypto heatmap bitcoin coins market prices rsi trend moving average bollinger signals rocket scorecard forex currency currencies exchange rates dollar euro metals precious gold silver platinum palladium paxg xaut store of value energy oil crude wti brent diesel gasoline natural gas lng ttf henry hub rates bonds bond yields yield curve treasury gilts bunds inverted recession interest" role="listitem">
-                    <div class="card-icon" aria-hidden="true">🔥</div>
-                    <div class="card-title-row">
-                        <h2>Heat — Crypto, Forex, Metals, Energy &amp; Bond Yield Heatmaps</h2>
-                        <span class="badge-new" aria-label="New">NEW</span> <span class="badge-wip" aria-label="Beta - Work in Progress">BETA</span>
-                    </div>
-                    <p><strong>Work in progress. Not financial advice.</strong> Free market heatmaps that refresh every 10 minutes. <strong>Crypto:</strong> the top 100 coins with RSI, the 50/200-day trend, point &amp; figure, momentum and suggested stop-losses on every tile, plus a daily scorecard that checks the signals against what happened next. <strong>Forex:</strong> 48 currencies against the US dollar from official ECB rates. <strong>Metals:</strong> gold, silver, platinum and palladium. <strong>Energy:</strong> WTI and Brent crude, diesel, gasoline and natural gas. <strong>New — Rates:</strong> official government bond yield curves for the US, euro area, UK, Japan, China, India and 8 more, with real yields, ten years of history and whether each curve is normal, flat or inverted.</p>
-                    <div class="btn-row">
-                        <a href="https://heat.sala.company" class="btn" aria-label="Open the Heat crypto heatmap">Crypto →</a>
-                        <a href="https://heat.sala.company/forex/" class="btn" aria-label="Open the Heat forex heatmap">Forex →</a>
-                        <a href="https://heat.sala.company/metals/" class="btn" aria-label="Open the Heat precious metals heatmap">Metals →</a>
-                        <a href="https://heat.sala.company/energy/" class="btn" aria-label="Open the Heat oil and gas energy heatmap">Energy →</a>
-                        <a href="https://heat.sala.company/rates/" class="btn" aria-label="Open the Heat government bond yield curves">Rates →</a>
-                    </div>
-                </article>
-
-                <!-- AI Tools Collection — Tools -->
-                <article class="card" data-cat="tools" data-tags="ai tools collection resources websites experiments" role="listitem">
-                    <div class="card-icon" aria-hidden="true">🔬</div>
-                    <div class="card-title-row">
-                        <h2>AI Tools Collection</h2>
-                    </div>
-                    <p>A curated collection of AI websites, tools, and experiments to help you explore and experience artificial intelligence applications in the real world.</p>
-                    <a href="https://ai.sala.company" class="btn" aria-label="Explore AI Tools Collection">Explore Tools</a>
-                </article>
-
-                <!-- Sala News – Tools (NEW) -->
-                <article class="card" data-cat="tools" data-tags="news live world news headlines breaking alerts aggregator osint disaster earthquake video youtube bluesky telegram trending the world now" role="listitem">
-                    <div class="card-icon" aria-hidden="true">📰</div>
-                    <div class="card-title-row">
-                        <h2>Sala News — The World Now</h2>
-                        <span class="badge-new" aria-label="New">NEW</span>
-                    </div>
-                    <p>Live world headlines from about 95 public news, OSINT and disaster sources, refreshed every few minutes and always newest first. A story is flagged <strong>Breaking</strong> when three or more sources report it at once, with optional browser alerts. Videos from 29 news channels, quick search links for X, YouTube and Google News under every headline, and a light or dark theme. No sign-up.</p>
-                    <a href="https://news.sala.company" class="btn" aria-label="Open Sala News, live world headlines">Open News →</a>
-                </article>
-
-                <!-- Secret Emoji — Tools -->
-                <article class="card" data-cat="tools" data-tags="secret emoji hidden message steganography unicode encode" role="listitem">
-                    <div class="card-icon" aria-hidden="true">🤫</div>
-                    <div class="card-title-row">
-                        <h2>Secret Emoji Messenger</h2>
-                    </div>
-                    <p>Hide secret messages inside emojis using Unicode tricks. Your text is invisibly encoded in an emoji so you can send hidden messages anywhere you can paste.</p>
-                    <a href="https://secret.sala.company" class="btn" aria-label="Try Secret Emoji Messenger">Hide Message</a>
-                </article>
-
-                <!-- iPod Classic Player — Tools (NEW) -->
-                <article class="card" data-cat="tools" data-tags="ipod music player classic mp3 audio browser" role="listitem">
-                    <div class="card-icon" aria-hidden="true">🎵</div>
-                    <div class="card-title-row">
-                        <h2>iPod Classic Player</h2>
-                        <span class="badge-new" aria-label="New">NEW</span>
-                    </div>
-                    <p>A faithful browser-based iPod Classic MP3 player. Load your own music files and enjoy that iconic retro interface — no install, no account, no limits.</p>
-                    <a href="https://music.sala.company" class="btn" aria-label="Open iPod Classic Player">Open Player</a>
-                </article>
-
-                <!-- Explaining AI — Learn -->
-                <article class="card" data-cat="learn" data-tags="learn ai how artificial intelligence neural networks language models explainer education" role="listitem">
-                    <div class="card-icon" aria-hidden="true">🧠</div>
-                    <div class="card-title-row">
-                        <h2>How AI Works</h2>
-                    </div>
-                    <p>Simple explanations and interactive illustrations of AI — from rule-based systems to neural networks and large language models. Learn without the jargon.</p>
-                    <a href="https://understand.sala.company" class="btn" aria-label="Learn How AI Works">Learn AI</a>
-                </article>
-
-                <!-- Early Wake Up Club — Learn -->
-                <article class="card" data-cat="learn" data-tags="newsletter blog articles technology business ai crypto substack read writing" role="listitem">
-                    <div class="card-icon" aria-hidden="true">✍️</div>
-                    <div class="card-title-row">
-                        <h2>Early Wake Up Club</h2>
-                    </div>
-                    <p>A newsletter covering technology, business, and AI — from the AI chip race to crypto trends and big tech moves. Published on Substack.</p>
-                    <ul style="list-style:none;margin-bottom:22px;display:flex;flex-direction:column;gap:6px;">
-                        <li><a href="https://mutawa.substack.com/p/the-trillion-dollar-club" style="color:var(--accent);font-size:0.875rem;text-decoration:none;" target="_blank" rel="noopener">→ The Trillion Dollar Club</a></li>
-                        <li><a href="https://mutawa.substack.com/p/from-mining-bitcoin-to-powering-chatgpt" style="color:var(--accent);font-size:0.875rem;text-decoration:none;" target="_blank" rel="noopener">→ From Mining Bitcoin to Powering ChatGPT</a></li>
-                        <li><a href="https://mutawa.substack.com/p/the-great-ai-chip-war-how-china-and" style="color:var(--accent);font-size:0.875rem;text-decoration:none;" target="_blank" rel="noopener">→ The Great AI Chip War</a></li>
-                    </ul>
-                    <a href="https://mutawa.substack.com" class="btn" aria-label="Read Early Wake Up Club newsletter">Read Newsletter</a>
-                </article>
-
-                <!-- Online Store — Shop -->
-                <article class="card" data-cat="shop" data-tags="store shop buy products sala company" role="listitem">
-                    <div class="card-icon" aria-hidden="true">🛒</div>
-                    <div class="card-title-row">
-                        <h2>Online Store</h2>
-                    </div>
-                    <p>Visit the official Sala Company store at www.sala.company. Browse and purchase products directly from us.</p>
-                    <a href="https://www.sala.company" class="btn" aria-label="Visit Sala Company Online Store">Visit Store</a>
-                </article>
-
-            </div><!-- /.grid -->
-
-            <p id="no-results" aria-live="polite">No projects match your search. Try a different keyword or clear the filter.</p>
+            <p id="no-results" aria-live="polite">No projects match your search. Try a different keyword or show all categories.</p>
 
             <!-- ── About / FAQ: plain text for readers and search engines ── -->
             <section class="about" aria-labelledby="about-title">
                 <h2 id="about-title">About Sala Company</h2>
-                <p>Sala Company makes free web apps that run right in your browser: a private AI chat that runs on your own device, a live world news feed, market heatmaps for crypto, currencies, metals, energy and government bonds, and browser games — from vibe coded arcade classics to Rizq, a roguelike set in Kuwait. Nothing to install and no account to create. Almost everything here was vibe coded from the start: built by describing it to an AI and refining it together, rather than written line by line.</p>
+                <p>Sala Company makes free web apps that run right in your browser: a live world news feed, market heatmaps for crypto, currencies, metals, energy and government bonds, browser games from vibe coded arcade classics to Rizq, a roguelike set in Kuwait, and a private AI chat that runs on your own device. Nothing to install and no account to create. Almost everything here was vibe coded from the start: built by describing it to an AI and refining it together, rather than written line by line.</p>
 
                 <h3>Is everything free?</h3>
-                <p>Yes. Every game and tool here is free to use in any modern browser, on desktop or phone. Only the <a href="https://www.sala.company">online store</a> sells anything.</p>
-
-                <h3>How can an AI chat run privately in the browser?</h3>
-                <p><a href="https://webai.sala.company">WebAI</a> downloads an open model such as Llama, Qwen or Gemma once and runs it on your own graphics chip through WebGPU. Your messages are processed on your device and never sent to a server.</p>
+                <p>Yes. Every game and tool here is free to use in any modern browser, on desktop or phone. Only the <a href="https://www.sala.company">store</a> sells anything.</p>
 
                 <h3>Where does Sala News get its headlines?</h3>
                 <p><a href="https://news.sala.company">Sala News</a> reads about 95 public news, government, OSINT and disaster feeds, plus public Bluesky and Telegram channels and 29 news channels on YouTube, and rebuilds the feed every few minutes.</p>
 
                 <h3>Where does the market data in Heat come from?</h3>
                 <p><a href="https://heat.sala.company">Heat</a> uses CoinGecko and exchange candles for crypto, official ECB rates for currencies, Swissquote for precious metals, futures markets for oil and gas, and the official publications of central banks and treasuries for <a href="https://heat.sala.company/rates/">bond yield curves</a>. It is a work in progress and not financial advice.</p>
-            </section>
 
+                <h3>How can an AI chat run privately in the browser?</h3>
+                <p><a href="https://webai.sala.company">WebAI</a> downloads an open model such as Llama, Qwen or Gemma once and runs it on your own graphics chip through WebGPU. Your messages are processed on your device and never sent to a server.</p>
+            </section>
         </main>
 
         <footer>
-            <p>&copy; 2026 <a href="https://www.sala.company">Sala Company</a>. Pioneering the future of browser-based AI.</p>
+            <p>&copy; 2026 <a href="https://www.sala.company">Sala Company</a>. Free web apps, live data and games, vibe coded and running in your browser.</p>
             <p><a href="https://github.com/jamalxcode">GitHub</a> · <a href="https://mutawa.substack.com">Newsletter</a> · <a href="https://www.sala.company">Store</a></p>
         </footer>
 
-    </div><!-- /.container -->
+    </div><!-- /.wrap -->
 
     <script>
-        // ── Scroll-in animation via IntersectionObserver ──────────
-        const cards = document.querySelectorAll('.card');
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach((entry, i) => {
-                if (entry.isIntersecting) {
-                    // Stagger each visible card slightly
-                    setTimeout(() => entry.target.classList.add('visible'), i * 60);
-                    io.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.08 });
+        // ── Theme: Auto (system) → Light → Dark, remembered per browser ──
+        const themeBtn = document.getElementById('theme-btn');
+        const themeLabels = { auto: '◐ Auto', light: '☀ Light', dark: '☾ Dark' };
+        function showTheme(t) {
+            themeBtn.textContent = themeLabels[t];
+            themeBtn.setAttribute('aria-label', 'Colour theme: ' + (t === 'auto' ? 'automatic' : t));
+        }
+        showTheme(document.documentElement.dataset.theme || 'auto');
+        themeBtn.addEventListener('click', () => {
+            const order = ['auto', 'light', 'dark'];
+            const next = order[(order.indexOf(document.documentElement.dataset.theme || 'auto') + 1) % 3];
+            if (next === 'auto') delete document.documentElement.dataset.theme;
+            else document.documentElement.dataset.theme = next;
+            try { next === 'auto' ? localStorage.removeItem('theme') : localStorage.setItem('theme', next); } catch (e) {}
+            showTheme(next);
+        });
 
-        cards.forEach(card => io.observe(card));
+        // ── Toolbar gets a bottom border once it sticks ──
+        const toolbar = document.getElementById('toolbar');
+        const sentinel = document.createElement('div');
+        toolbar.before(sentinel);
+        new IntersectionObserver(([e]) => toolbar.classList.toggle('stuck', !e.isIntersecting)).observe(sentinel);
 
-        // ── Filter logic ──────────────────────────────────────────
+        // ── Filters and search ──
+        const groups  = [...document.querySelectorAll('.group')];
+        const filters = [...document.querySelectorAll('.filter')];
+        const whatsNew = document.getElementById('whats-new');
         let activeCategory = 'all';
         let searchQuery    = '';
 
         function applyFilters() {
-            let visibleCount = 0;
-
-            cards.forEach(card => {
-                const cat  = card.dataset.cat || '';
-                const tags = (card.dataset.tags || '') + ' ' + (card.querySelector('h2')?.textContent || '') + ' ' + (card.querySelector('p')?.textContent || '');
-                const catMatch    = activeCategory === 'all' || cat === activeCategory;
-                const searchMatch = !searchQuery   || tags.toLowerCase().includes(searchQuery);
-
-                if (catMatch && searchMatch) {
-                    card.classList.remove('hidden');
-                    // Re-trigger scroll animation if card became visible again
-                    if (!card.classList.contains('visible')) {
-                        setTimeout(() => card.classList.add('visible'), visibleCount * 60);
-                    }
-                    visibleCount++;
-                } else {
-                    card.classList.add('hidden');
-                }
+            let total = 0;
+            groups.forEach(group => {
+                let shown = 0;
+                const catMatch = activeCategory === 'all' || group.dataset.cat === activeCategory;
+                group.querySelectorAll('.item').forEach(item => {
+                    const text = (item.dataset.tags + ' ' + item.querySelector('.card-body').textContent).toLowerCase();
+                    const show = catMatch && (!searchQuery || text.includes(searchQuery));
+                    item.hidden = !show;
+                    if (show) shown++;
+                });
+                group.hidden = shown === 0;
+                total += shown;
             });
-
-            document.getElementById('no-results').style.display = visibleCount === 0 ? 'block' : 'none';
+            whatsNew.hidden = activeCategory !== 'all' || !!searchQuery;
+            document.getElementById('no-results').style.display = total === 0 ? 'block' : 'none';
         }
 
-        // Category tabs
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.tab').forEach(t => {
-                    t.classList.remove('active');
-                    t.setAttribute('aria-selected', 'false');
-                });
-                tab.classList.add('active');
-                tab.setAttribute('aria-selected', 'true');
-                activeCategory = tab.dataset.filter;
+        filters.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filters.forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+                activeCategory = btn.dataset.filter;
                 applyFilters();
             });
         });
 
-        // Search
         document.getElementById('search').addEventListener('input', (e) => {
             searchQuery = e.target.value.trim().toLowerCase();
             applyFilters();
@@ -797,8 +788,7 @@
         // ?q=… in the address (e.g. go.sala.company/?q=heat) starts with that search, as the site's structured data promises
         const q = new URLSearchParams(location.search).get('q');
         if (q) {
-            const box = document.getElementById('search');
-            box.value = q;
+            document.getElementById('search').value = q;
             searchQuery = q.trim().toLowerCase();
             applyFilters();
         }
