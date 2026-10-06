@@ -4,7 +4,7 @@ The Sala Company start page lives at [https://go.sala.company](https://go.sala.c
 
 ## What's New
 
-- **Rizq** — A Brogue-inspired roguelike set in modern Kuwait (new game)
+- **Rizq** — A Brogue-inspired roguelike set in modern Kuwait (new game). Now with traders and banking, a ride home for your herd, smarter animals and a daily run
 - **Heat** — Crypto heatmap with self-checking 🚀/😢 signals (new tool, beta)
 - **Harmony** — AI-powered Suno prompt builder (new tool)
 - **WebAI** — Private, in-browser AI (featured project)
@@ -26,7 +26,7 @@ The Sala Company start page lives at [https://go.sala.company](https://go.sala.c
 - **Galactic Defender** ([galacticdefender.sala.company](https://galacticdefender.sala.company)) — [[repo]](https://github.com/jamalxcode/galactic_defender): Galaga-inspired space shooter.
 - **AI Coded Tetris** ([tetris.sala.company](https://tetris.sala.company)) — [[repo]](https://github.com/jamalxcode/tetris3): The classic puzzle game, reprogrammed using AI.
 - **3D Rubik's Cube** ([cube.sala.company](https://cube.sala.company)) — [[repo]](https://github.com/jamalxcode/cube): Interactive 3D puzzle built with React and Three.js.
-- **Rizq — A Kuwaiti Roguelike** ([rizq.sala.company](https://rizq.sala.company)) — [[repo]](https://github.com/jamalxcode/rizq): A Brogue-inspired roguelike set in modern Kuwait. Hustle from the Friday market to the deep desert, reach 100,000 KD net worth, then make it home.
+- **Rizq — A Kuwaiti Roguelike** ([rizq.sala.company](https://rizq.sala.company)) — [[repo]](https://github.com/jamalxcode/rizq): A Brogue-inspired roguelike set in modern Kuwait. Hustle from the Friday market to the deep desert, win over camels with dates, trade and bank at diwaniyas and camps, and dodge charging bull camels and howling wolf packs. Reach 100,000 KD net worth, then make it home. Includes a daily run where everyone gets the same map.
 
 ### Tools
 
