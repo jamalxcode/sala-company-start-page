@@ -32,7 +32,7 @@ In the order the page shows them, most active first.
 |---|---|---|---|
 | <img src="img/rizq.jpg" width="160" alt=""> | **[Rizq — A Kuwaiti Roguelike](https://rizq.sala.company)** | A Brogue-inspired roguelike set in modern Kuwait. Build a camel herd with dates, trade and bank at diwaniyas, survive the deep desert, reach 100,000 KD and make it home. One life, plus a daily run on the same map for everyone. The featured card. | [rizq](https://github.com/jamalxcode/rizq) |
 | <img src="img/cube.jpg" width="160" alt=""> | **[3D Rubik's Cube](https://cube.sala.company)** | Scramble, turn and solve a 3D cube, with hints. React and Three.js. | [cube](https://github.com/jamalxcode/cube) |
-| <img src="img/breakout.jpg" width="160" alt=""> | **[Vibe Coded Breakout](https://breakout.sala.company)** | The arcade classic, vibe coded from the start. | [breakout-game-html](https://github.com/jamalxcode/breakout-game-html) |
+| <img src="img/breakout.jpg" width="160" alt=""> | **[Vibe Coded Breakout](https://breakout.sala.company)** | Version 2.0: 76 levels across 4 worlds, boss fights, and power-ups like Multi-Ball, rockets, lasers and super bombs. The original 2025 version is still playable side by side. | [breakout-game-html](https://github.com/jamalxcode/breakout-game-html) |
 | <img src="img/galactic.jpg" width="160" alt=""> | **[Galactic Defender](https://galacticdefender.sala.company)** | A Galaga-inspired space shooter with keyboard and touch controls. | [galactic_defender](https://github.com/jamalxcode/galactic_defender) |
 | <img src="img/tetris.jpg" width="160" alt=""> | **[Vibe Coded Tetris](https://tetris.sala.company)** | The classic puzzle game, vibe coded from the start. | [tetris3](https://github.com/jamalxcode/tetris3) |
 
