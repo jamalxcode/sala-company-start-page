@@ -10,6 +10,7 @@ The start page for all of Sala Company's browser projects: live world news, mark
 
 The page has a matching **What's new** strip under the search bar. Update both together, and keep it to the last month or so.
 
+- **Heat ETFs:** 112 of the most traded US stock ETFs, grouped into the US market, the 11 sectors, industries and themes, and countries.
 - **Sala News** is out of beta: a new look, about 95 live sources, breaking-news alerts and videos from 29 news channels.
 - **Heat Rates:** official government bond yield curves for 14 markets, with real yields and ten years of history.
 - **Rizq:** traders and banking, a pickup truck home for your herd, smarter animals and a daily run.
@@ -24,7 +25,7 @@ In the order the page shows them, most active first.
 | | Project | What it is | Code |
 |---|---|---|---|
 | <img src="img/news.jpg" width="160" alt=""> | **[Sala News — The World Now](https://news.sala.company)** | Live world headlines from about 95 news, OSINT and disaster sources, refreshed every few minutes, with breaking-news alerts, videos from 29 news channels and search links under every headline. | [the-world-now](https://github.com/jamalxcode/the-world-now) |
-| <img src="img/heat.jpg" width="160" alt=""> | **[Heat — Market Heatmaps](https://heat.sala.company)** <br>[Forex](https://heat.sala.company/forex/) · [Metals](https://heat.sala.company/metals/) · [Energy](https://heat.sala.company/energy/) · [Rates](https://heat.sala.company/rates/) | The top 100 coins with RSI, trend, point & figure, momentum and suggested stop-losses on every tile, and a daily scorecard that checks the signals against what happened next. Also 48 currencies (ECB rates), precious metals, oil and gas, and official bond yield curves for 14 markets. Refreshes every 10 minutes. *Beta, not financial advice.* | [heat](https://github.com/jamalxcode/heat) |
+| <img src="img/heat.jpg" width="160" alt=""> | **[Heat — Market Heatmaps](https://heat.sala.company)** <br>[Forex](https://heat.sala.company/forex/) · [Metals](https://heat.sala.company/metals/) · [Energy](https://heat.sala.company/energy/) · [ETFs](https://heat.sala.company/etfs/) · [Rates](https://heat.sala.company/rates/) | The top 100 coins with RSI, trend, point & figure, momentum and suggested stop-losses on every tile, and a daily scorecard that checks the signals against what happened next. Also 48 currencies (ECB rates), precious metals, oil and gas, 112 US stock ETFs by sector, theme and country, and official bond yield curves for 14 markets. Refreshes every 10 minutes. *Beta, not financial advice.* | [heat](https://github.com/jamalxcode/heat) |
 
 ### 🟠 Games
 
