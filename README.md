@@ -2,7 +2,7 @@
 
 **Live: [go.sala.company](https://go.sala.company)**
 
-The start page for all of Sala Company's browser projects: live world news, market heatmaps, games and AI tools. Everything is free and runs in the browser, with no sign-up and no install. Almost all of it was vibe coded from the start: built by describing it to an AI and refining it together, rather than written line by line.
+The start page for all of Sala Company's browser projects: live world news, market heatmaps, games and AI tools. Everything is free and runs in the browser, with no install and, except for Scene to Story's AI, no sign-up. Almost all of it was vibe coded from the start: built by describing it to an AI and refining it together, rather than written line by line.
 
 [![The go.sala.company start page](og-image.png)](https://go.sala.company)
 
@@ -10,6 +10,7 @@ The start page for all of Sala Company's browser projects: live world news, mark
 
 The page has a matching **What's new** strip under the search bar. Update both together, and keep it to the last month or so.
 
+- **Scene to Story:** record, upload or pick a YouTube clip up to a minute long, and the AI (Claude) writes the moment as prose, a poem or a screenplay. The video stays on your device, and the AI is paid for through your own OpenRouter account.
 - **Heat ETFs:** 112 of the most traded US stock ETFs, grouped into the US market, the 11 sectors, industries and themes, and countries.
 - **Sala News** is out of beta: a new look, about 95 live sources, breaking-news alerts and videos from 29 news channels.
 - **Heat Rates:** official government bond yield curves for 14 markets, with real yields and ten years of history.
@@ -41,6 +42,7 @@ In the order the page shows them, most active first.
 
 | | Project | What it is | Code |
 |---|---|---|---|
+| <img src="img/story.jpg" width="160" alt=""> | **[Scene to Story](https://story.sala.company)** | Record, upload or pick a YouTube clip up to a minute long. The AI (Claude) reads the text on screen, listens to what people say and writes the moment as prose, a poem, a screenplay, noir, haiku or a fairy tale. The video stays on your device; visitors sign in with their own OpenRouter account to pay for the AI (about $0.17 a story). | [storywriter](https://github.com/jamalxcode/storywriter) |
 | <img src="img/webai.jpg" width="160" alt=""> | **[WebAI — Private Browser AI Chat](https://webai.sala.company)** | Chat with open models (Llama, Phi, Mistral, Qwen, Gemma, TinyLlama) running on your own device through WebGPU. Nothing leaves the browser. Needs a WebGPU browser such as recent Chrome or Edge. | [webllm-onefile](https://github.com/jamalxcode/webllm-onefile) |
 | <img src="img/harmony.jpg" width="160" alt=""> | **[Harmony](https://harmony.sala.company)** | A local AI co-producer for Suno: turns a rough song idea into titles, genre tags, lyric skeletons and exclude lists for Custom Mode. | — |
 | <img src="img/understand.jpg" width="160" alt=""> | **[How AI Works](https://understand.sala.company)** | Plain-language explanations of AI, from rule-based systems to neural networks and large language models. Made in [Gamma](https://gamma.app/). | — |
