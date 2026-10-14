@@ -10,6 +10,7 @@ The start page for all of Sala Company's browser projects: live world news, mark
 
 The page has a matching **What's new** strip under the search bar. Update both together, and keep it to the last month or so.
 
+- **Artograph:** a Spirograph in the browser. Rings and wheels with real tooth counts, a pattern preview on every wheel, gel-pen colors, drag-to-crank drawing, rosettes, PNG and SVG export and share links.
 - **Scene to Story:** record, upload or pick a YouTube clip up to a minute long, and the AI (Claude) writes the moment as prose, a poem or a screenplay. The video stays on your device, and the AI is paid for through your own OpenRouter account.
 - **Heat ETFs:** 112 of the most traded US stock ETFs, grouped into the US market, the 11 sectors, industries and themes, and countries.
 - **Sala News** is out of beta: a new look, about 95 live sources, breaking-news alerts and videos from 29 news channels.
@@ -52,6 +53,7 @@ In the order the page shows them, most active first.
 
 | | Project | What it is | Code |
 |---|---|---|---|
+| <img src="img/artograph.jpg" width="160" alt=""> | **[Artograph](https://art.sala.company)** | A Spirograph in the browser. Pick a ring and a wheel (real tooth counts, each wheel previewing its pattern), put the pen in a hole and let it roll, or drag around the paper to crank it by hand. Gel-pen colors, white or black paper, rosettes, PNG and SVG export, and share links that carry the whole drawing. | [art](https://github.com/jamalxcode/art) |
 | <img src="img/secret.jpg" width="160" alt=""> | **[Secret Emoji Messenger](https://secret.sala.company)** | Hide a secret message inside an emoji with invisible Unicode characters. | [hidetext](https://github.com/jamalxcode/hidetext) |
 | <img src="img/music.jpg" width="160" alt=""> | **[iPod Classic Player](https://music.sala.company)** | A faithful iPod Classic in the browser for your own MP3s. | [retro-tunes-player](https://github.com/jamalxcode/retro-tunes-player) |
 | <img src="img/substack.jpg" width="160" alt=""> | **[Early Wake Up Club](https://mutawa.substack.com)** | A newsletter on technology, business and AI. Recent: [The Trillion Dollar Club](https://mutawa.substack.com/p/the-trillion-dollar-club) (Jan 2026), [From Mining Bitcoin to Powering ChatGPT](https://mutawa.substack.com/p/from-mining-bitcoin-to-powering-chatgpt) (Dec 2025), [The Great AI Chip War](https://mutawa.substack.com/p/the-great-ai-chip-war-how-china-and) (Nov 2025). | — |
