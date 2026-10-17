@@ -334,7 +334,7 @@
         }
         .grid.wide { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
 
-        /* A featured card (Rizq) takes a 2×2 block on wider screens, its screenshot filling the extra height */
+        /* A featured card (Last Marine Standing) takes a 2×2 block on wider screens, its screenshot filling the extra height */
         @media (min-width: 820px) {
             .item.feature { grid-column: span 2; grid-row: span 2; }
             .item.feature .shot { flex: 1; min-height: 0; aspect-ratio: auto; object-position: center; }
@@ -556,7 +556,20 @@
                 <h2 id="games-title">Games</h2>
                 <p>Free to play on desktop and phone. Most were vibe coded from the start.</p>
                 <ul class="grid">
-                    <li class="item feature" data-tags="rizq roguelike rogue brogue kuwait dungeon desert camel ascii daily trader diwaniya herd">
+                    <li class="item feature" data-tags="last marine standing fps first person shooter doom freedoom chocolate doom retro 90s classic demons marine guns levels episodes webassembly">
+                        <article class="card">
+                            <img class="shot" src="img/last-feature.jpg" width="960" height="720" alt="Last Marine Standing: a pistol aimed down a stone corridor above the classic health, ammo and armor status bar" loading="lazy">
+                            <div class="card-body">
+                                <div class="card-title-row">
+                                    <h3><a href="https://last.sala.company">Last Marine Standing</a></h3>
+                                    <span class="badge badge-new">New</span>
+                                </div>
+                                <p>A classic 90s first-person shooter. One marine, one base, no backup: 4 episodes and 36 levels with full sound and music, and your saved games stay in your browser.</p>
+                                <div class="actions"><span class="btn" aria-hidden="true">Play Last Marine Standing →</span></div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="item" data-tags="rizq roguelike rogue brogue kuwait dungeon desert camel ascii daily trader diwaniya herd">
                         <article class="card">
                             <img class="shot" src="img/rizq.jpg" width="720" height="720" alt="Rizq: the title screen of the Kuwaiti roguelike, with its goals and the New run and Daily run buttons" loading="lazy">
                             <div class="card-body">
@@ -566,19 +579,6 @@
                                 </div>
                                 <p>Build a camel herd with dates, trade at diwaniyas and survive the deep desert. Reach 100,000 KD and make it home, with one life and a daily run on the same map for everyone.</p>
                                 <div class="actions"><span class="btn" aria-hidden="true">Play Rizq →</span></div>
-                            </div>
-                        </article>
-                    </li>
-                    <li class="item" data-tags="last marine standing fps first person shooter doom freedoom chocolate doom retro 90s classic demons marine guns levels episodes webassembly">
-                        <article class="card">
-                            <img class="shot" src="img/last.jpg" width="640" height="400" alt="Last Marine Standing: a pistol aimed down a stone corridor above the classic health, ammo and armor status bar" loading="lazy">
-                            <div class="card-body">
-                                <div class="card-title-row">
-                                    <h3><a href="https://last.sala.company">Last Marine Standing</a></h3>
-                                    <span class="badge badge-new">New</span>
-                                </div>
-                                <p>A classic 90s first-person shooter. One marine, one base, no backup: 4 episodes and 36 levels with full sound and music, and your saved games stay in your browser.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Play Last Marine Standing →</span></div>
                             </div>
                         </article>
                     </li>

@@ -36,8 +36,8 @@ In the order the page shows them, most active first.
 
 | | Project | What it is | Code |
 |---|---|---|---|
-| <img src="img/rizq.jpg" width="160" alt=""> | **[Rizq — A Kuwaiti Roguelike](https://rizq.sala.company)** | A Brogue-inspired roguelike set in modern Kuwait. Build a camel herd with dates, trade and bank at diwaniyas, survive the deep desert, reach 100,000 KD and make it home. One life, plus a daily run on the same map for everyone. The featured card. | [rizq](https://github.com/jamalxcode/rizq) |
-| <img src="img/last.jpg" width="160" alt=""> | **[Last Marine Standing](https://last.sala.company)** | A classic 90s first-person shooter: the Chocolate Doom engine compiled to WebAssembly, playing Freedoom's 4 episodes and 36 levels with full sound and music. Click to play, Space or Enter in the menus, and saved games stay in your browser. | [last](https://github.com/jamalxcode/last) |
+| <img src="img/last.jpg" width="160" alt=""> | **[Last Marine Standing](https://last.sala.company)** | A classic 90s first-person shooter: the Chocolate Doom engine compiled to WebAssembly, playing Freedoom's 4 episodes and 36 levels with full sound and music. Click to play, Space or Enter in the menus, and saved games stay in your browser. The featured card. | [last](https://github.com/jamalxcode/last) |
+| <img src="img/rizq.jpg" width="160" alt=""> | **[Rizq — A Kuwaiti Roguelike](https://rizq.sala.company)** | A Brogue-inspired roguelike set in modern Kuwait. Build a camel herd with dates, trade and bank at diwaniyas, survive the deep desert, reach 100,000 KD and make it home. One life, plus a daily run on the same map for everyone. | [rizq](https://github.com/jamalxcode/rizq) |
 | <img src="img/cube.jpg" width="160" alt=""> | **[3D Rubik's Cube](https://cube.sala.company)** | Scramble, turn and solve a 3D cube, with hints. React and Three.js. | [cube](https://github.com/jamalxcode/cube) |
 | <img src="img/breakout.jpg" width="160" alt=""> | **[Vibe Coded Breakout](https://breakout.sala.company)** | Version 2.0: 76 levels across 4 worlds, boss fights, and power-ups like Multi-Ball, rockets, lasers and super bombs. The original 2025 version is still playable side by side. | [breakout-game-html](https://github.com/jamalxcode/breakout-game-html) |
 | <img src="img/galactic.jpg" width="160" alt=""> | **[Galactic Defender](https://galacticdefender.sala.company)** | A Galaga-inspired space shooter with keyboard and touch controls. | [galactic_defender](https://github.com/jamalxcode/galactic_defender) |
@@ -72,7 +72,7 @@ In the order the page shows them, most active first.
 - **Search and filters:** the search box matches card titles, text and each item's `data-tags`. The filter buttons (`aria-pressed`) show one section. Empty sections hide, and the What's new strip hides while searching or filtering. A link like [`go.sala.company/?q=heat`](https://go.sala.company/?q=heat) opens with that search applied.
 - **Cards:** the title link covers the whole card, so a click anywhere opens the project. Extra links (Heat's markets, the newsletter articles) sit above it and stay clickable.
 - **Badges:** **New** for about 30 days after a launch, **Updated** for a big recent change, **Beta** while a project is a work in progress. Remove them when they go stale.
-- **Featured card:** adding `feature` to an item's class gives it a 2×2 block on wider screens (Rizq today).
+- **Featured card:** adding `feature` to an item's class gives it a 2×2 block on wider screens (Last Marine Standing today).
 - **Theme:** light and dark follow the system. The ◐ button cycles Auto → Light → Dark and remembers the choice in that browser.
 - **Font:** Inter (`fonts/inter-latin.woff2`), hosted here so the page makes no calls to Google, as on heat and news.
 
