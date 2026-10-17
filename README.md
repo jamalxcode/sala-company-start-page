@@ -10,6 +10,7 @@ The start page for all of Sala Company's browser projects: live world news, mark
 
 The page has a matching **What's new** strip under the search bar. Update both together, and keep it to the last month or so.
 
+- **Last Marine Standing:** a classic 90s first-person shooter in the browser. The Chocolate Doom engine compiled to WebAssembly, playing Freedoom's 4 episodes and 36 levels with full sound and music, with saved games kept in your browser.
 - **radio.sala.company:** free internet radio in a 10-band shortwave portable. Stations from Radio Browser, SomaFM and community M3U lists, search across all of them, an in-browser check of which stations are on air, the song or show that's playing, automatic reconnecting, and favorites and the songs you heard kept in your browser.
 - **video.sala.company:** free live TV in a 70s wood-panel TV with an 80s cable guide. About 11,000 public channels from iptv-org or your own M3U playlist, signal bars that warn about slow or dead channels before you click, automatic backup sources, and favorites, ratings and recently watched kept in your browser.
 - **Artograph:** a Spirograph in the browser. One-tap recipes, rings and wheels with real tooth counts, a pattern preview on every wheel, numbered pen holes, gel-pen colors, drag-to-crank drawing, rosettes, layers you can hide or recolor, gear clicks, PNG and SVG export and share links.
@@ -36,6 +37,7 @@ In the order the page shows them, most active first.
 | | Project | What it is | Code |
 |---|---|---|---|
 | <img src="img/rizq.jpg" width="160" alt=""> | **[Rizq — A Kuwaiti Roguelike](https://rizq.sala.company)** | A Brogue-inspired roguelike set in modern Kuwait. Build a camel herd with dates, trade and bank at diwaniyas, survive the deep desert, reach 100,000 KD and make it home. One life, plus a daily run on the same map for everyone. The featured card. | [rizq](https://github.com/jamalxcode/rizq) |
+| <img src="img/last.jpg" width="160" alt=""> | **[Last Marine Standing](https://last.sala.company)** | A classic 90s first-person shooter: the Chocolate Doom engine compiled to WebAssembly, playing Freedoom's 4 episodes and 36 levels with full sound and music. Click to play, Space or Enter in the menus, and saved games stay in your browser. | [last](https://github.com/jamalxcode/last) |
 | <img src="img/cube.jpg" width="160" alt=""> | **[3D Rubik's Cube](https://cube.sala.company)** | Scramble, turn and solve a 3D cube, with hints. React and Three.js. | [cube](https://github.com/jamalxcode/cube) |
 | <img src="img/breakout.jpg" width="160" alt=""> | **[Vibe Coded Breakout](https://breakout.sala.company)** | Version 2.0: 76 levels across 4 worlds, boss fights, and power-ups like Multi-Ball, rockets, lasers and super bombs. The original 2025 version is still playable side by side. | [breakout-game-html](https://github.com/jamalxcode/breakout-game-html) |
 | <img src="img/galactic.jpg" width="160" alt=""> | **[Galactic Defender](https://galacticdefender.sala.company)** | A Galaga-inspired space shooter with keyboard and touch controls. | [galactic_defender](https://github.com/jamalxcode/galactic_defender) |
