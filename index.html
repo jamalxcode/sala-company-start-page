@@ -76,7 +76,7 @@
                 "isPartOf": { "@id": "https://go.sala.company/#website" },
                 "about": { "@id": "https://go.sala.company/#org" },
                 "primaryImageOfPage": "https://go.sala.company/og-image.png",
-                "dateModified": "2026-10-27",
+                "dateModified": "2026-10-30",
                 "mainEntity": { "@id": "https://go.sala.company/#projects" }
             },
             {
@@ -141,62 +141,84 @@
 
         /* ── Tokens: light by default, dark from the system or the ◐ button ── */
         :root {
-            --bg:          #f6f7f9;
+            --bg:          #f5f4f0;
+            --bar:         rgba(245,244,240,.9);
             --surface:     #ffffff;
-            --surface-2:   #f0f1f4;
-            --border:      #e3e5ea;
-            --text:        #111827;
-            --text-muted:  #4b5563;   /* 7.5:1 on white */
+            --surface-2:   #f0eee8;
+            --border:      #e4e2db;
+            --border-2:    #d6d3ca;
+            --text:        #16151a;
+            --text-muted:  #4a4851;   /* 8.6:1 on white */
             --accent:      #4f46e5;   /* 6.3:1 on white */
             --accent-ink:  #ffffff;
-            --accent-soft: #eef0ff;
-            --new-bg:      #dc2626;
-            --new-ink:     #ffffff;
+            --accent-soft: #e8e6fd;
+            --ink:         #16151a;   /* dark buttons and the News card */
+            --ink-text:    #ffffff;
+            --new-bg:      #ffffff;
+            --new-ink:     #16151a;
             --beta-bg:     #fef3c7;
             --beta-ink:    #92400e;
-            --shadow:      0 1px 2px rgba(16,24,40,.06), 0 8px 24px rgba(16,24,40,.06);
-            --shadow-h:    0 2px 4px rgba(16,24,40,.08), 0 16px 40px rgba(16,24,40,.12);
-            --dot-live:    #ef4444;
-            --dot-games:   #f59e0b;
-            --dot-ai:      #6366f1;
-            --dot-more:    #10b981;
+            --shadow:      0 1px 2px rgba(22,21,26,.05);
+            --shadow-h:    0 16px 32px -14px rgba(22,21,26,.3);
+            --c-live:      #d33a2c;
+            --c-games:     #e07a1f;
+            --c-ai:        #7c3aed;
+            --c-watch:     #0e8a8c;
+            --c-create:    #c2367a;
         }
-
         @media (prefers-color-scheme: dark) {
             :root:not([data-theme="light"]) {
-                --bg:          #0e1016;
-                --surface:     #171a22;
-                --surface-2:   #1f232d;
-                --border:      #2a2f3b;
-                --text:        #e7e9ee;
-                --text-muted:  #a3aab6;   /* 7:1 on the card */
+                --bg:          #0f0f13;
+                --bar:         rgba(15,15,19,.88);
+                --surface:     #18181e;
+                --surface-2:   #22222a;
+                --border:      #2b2b35;
+                --border-2:    #3a3a46;
+                --text:        #ececf1;
+                --text-muted:  #a9a8b4;   /* 7.4:1 on the card */
                 --accent:      #8b93fa;
                 --accent-ink:  #0b0d12;
-                --accent-soft: #23264a;
-                --new-bg:      #f87171;
-                --new-ink:     #1a0505;
+                --accent-soft: #25264a;
+                --ink:         #ececf1;
+                --ink-text:    #0f0f13;
+                --new-bg:      #ececf1;
+                --new-ink:     #0f0f13;
                 --beta-bg:     #3b2f0b;
                 --beta-ink:    #fde68a;
                 --shadow:      0 1px 2px rgba(0,0,0,.4);
-                --shadow-h:    0 12px 32px rgba(0,0,0,.5);
+                --shadow-h:    0 16px 32px -12px rgba(0,0,0,.7);
+                --c-live:      #f26b5e;
+                --c-games:     #f5a050;
+                --c-ai:        #a98bf7;
+                --c-watch:     #3fc1c3;
+                --c-create:    #ec6aa6;
             }
         }
         :root[data-theme="dark"] {
-            --bg:          #0e1016;
-            --surface:     #171a22;
-            --surface-2:   #1f232d;
-            --border:      #2a2f3b;
-            --text:        #e7e9ee;
-            --text-muted:  #a3aab6;
+            --bg:          #0f0f13;
+            --bar:         rgba(15,15,19,.88);
+            --surface:     #18181e;
+            --surface-2:   #22222a;
+            --border:      #2b2b35;
+            --border-2:    #3a3a46;
+            --text:        #ececf1;
+            --text-muted:  #a9a8b4;
             --accent:      #8b93fa;
             --accent-ink:  #0b0d12;
-            --accent-soft: #23264a;
-            --new-bg:      #f87171;
-            --new-ink:     #1a0505;
+            --accent-soft: #25264a;
+            --ink:         #ececf1;
+            --ink-text:    #0f0f13;
+            --new-bg:      #ececf1;
+            --new-ink:     #0f0f13;
             --beta-bg:     #3b2f0b;
             --beta-ink:    #fde68a;
             --shadow:      0 1px 2px rgba(0,0,0,.4);
-            --shadow-h:    0 12px 32px rgba(0,0,0,.5);
+            --shadow-h:    0 16px 32px -12px rgba(0,0,0,.7);
+            --c-live:      #f26b5e;
+            --c-games:     #f5a050;
+            --c-ai:        #a98bf7;
+            --c-watch:     #3fc1c3;
+            --c-create:    #ec6aa6;
             color-scheme: dark;
         }
         :root[data-theme="light"] { color-scheme: light; }
@@ -209,227 +231,226 @@
             line-height: 1.55;
             -webkit-font-smoothing: antialiased;
         }
-
         a { color: var(--accent); }
-        .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-
+        img { display: block; max-width: 100%; }
+        .wrap { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
         :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-
-        /* ── Header ───────────────────────────────────────────── */
-        .top {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            padding: 22px 0 6px;
+        [hidden] { display: none !important; }
+        .sr-only {
+            position: absolute; width: 1px; height: 1px;
+            padding: 0; margin: -1px; overflow: hidden;
+            clip: rect(0,0,0,0); white-space: nowrap; border: 0;
         }
-        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
-        .brand svg { width: 40px; height: 40px; flex-shrink: 0; }
-        h1 { font-size: 1.45rem; font-weight: 800; letter-spacing: -0.02em; }
-        .theme-btn {
-            margin-left: auto;
-            border: 1px solid var(--border);
-            background: var(--surface);
-            color: var(--text);
-            border-radius: 999px;
-            padding: 7px 14px;
-            font: inherit;
-            font-size: 0.85rem;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        .theme-btn:hover { background: var(--surface-2); }
+        .section-title { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; }
+        .pulse { width: 9px; height: 9px; border-radius: 50%; background: var(--c-live); flex: none; animation: pulse 1.6s ease-in-out infinite; }
+        @keyframes pulse { 50% { opacity: .3; } }
 
-        .intro {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            max-width: 640px;
-            margin-bottom: 18px;
+        /* ── Top bar: brand, search, Surprise me, theme. Sticks while scrolling ── */
+        .topbar {
+            position: sticky; top: 0; z-index: 20;
+            background: var(--bar);
+            -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
         }
-
-        /* ── Toolbar: search + filters, stays in reach while scrolling ── */
-        .toolbar {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 0;
-            background: var(--bg);
-            border-bottom: 1px solid transparent;
-        }
-        .toolbar.stuck { border-bottom-color: var(--border); }
-
-        .search-wrap { position: relative; flex: 1 1 240px; max-width: 380px; }
+        .topbar .wrap { display: flex; align-items: center; gap: 14px; padding-top: 12px; padding-bottom: 12px; }
+        .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; font-weight: 800; font-size: 1.15rem; letter-spacing: -0.02em; white-space: nowrap; }
+        .brand svg { width: 36px; height: 36px; flex: none; }
+        .search-wrap { position: relative; flex: 1 1 240px; max-width: 460px; margin-left: 12px; }
         .search-wrap svg {
-            position: absolute; left: 13px; top: 50%; transform: translateY(-50%);
-            width: 16px; height: 16px;
-            stroke: var(--text-muted); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+            position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
+            width: 17px; height: 17px;
+            stroke: var(--text-muted); fill: none; stroke-width: 2; stroke-linecap: round;
             pointer-events: none;
         }
         #search {
-            width: 100%;
-            padding: 9px 14px 9px 38px;
+            width: 100%; height: 44px;
+            padding: 0 16px 0 42px;
             border-radius: 999px;
-            border: 1px solid var(--border);
+            border: 1px solid var(--border-2);
             background: var(--surface);
             color: var(--text);
-            font: inherit;
-            font-size: 0.95rem;
+            font: inherit; font-size: 0.95rem;
         }
         #search::placeholder { color: var(--text-muted); }
         #search:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
-
-        .filters { display: flex; flex-wrap: wrap; gap: 6px; }
-        .filter {
-            padding: 7px 14px;
+        .bar-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            height: 44px; padding: 0 18px;
             border-radius: 999px;
-            border: 1px solid var(--border);
-            background: var(--surface);
-            color: var(--text);
-            font: inherit;
-            font-size: 0.85rem;
-            font-weight: 600;
+            border: 1px solid var(--border-2);
+            background: var(--surface); color: var(--text);
+            font: inherit; font-size: 0.88rem; font-weight: 600;
+            cursor: pointer; white-space: nowrap;
+        }
+        .bar-btn:hover { background: var(--surface-2); }
+        .bar-btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .bar-btn.dark { background: var(--ink); border-color: var(--ink); color: var(--ink-text); margin-left: auto; }
+        .bar-btn.dark:hover { filter: brightness(1.15); }
+
+        /* ── Hero: headline on the left, featured carousel on the right ── */
+        .hero { display: grid; grid-template-columns: minmax(0,5fr) minmax(0,7fr); gap: 48px; align-items: center; padding: 56px 0 44px; }
+        .hero-copy { display: flex; flex-direction: column; gap: 22px; }
+        .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+        .pill { font-size: 0.82rem; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border-2); color: var(--text-muted); }
+        .pill.accent { background: var(--accent-soft); border-color: transparent; color: var(--accent); }
+        h1 { font-size: clamp(2.3rem, 4.4vw, 3.7rem); line-height: 1.03; letter-spacing: -0.04em; font-weight: 800; }
+        h1 em { font-style: normal; color: var(--accent); }
+        .lede { font-size: 1.1rem; color: var(--text-muted); max-width: 470px; }
+        .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+        .cta a {
+            display: inline-flex; align-items: center; gap: 9px;
+            height: 48px; padding: 0 22px; border-radius: 12px;
+            font-weight: 700; text-decoration: none;
+        }
+        .cta .primary { background: var(--accent); color: var(--accent-ink); }
+        .cta .primary:hover { filter: brightness(1.08); }
+        .cta .secondary { background: var(--surface); border: 1px solid var(--border-2); color: var(--text); }
+        .cta .secondary:hover { background: var(--surface-2); }
+
+        .carousel { position: relative; }
+        .slides { position: relative; aspect-ratio: 16 / 10; border-radius: 22px; overflow: hidden; background: #16151a; box-shadow: 0 30px 60px -30px rgba(22,21,26,.55); }
+        .slide { position: absolute; inset: 0; color: #fff; text-decoration: none; opacity: 0; transition: opacity .5s ease; }
+        .slide.on { opacity: 1; z-index: 1; }
+        .slide img { width: 100%; height: 100%; object-fit: cover; transition: transform 6s ease; }
+        .slide.on img { transform: scale(1.04); }
+        .slide::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(10,10,14,.9) 100%); }
+        .slide-text { position: absolute; left: 24px; right: 24px; bottom: 22px; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+        .kicker { font-size: 0.72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; background: var(--k); color: #fff; }
+        .slide-name { font-size: clamp(1.6rem, 2.6vw, 2.2rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+        .slide-pitch { font-size: 1rem; color: #e9e8ee; max-width: 540px; }
+        .carousel-nav { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; }
+        .dots { display: flex; gap: 8px; }
+        .dot { width: 8px; height: 8px; border-radius: 999px; border: 0; padding: 0; background: var(--border-2); cursor: pointer; transition: width .25s, background .25s; }
+        .dot[aria-current="true"] { width: 28px; background: var(--text); }
+        .arrows { display: flex; gap: 8px; }
+        .arrow { width: 44px; height: 44px; border-radius: 999px; border: 1px solid var(--border-2); background: var(--surface); color: var(--text); cursor: pointer; display: grid; place-items: center; }
+        .arrow:hover { background: var(--surface-2); }
+        .arrow svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
+
+        /* ── Just added: built from each card's data-added date ── */
+        .fresh { padding-bottom: 44px; }
+        .row-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+        .shelf { list-style: none; display: flex; gap: 14px; overflow-x: auto; padding: 2px 2px 10px; scroll-snap-type: x proximity; scrollbar-width: thin; }
+        .shelf li { flex: 0 0 172px; scroll-snap-align: start; }
+        .shelf a { display: block; height: 100%; text-decoration: none; color: inherit; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform .15s, box-shadow .15s; }
+        .shelf a:hover { transform: translateY(-3px); box-shadow: var(--shadow-h); }
+        .shelf img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: var(--surface-2); }
+        .shelf span { display: block; padding: 0 12px; }
+        .shelf .name { font-weight: 700; font-size: 0.92rem; padding-top: 10px; }
+        .shelf .meta { font-size: 0.78rem; color: var(--text-muted); padding-bottom: 12px; }
+
+        /* ── Filters ──────────────────────────────────────────── */
+        .filters-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-bottom: 4px; }
+        .filters { display: flex; flex-wrap: wrap; gap: 8px; }
+        .filter {
+            display: inline-flex; align-items: center; gap: 8px;
+            height: 40px; padding: 0 15px;
+            border-radius: 999px;
+            border: 1px solid var(--border-2);
+            background: var(--surface); color: var(--text);
+            font: inherit; font-size: 0.88rem; font-weight: 600;
             cursor: pointer;
         }
-        .filter:hover { background: var(--surface-2); }
-        .filter[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
-
-        /* ── What's new ───────────────────────────────────────── */
-        .whats-new {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: baseline;
-            gap: 6px 20px;
-            margin: 10px 0 4px;
-            padding: 12px 16px;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            background: var(--surface);
-            font-size: 0.9rem;
-        }
-        .whats-new h2 { font-size: 0.9rem; font-weight: 700; white-space: nowrap; }
-        .whats-new h2 time { color: var(--text-muted); font-weight: 500; margin-left: 4px; }
-        .whats-new ul { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 20px; }
-        .whats-new li { color: var(--text-muted); }
-        .whats-new a { font-weight: 600; text-decoration: none; }
-        .whats-new a:hover { text-decoration: underline; }
+        .filter:hover { border-color: var(--text); }
+        .filter::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--c, var(--text)); }
+        .filter .n { font-weight: 500; opacity: .65; }
+        .filter[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--ink-text); }
+        .filter[aria-pressed="true"]::before { background: var(--c, var(--ink-text)); }
+        .filter[data-filter="all"] { --c: currentColor; }
 
         /* ── Sections ─────────────────────────────────────────── */
-        .group { margin-top: 34px; }
-        .group > h2 {
-            display: flex; align-items: center; gap: 10px;
-            font-size: 1.2rem; font-weight: 700; letter-spacing: -0.01em;
-            margin-bottom: 4px;
-        }
-        .group > h2::before { content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--dot); }
-        .group > p { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 14px; }
-        #live  { --dot: var(--dot-live); }
-        #games { --dot: var(--dot-games); }
-        #ai    { --dot: var(--dot-ai); }
-        #more  { --dot: var(--dot-more); }
+        #live   { --c: var(--c-live); }
+        #games  { --c: var(--c-games); }
+        #ai     { --c: var(--c-ai); }
+        #watch  { --c: var(--c-watch); }
+        #create { --c: var(--c-create); }
+        .filter[data-filter="live"]   { --c: var(--c-live); }
+        .filter[data-filter="games"]  { --c: var(--c-games); }
+        .filter[data-filter="ai"]     { --c: var(--c-ai); }
+        .filter[data-filter="watch"]  { --c: var(--c-watch); }
+        .filter[data-filter="create"] { --c: var(--c-create); }
 
-        .grid {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
-            gap: 18px;
-        }
-        .grid.wide { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+        .group { margin-top: 36px; }
+        .group-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px; margin-bottom: 14px; }
+        .group-head h2 { display: flex; align-items: center; gap: 10px; font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em; }
+        .group-head h2::before { content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
+        #live .group-head h2::before { animation: pulse 1.6s ease-in-out infinite; }
+        .group-head p { color: var(--text-muted); font-size: 0.92rem; }
 
-        /* A featured card (Last Marine Standing) takes a 2×2 block on wider screens, its screenshot filling the extra height */
-        @media (min-width: 820px) {
-            .item.feature { grid-column: span 2; grid-row: span 2; }
-            .item.feature .shot { flex: 1; min-height: 0; aspect-ratio: auto; object-position: center; }
-            .item.feature h3 { font-size: 1.2rem; }
-        }
+        .grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+        .grid.wide { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
         /* ── Cards: the whole card is one link (the title), with any extra links raised above it ── */
         .card {
-            position: relative;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+            position: relative; height: 100%;
+            display: flex; flex-direction: column;
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 14px;
+            border-radius: 18px;
             overflow: hidden;
             box-shadow: var(--shadow);
-            transition: box-shadow .2s, transform .2s, border-color .2s;
+            transition: box-shadow .2s, transform .2s;
         }
-        .card:hover { box-shadow: var(--shadow-h); transform: translateY(-2px); border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
+        .card:hover { box-shadow: var(--shadow-h); transform: translateY(-3px); }
         .card:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+        .shot-wrap { position: relative; }
+        .shot { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top center; background: var(--surface-2); }
+        .wide .shot { aspect-ratio: 16 / 7; }
+        .shot-wrap .badge-new { position: absolute; top: 10px; left: 10px; }
 
-        .shot {
-            display: block;
-            width: 100%;
-            height: auto;
-            aspect-ratio: 16 / 10;
-            object-fit: cover;
-            object-position: top center;
-            background: var(--surface-2);
-            border-bottom: 1px solid var(--border);
-        }
-        .wide .shot { aspect-ratio: 2 / 1; }
-
-        .card-body { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px 16px; flex: 1; }
-        .item.feature .card-body { flex: 0 0 auto; }
+        .card-body { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 16px; flex: 1; }
         .card-title-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
-        .card-icon { width: 28px; height: 28px; flex: none; }
-        .card h3 { font-size: 1.05rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.01em; }
-        .wide .card h3 { font-size: 1.2rem; }
+        .card h3 { font-size: 1.08rem; font-weight: 800; line-height: 1.25; letter-spacing: -0.015em; }
+        .wide .card h3 { font-size: 1.4rem; }
         .card h3 a { color: inherit; text-decoration: none; }
         .card h3 a::after { content: ''; position: absolute; inset: 0; z-index: 1; }
         .card h3 a:focus-visible { outline: none; }
-        .card p { color: var(--text-muted); font-size: 0.92rem; }
-        .card .note { font-size: 0.8rem; }
+        .card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.45; }
 
-        .badge {
-            font-size: 0.66rem;
-            font-weight: 800;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            padding: 2px 8px;
-            border-radius: 999px;
-            white-space: nowrap;
-        }
-        .badge-new     { background: var(--new-bg); color: var(--new-ink); }
-        .badge-updated { background: var(--accent-soft); color: var(--accent); }
-        .badge-beta    { background: var(--beta-bg); color: var(--beta-ink); }
+        .tags { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 8px; }
+        .tags li { font-size: 0.75rem; font-weight: 600; padding: 3px 8px; border-radius: 6px; background: var(--surface-2); color: var(--text-muted); }
 
-        /* The button is the visual call to action; the title link above covers the card */
-        .actions { margin-top: auto; padding-top: 6px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
-        .btn {
-            display: inline-block;
-            padding: 7px 16px;
-            border-radius: 999px;
-            background: var(--accent);
-            color: var(--accent-ink);
-            font-weight: 700;
-            font-size: 0.85rem;
-        }
-        .card:hover .btn { filter: brightness(1.08); }
+        .badge { font-size: 0.66rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; padding: 3px 8px; border-radius: 6px; white-space: nowrap; }
+        .badge-new  { background: var(--new-bg); color: var(--new-ink); box-shadow: 0 1px 3px rgba(0,0,0,.25); }
+        .badge-beta { background: var(--beta-bg); color: var(--beta-ink); }
+        .badge-live { background: var(--c-live); color: #fff; }
 
-        .sublinks { position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 0.85rem; }
-        .sublinks a { font-weight: 600; text-decoration: none; }
-        .sublinks a:hover { text-decoration: underline; }
-        .card ul.sublinks { list-style: none; flex-direction: column; gap: 4px; }
+        /* Live cards: News on dark ink with the top breaking story, Heat with its markets */
+        .card.news { background: #16151a; }
+        .card.news h3, .card.news .breaking { color: #fff; }
+        .card.news p { color: #b9b7c2; }
+        .breaking { display: flex; gap: 10px; align-items: flex-start; background: #26252c; border-radius: 10px; padding: 12px 14px; font-size: 0.98rem; font-weight: 600; line-height: 1.4; color: #fff; }
+        .breaking .pulse { margin-top: 6px; }
+        .breaking small { display: block; font-weight: 500; font-size: 0.78rem; color: #b9b7c2; margin-top: 3px; }
+        .sublinks { position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 6px; }
+        .sublinks a { font-size: 0.82rem; font-weight: 600; text-decoration: none; color: var(--text); padding: 5px 11px; border-radius: 999px; background: var(--surface-2); }
+        .sublinks a:hover { background: var(--accent-soft); color: var(--accent); }
 
-        /* ── No results ───────────────────────────────────────── */
         #no-results { display: none; text-align: center; color: var(--text-muted); padding: 48px 16px; font-size: 1.05rem; }
 
-        [hidden] { display: none !important; }
+        /* ── Footer cards: newsletter, store, about ──────────── */
+        .extras { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; margin-top: 72px; }
+        .extra { display: flex; flex-direction: column; gap: 10px; padding: 26px; border-radius: 20px; background: var(--surface); border: 1px solid var(--border); }
+        .extra h2 { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; }
+        .extra p { color: var(--text-muted); font-size: 0.95rem; }
+        .extra ul { list-style: none; display: flex; flex-direction: column; gap: 4px; font-size: 0.9rem; }
+        .extra a { font-weight: 600; text-decoration: none; }
+        .extra a:hover { text-decoration: underline; }
+        .extra .go { margin-top: auto; padding-top: 6px; }
+        .extra.feature { background: #4f46e5; border-color: #4f46e5; color: #fff; }
+        .extra.feature p { color: #e4e2ff; }
+        .extra.feature a { color: #fff; }
+        .extra.feature .go a { display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border-radius: 10px; background: #fff; color: #3f35c9; }
+        .extra.feature .go a:hover { text-decoration: none; filter: brightness(.95); }
 
         /* ── About / FAQ ──────────────────────────────────────── */
         .about { max-width: 760px; margin: 64px 0 56px; color: var(--text-muted); }
-        .about h2 { color: var(--text); font-size: 1.3rem; margin-bottom: 10px; }
+        .about h2 { color: var(--text); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 10px; }
         .about h3 { color: var(--text); font-size: 1rem; margin: 20px 0 4px; }
         .about p  { margin-bottom: 8px; }
         .about a  { text-decoration: none; font-weight: 600; }
         .about a:hover { text-decoration: underline; }
 
-        /* ── Footer ───────────────────────────────────────────── */
         footer {
             padding: 28px 0 40px;
             border-top: 1px solid var(--border);
@@ -440,119 +461,183 @@
         footer a { text-decoration: none; font-weight: 600; }
         footer a:hover { text-decoration: underline; }
 
-        /* ── Phones ───────────────────────────────────────────── */
+        /* ── Tablets and phones ───────────────────────────────── */
+        @media (max-width: 900px) {
+            .hero { grid-template-columns: 1fr; gap: 28px; padding-top: 32px; }
+            .grid.wide { grid-template-columns: 1fr; }
+        }
         @media (max-width: 640px) {
             .wrap { padding: 0 16px; }
-            .top { padding-top: 16px; }
-            h1 { font-size: 1.25rem; }
-            .intro { font-size: 0.98rem; }
-            .search-wrap { max-width: none; flex-basis: 100%; }
-            .grid, .grid.wide { grid-template-columns: 1fr; }
-            .whats-new ul { flex-direction: column; }
+            .topbar .wrap { flex-wrap: wrap; gap: 10px; }
+            .search-wrap { order: 3; flex-basis: 100%; max-width: none; margin-left: 0; }
+            .brand { font-size: 1.05rem; }
+            .bar-btn { height: 40px; padding: 0 14px; }
+            .bar-btn .label { display: none; }
+            .lede { font-size: 1rem; }
+            .slide-text { left: 16px; right: 16px; bottom: 14px; }
+            .slide-pitch { display: none; }
+            .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+            .card-body { padding: 10px 12px 12px; }
+            .card h3 { font-size: 0.98rem; }
+            .card p { font-size: 0.84rem; }
+            .tags li:nth-child(n+2) { display: none; }
+            .shelf li { flex-basis: 140px; }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .card { transition: none; }
-            .card:hover { transform: none; }
-        }
-
-        .sr-only {
-            position: absolute; width: 1px; height: 1px;
-            padding: 0; margin: -1px; overflow: hidden;
-            clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+            .card, .shelf a, .slide, .slide img { transition: none; }
+            .card:hover, .shelf a:hover { transform: none; }
+            .slide.on img { transform: none; }
+            .pulse, #live .group-head h2::before { animation: none; }
         }
     </style>
 </head>
 <body>
-    <div class="wrap">
 
-        <!-- ── Header ──────────────────────────────────────────── -->
-        <header>
-            <div class="top">
-                <a class="brand" href="/" aria-label="Sala Company home">
-                    <svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="mark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs><rect width="100" height="100" rx="24" fill="url(#mark)"/><path d="M67 27H43a11.5 11.5 0 0 0 0 23h14a11.5 11.5 0 0 1 0 23H33" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <h1>Sala Company</h1>
-                </a>
-                <button class="theme-btn" id="theme-btn" type="button" aria-label="Colour theme: automatic">◐ Auto</button>
+    <!-- ── Top bar ─────────────────────────────────────────── -->
+    <header class="topbar">
+        <div class="wrap">
+            <a class="brand" href="/" aria-label="Sala Company home">
+                <svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="mark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs><rect width="100" height="100" rx="24" fill="url(#mark)"/><path d="M67 27H43a11.5 11.5 0 0 0 0 23h14a11.5 11.5 0 0 1 0 23H33" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Sala Company
+            </a>
+            <div class="search-wrap" role="search">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+                <input type="search" id="search" placeholder="Search apps, games and tools…" aria-label="Search apps, games and tools">
             </div>
-            <p class="intro">Free web apps, live data and games that run right in your browser. No sign-up, no install.</p>
-        </header>
-
-        <!-- Search + category filters -->
-        <div class="toolbar" id="toolbar">
-            <div class="search-wrap">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <input type="search" id="search" placeholder="Search projects…" aria-label="Search projects">
-            </div>
-            <div class="filters" role="group" aria-label="Show category">
-                <button class="filter" type="button" data-filter="all"   aria-pressed="true">All</button>
-                <button class="filter" type="button" data-filter="live"  aria-pressed="false">Live data</button>
-                <button class="filter" type="button" data-filter="games" aria-pressed="false">Games</button>
-                <button class="filter" type="button" data-filter="ai"    aria-pressed="false">AI</button>
-                <button class="filter" type="button" data-filter="more"  aria-pressed="false">More</button>
-            </div>
+            <button class="bar-btn dark" id="surprise" type="button" aria-label="Surprise me: open a random app">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5"/><path d="M4 20L21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg>
+                <span class="label">Surprise me</span>
+            </button>
+            <button class="bar-btn" id="theme-btn" type="button" aria-label="Colour theme: automatic">◐ Auto</button>
         </div>
+    </header>
 
-        <main>
-            <!-- ── What's new: keep to the last month or so; mirror it in the README ── -->
-            <section class="whats-new" id="whats-new" aria-labelledby="whats-new-title">
-                <h2 id="whats-new-title">What's new <time datetime="2026-10">Oct 2026</time></h2>
-                <ul>
-                    <li><a href="https://how.sala.company">How</a>: type a thing and see how it works, pulled apart and numbered, in your language</li>
-                    <li><a href="https://sand.sala.company">Sand Digger</a>: dig through the desert, sling lizards and dodge a venom-spitting cobra</li>
-                    <li><a href="https://yeti.sala.company">Yeti</a>: an arcade climbing game where a penguin rescues a chick from a snowball-throwing yeti</li>
-                    <li><a href="https://heliattack.sala.company">Heli Attack</a>: a retro helicopter cave shooter with a boss, power-ups and chiptune music</li>
-                    <li><a href="https://last.sala.company">Last Marine Standing</a>: a classic 90s shooter in your browser, 36 levels with sound and music</li>
-                    <li><a href="https://radio.sala.company">radio.sala.company</a>: free internet radio in a retro shortwave radio, with the song that's playing</li>
-                    <li><a href="https://video.sala.company">video.sala.company</a>: free live TV channels in a retro TV set, with warnings before you click</li>
-                    <li><a href="https://art.sala.company">Artograph</a>: a Spirograph in your browser, with one-tap recipes, gel pens and rosettes</li>
-                    <li><a href="https://story.sala.company">Scene to Story</a>: AI turns a one-minute video into a story or poem</li>
-                    <li><a href="https://heat.sala.company/etfs/">Heat ETFs</a>: 112 US stock ETFs by sector, theme and country</li>
-                    <li><a href="https://news.sala.company">Sala News</a> is out of beta, with breaking-news alerts</li>
-                    <li><a href="https://heat.sala.company/rates/">Heat Rates</a>: bond yield curves for 14 markets</li>
-                    <li><a href="https://rizq.sala.company">Rizq</a>: traders, banking and a daily run</li>
-                </ul>
-            </section>
+    <div class="wrap">
+        <!-- ── Hero ────────────────────────────────────────────── -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <div class="pills">
+                    <span class="pill accent" id="app-count">22 free apps</span>
+                    <span class="pill">No sign-up · no install</span>
+                </div>
+                <h1 id="hero-title">Little apps, live data and arcade games. <em>Right in your browser.</em></h1>
+                <p class="lede">Tune a shortwave radio, watch live TV in a 70s set, draw spirographs or chase a yeti up a mountain. Everything opens in one tap, on desktop or phone.</p>
+                <div class="cta">
+                    <a class="primary" href="#apps">Browse all apps</a>
+                    <a class="secondary" href="#live"><span class="pulse" aria-hidden="true"></span>What's live now</a>
+                </div>
+            </div>
+
+            <!-- Featured: pick 3–5 projects. Each slide is a plain link, so the first one shows without JavaScript -->
+            <div class="carousel" aria-roledescription="carousel" aria-label="Featured apps">
+                <div class="slides" id="slides">
+                    <a class="slide on" href="https://how.sala.company" style="--k: var(--c-ai)" aria-roledescription="slide" aria-label="1 of 4: How">
+                        <img src="img/how.jpg" width="640" height="400" alt="How: a pair of scissors drawn on cream paper with its parts numbered 1, 2 and 3" fetchpriority="high">
+                        <span class="slide-text">
+                            <span class="kicker">New · AI</span>
+                            <span class="slide-name">How</span>
+                            <span class="slide-pitch">Type any thing and get an exploded view with every part numbered, in 17 languages.</span>
+                        </span>
+                    </a>
+                    <a class="slide" href="https://yeti.sala.company" style="--k: var(--c-games)" aria-roledescription="slide" aria-label="2 of 4: Yeti">
+                        <img src="img/yeti.jpg" width="640" height="400" alt="Yeti: a penguin jumps a snowball on icy ledges while a yeti throws snowballs from the top" loading="lazy">
+                        <span class="slide-text">
+                            <span class="kicker">New game</span>
+                            <span class="slide-name">Yeti</span>
+                            <span class="slide-pitch">Help a penguin up the icy ledges, jump the snowballs and pull the bolts holding up the peak.</span>
+                        </span>
+                    </a>
+                    <a class="slide" href="https://radio.sala.company" style="--k: var(--c-watch)" aria-roledescription="slide" aria-label="3 of 4: radio.sala.company">
+                        <img src="img/radio.jpg" width="640" height="400" alt="radio.sala.company: a black shortwave portable with a lit tuning dial beside a station guide" loading="lazy">
+                        <span class="slide-text">
+                            <span class="kicker">Listen</span>
+                            <span class="slide-name">radio.sala.company</span>
+                            <span class="slide-pitch">Tens of thousands of stations in a 10-band shortwave portable, with the song that's playing.</span>
+                        </span>
+                    </a>
+                    <a class="slide" href="https://art.sala.company" style="--k: var(--c-create)" aria-roledescription="slide" aria-label="4 of 4: Artograph">
+                        <img src="img/artograph.jpg" width="640" height="400" alt="Artograph: a spirograph pattern of teal, violet and coral loops" loading="lazy">
+                        <span class="slide-text">
+                            <span class="kicker">Create</span>
+                            <span class="slide-name">Artograph</span>
+                            <span class="slide-pitch">Pick a ring, a wheel and a pen hole and watch it roll. Gel pens, rosettes and one-tap recipes.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="carousel-nav" id="carousel-nav" hidden>
+                    <div class="dots" id="dots"></div>
+                    <div class="arrows">
+                        <button class="arrow" id="prev" type="button" aria-label="Previous featured app"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+                        <button class="arrow" id="next" type="button" aria-label="Next featured app"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Just added: filled from the cards' data-added dates (last 45 days, newest first) ── -->
+        <section class="fresh" id="fresh" aria-labelledby="fresh-title" hidden>
+            <div class="row-head">
+                <h2 class="section-title" id="fresh-title">Just added</h2>
+            </div>
+            <ul class="shelf" id="shelf"></ul>
+        </section>
+
+        <main id="apps">
+            <div class="filters-row">
+                <h2 class="sr-only">All apps</h2>
+                <div class="filters" role="group" aria-label="Show category">
+                    <button class="filter" type="button" data-filter="all"    aria-pressed="true">All</button>
+                    <button class="filter" type="button" data-filter="live"   aria-pressed="false">Live data</button>
+                    <button class="filter" type="button" data-filter="games"  aria-pressed="false">Games</button>
+                    <button class="filter" type="button" data-filter="ai"     aria-pressed="false">AI</button>
+                    <button class="filter" type="button" data-filter="watch"  aria-pressed="false">Watch &amp; listen</button>
+                    <button class="filter" type="button" data-filter="create" aria-pressed="false">Create</button>
+                </div>
+            </div>
+
+            <!--
+              Every card: data-added (YYYY-MM-DD) drives the New badge (30 days) and Just added (45 days).
+              Keep the text to one line; data-tags carry the search words.
+            -->
 
             <!-- ── Live data ─────────────────────────────────────── -->
             <section class="group" id="live" data-cat="live" aria-labelledby="live-title">
-                <h2 id="live-title">Live data</h2>
-                <p>Refreshed every few minutes, all day.</p>
+                <div class="group-head">
+                    <h2 id="live-title">Live right now</h2>
+                    <p>Refreshed every few minutes, all day.</p>
+                </div>
                 <ul class="grid wide">
-                    <li class="item" data-tags="news live world news headlines breaking alerts aggregator osint disaster earthquake video youtube bluesky telegram trending the world now">
-                        <article class="card">
-                            <img class="shot" src="img/news.jpg" width="640" height="400" alt="Sala News: a feed of live world headlines, newest first" fetchpriority="high">
+                    <li class="item" data-added="2026-05-13" data-tags="news live world news headlines breaking alerts aggregator osint disaster earthquake video youtube bluesky telegram trending the world now">
+                        <article class="card news">
+                            <div class="shot-wrap"><img class="shot" src="img/news.jpg" width="640" height="400" alt="Sala News: a feed of live world headlines, newest first" fetchpriority="high"></div>
                             <div class="card-body">
                                 <div class="card-title-row">
                                     <h3><a href="https://news.sala.company">Sala News — The World Now</a></h3>
-                                    <span class="badge badge-updated">Updated</span>
+                                    <span class="badge badge-live">Breaking alerts</span>
                                 </div>
-                                <p>Live world headlines from about 95 news, OSINT and disaster sources, newest first and refreshed every few minutes. Stories are flagged <strong>Breaking</strong> when several sources report them at once.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Open News →</span></div>
+                                <div class="breaking" id="breaking"><span class="pulse" aria-hidden="true"></span><span>Stories are flagged Breaking when several sources report them at once.</span></div>
+                                <p>World headlines from about 95 news, OSINT and disaster sources, newest first.</p>
                             </div>
                         </article>
                     </li>
-                    <li class="item" data-tags="heat crypto heatmap bitcoin coins market prices rsi trend moving average signals scorecard stop loss forex currency currencies exchange rates dollar euro metals precious gold silver platinum palladium energy oil crude wti brent diesel gasoline natural gas etf etfs funds stocks sectors themes spy qqq sp500 nasdaq semiconductors countries rates bonds bond yields yield curve treasury gilts bunds inverted recession interest">
+                    <li class="item" data-added="2026-09-27" data-tags="heat crypto heatmap bitcoin coins market prices rsi trend moving average signals scorecard stop loss forex currency currencies exchange rates dollar euro metals precious gold silver platinum palladium energy oil crude wti brent diesel gasoline natural gas etf etfs funds stocks sectors themes spy qqq sp500 nasdaq semiconductors countries rates bonds bond yields yield curve treasury gilts bunds inverted recession interest">
                         <article class="card">
-                            <img class="shot" src="img/heat.jpg" width="640" height="400" alt="Heat: a crypto heatmap of coin tiles coloured blue for gains and red for losses" fetchpriority="high">
+                            <div class="shot-wrap"><img class="shot" src="img/heat.jpg" width="640" height="400" alt="Heat: a crypto heatmap of coin tiles coloured blue for gains and red for losses" fetchpriority="high"></div>
                             <div class="card-body">
                                 <div class="card-title-row">
                                     <h3><a href="https://heat.sala.company">Heat — Market Heatmaps</a></h3>
-                                    <span class="badge badge-new">New</span>
                                     <span class="badge badge-beta">Beta</span>
                                 </div>
-                                <p>Crypto, currencies, metals, oil and gas, government bond yield curves, and now 112 US stock ETFs by sector, theme and country, refreshed every 10 minutes. A daily scorecard checks whether the signals on each tile actually worked.</p>
-                                <p class="note">Work in progress. Not financial advice.</p>
-                                <div class="actions">
-                                    <span class="btn" aria-hidden="true">Open Heat →</span>
-                                    <nav class="sublinks" aria-label="Heat markets">
-                                        <a href="https://heat.sala.company/forex/">Forex</a>
-                                        <a href="https://heat.sala.company/metals/">Metals</a>
-                                        <a href="https://heat.sala.company/energy/">Energy</a>
-                                        <a href="https://heat.sala.company/etfs/">ETFs</a>
-                                        <a href="https://heat.sala.company/rates/">Rates</a>
-                                    </nav>
-                                </div>
+                                <nav class="sublinks" aria-label="Heat markets">
+                                    <a href="https://heat.sala.company">Crypto</a>
+                                    <a href="https://heat.sala.company/forex/">Forex</a>
+                                    <a href="https://heat.sala.company/metals/">Metals</a>
+                                    <a href="https://heat.sala.company/energy/">Energy</a>
+                                    <a href="https://heat.sala.company/etfs/">ETFs</a>
+                                    <a href="https://heat.sala.company/rates/">Rates</a>
+                                </nav>
+                                <p>Market heatmaps refreshed every 10 minutes, with a daily signal scorecard. Not financial advice.</p>
                             </div>
                         </article>
                     </li>
@@ -561,114 +646,98 @@
 
             <!-- ── Games ─────────────────────────────────────────── -->
             <section class="group" id="games" data-cat="games" aria-labelledby="games-title">
-                <h2 id="games-title">Games</h2>
-                <p>Free to play on desktop and phone. Most were vibe coded from the start.</p>
+                <div class="group-head">
+                    <h2 id="games-title">Games</h2>
+                    <p>Free on desktop and phone. Most were vibe coded from the start.</p>
+                </div>
                 <ul class="grid">
-                    <li class="item feature" data-tags="last marine standing fps first person shooter doom freedoom chocolate doom retro 90s classic demons marine guns levels episodes webassembly">
+                    <li class="item" data-added="2026-10-17" data-tags="last marine standing fps first person shooter doom freedoom chocolate doom retro 90s classic demons marine guns levels episodes webassembly">
                         <article class="card">
-                            <img class="shot" src="img/last-feature.jpg" width="960" height="720" alt="Last Marine Standing: a pistol aimed down a stone corridor above the classic health, ammo and armor status bar" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/last.jpg" width="640" height="400" alt="Last Marine Standing: a pistol aimed down a stone corridor above the classic health, ammo and armor status bar" loading="lazy"></div>
                             <div class="card-body">
-                                <div class="card-title-row">
-                                    <h3><a href="https://last.sala.company">Last Marine Standing</a></h3>
-                                    <span class="badge badge-new">New</span>
-                                </div>
-                                <p>A classic 90s first-person shooter. One marine, one base, no backup: 4 episodes and 36 levels with full sound and music, and your saved games stay in your browser.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Play Last Marine Standing →</span></div>
+                                <div class="card-title-row"><h3><a href="https://last.sala.company">Last Marine Standing</a></h3></div>
+                                <p>A classic 90s shooter: 36 levels with full sound and music.</p>
+                                <ul class="tags"><li>Saves in browser</li><li>Desktop</li></ul>
                             </div>
                         </article>
                     </li>
-                    <li class="item" data-tags="rizq roguelike rogue brogue kuwait dungeon desert camel ascii daily trader diwaniya herd">
+                    <li class="item" data-added="2026-10-05" data-tags="rizq roguelike rogue brogue kuwait dungeon desert camel ascii daily trader diwaniya herd">
                         <article class="card">
-                            <img class="shot" src="img/rizq.jpg" width="720" height="720" alt="Rizq: the title screen of the Kuwaiti roguelike, with its goals and the New run and Daily run buttons" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/rizq.jpg" width="720" height="720" alt="Rizq: the title screen of the Kuwaiti roguelike, with its goals and the New run and Daily run buttons" loading="lazy"></div>
                             <div class="card-body">
-                                <div class="card-title-row">
-                                    <h3><a href="https://rizq.sala.company">Rizq — A Kuwaiti Roguelike</a></h3>
-                                    <span class="badge badge-new">New</span>
-                                </div>
-                                <p>Build a camel herd with dates, trade at diwaniyas and survive the deep desert. Reach 100,000 KD and make it home, with one life and a daily run on the same map for everyone.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Play Rizq →</span></div>
+                                <div class="card-title-row"><h3><a href="https://rizq.sala.company">Rizq — A Kuwaiti Roguelike</a></h3></div>
+                                <p>Build a camel herd, trade at diwaniyas and make it home with 100,000 KD.</p>
+                                <ul class="tags"><li>Daily run</li><li>Phone</li></ul>
                             </div>
                         </article>
                     </li>
-                    <li class="item" data-tags="heli attack helicopter shooter scramble cobra arcade retro side-scrolling cave boss power-ups chiptune game vibe coded">
+                    <li class="item" data-added="2026-10-17" data-tags="heli attack helicopter shooter scramble cobra arcade retro side-scrolling cave boss power-ups chiptune game vibe coded">
                         <article class="card">
-                            <img class="shot" src="img/heli.jpg" width="640" height="400" alt="Heli Attack: a helicopter fires over green hills as missiles launch from a plateau" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/heli.jpg" width="640" height="400" alt="Heli Attack: a helicopter fires over green hills as missiles launch from a plateau" loading="lazy"></div>
                             <div class="card-body">
-                                <div class="card-title-row">
-                                    <h3><a href="https://heliattack.sala.company">Heli Attack</a></h3>
-                                    <span class="badge badge-new">New</span>
-                                </div>
-                                <p>A modern take on the 1981 arcade cave shooters. Fly through six stages, bomb fuel tanks to stay in the air, beat the gunship and grab the data core. Plays on phone too.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Play Heli Attack →</span></div>
+                                <div class="card-title-row"><h3><a href="https://heliattack.sala.company">Heli Attack</a></h3></div>
+                                <p>A retro cave shooter with six stages, a gunship boss and chiptunes.</p>
+                                <ul class="tags"><li>Phone</li><li>Gamepad</li></ul>
                             </div>
                         </article>
                     </li>
-                    <li class="item" data-tags="sand digger dig dug digging desert dunes arcade retro bedouin lizard cobra slingshot pots tunnels classic game vibe coded">
+                    <li class="item" data-added="2026-10-17" data-tags="sand digger dig dug digging desert dunes arcade retro bedouin lizard cobra slingshot pots tunnels classic game vibe coded">
                         <article class="card">
-                            <img class="shot" src="img/sand.jpg" width="640" height="400" alt="Sand Digger: a boy in a keffiyeh slings a pebble at a stunned lizard in a sand tunnel while a cobra rears up in the shaft" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/sand.jpg" width="640" height="400" alt="Sand Digger: a boy in a keffiyeh slings a pebble at a stunned lizard in a sand tunnel while a cobra rears up in the shaft" loading="lazy"></div>
                             <div class="card-body">
-                                <div class="card-title-row">
-                                    <h3><a href="https://sand.sala.company">Sand Digger</a></h3>
-                                    <span class="badge badge-new">New</span>
-                                </div>
-                                <p>A desert take on the arcade digging classic. Tunnel through the dunes, sling the lizards three times to knock them out, dodge the cobra's venom and drop clay pots on them all. Plays on phone too.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Play Sand Digger →</span></div>
+                                <div class="card-title-row"><h3><a href="https://sand.sala.company">Sand Digger</a></h3></div>
+                                <p>Tunnel the dunes, sling the lizards and dodge the cobra's venom.</p>
+                                <ul class="tags"><li>Phone</li></ul>
                             </div>
                         </article>
                     </li>
-                    <li class="item" data-tags="yeti penguin climbing platformer arcade retro snowball seal ice ladders barrels classic game vibe coded">
+                    <li class="item" data-added="2026-10-17" data-tags="yeti penguin climbing platformer arcade retro snowball seal ice ladders barrels classic game vibe coded">
                         <article class="card">
-                            <img class="shot" src="img/yeti.jpg" width="640" height="400" alt="Yeti: a penguin jumps a snowball on icy ledges while a yeti throws snowballs from the top" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/yeti.jpg" width="640" height="400" alt="Yeti: a penguin jumps a snowball on icy ledges while a yeti throws snowballs from the top" loading="lazy"></div>
                             <div class="card-body">
-                                <div class="card-title-row">
-                                    <h3><a href="https://yeti.sala.company">Yeti</a></h3>
-                                    <span class="badge badge-new">New</span>
-                                </div>
-                                <p>An arcade climbing game. Help a penguin up the icy ledges to rescue a chick from the yeti: jump rolling snowballs, dodge angry seals, grab a snow shovel and pull the bolts holding up the peak. Plays on phone too.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Play Yeti →</span></div>
+                                <div class="card-title-row"><h3><a href="https://yeti.sala.company">Yeti</a></h3></div>
+                                <p>Climb the ice and rescue a chick from a snowball-throwing yeti.</p>
+                                <ul class="tags"><li>Phone</li><li>Gamepad</li></ul>
                             </div>
                         </article>
                     </li>
-                    <li class="item" data-tags="rubik cube 3d puzzle game three.js react">
+                    <li class="item" data-added="2026-02-19" data-tags="rubik cube 3d puzzle game three.js react">
                         <article class="card">
-                            <img class="shot" src="img/cube.jpg" width="640" height="400" alt="A 3D Rubik's Cube in the browser" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/cube.jpg" width="640" height="400" alt="A 3D Rubik's Cube in the browser" loading="lazy"></div>
                             <div class="card-body">
                                 <div class="card-title-row"><h3><a href="https://cube.sala.company">3D Rubik's Cube</a></h3></div>
-                                <p>Scramble, turn and solve a 3D Rubik's Cube, with hints when you're stuck. Built with React and Three.js.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Play Cube →</span></div>
+                                <p>Scramble, turn and solve a cube in 3D, with hints when you're stuck.</p>
+                                <ul class="tags"><li>Puzzle</li></ul>
                             </div>
                         </article>
                     </li>
-                    <li class="item" data-tags="breakout brick breaker arcade retro game vibe coded power-ups bosses levels">
+                    <li class="item" data-added="2025-09-22" data-tags="breakout brick breaker arcade retro game vibe coded power-ups bosses levels">
                         <article class="card">
-                            <img class="shot" src="img/breakout.jpg" width="640" height="400" alt="Breakout 2.0: neon bricks, gold bricks and several balls in play above a paddle firing rockets" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/breakout.jpg" width="640" height="400" alt="Breakout 2.0: neon bricks, gold bricks and several balls in play above a paddle firing rockets" loading="lazy"></div>
                             <div class="card-body">
-                                <div class="card-title-row">
-                                    <h3><a href="https://breakout.sala.company">Vibe Coded Breakout</a></h3>
-                                    <span class="badge badge-updated">Updated</span>
-                                </div>
-                                <p>Version 2.0: 76 levels in 4 worlds, boss fights, rockets, lasers and Multi-Ball. The 2025 original is still there to compare.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Play Breakout →</span></div>
+                                <div class="card-title-row"><h3><a href="https://breakout.sala.company">Vibe Coded Breakout</a></h3></div>
+                                <p>76 levels in 4 worlds, with boss fights, rockets and Multi-Ball.</p>
+                                <ul class="tags"><li>Phone</li></ul>
                             </div>
                         </article>
                     </li>
-                    <li class="item" data-tags="galactic defender space shooter galaga arcade game vibe coded">
+                    <li class="item" data-added="2025-09-22" data-tags="galactic defender space shooter galaga arcade game vibe coded">
                         <article class="card">
-                            <img class="shot" src="img/galactic.jpg" width="640" height="400" alt="Galactic Defender: the neon start screen of the space shooter" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/galactic.jpg" width="640" height="400" alt="Galactic Defender: the neon start screen of the space shooter" loading="lazy"></div>
                             <div class="card-body">
                                 <div class="card-title-row"><h3><a href="https://galacticdefender.sala.company">Galactic Defender</a></h3></div>
-                                <p>A vibe coded, Galaga-inspired space shooter. Blast through waves of enemies with keyboard or touch controls.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Play Galactic Defender →</span></div>
+                                <p>A Galaga-inspired space shooter. Blast through the waves.</p>
+                                <ul class="tags"><li>Phone</li></ul>
                             </div>
                         </article>
                     </li>
-                    <li class="item" data-tags="tetris puzzle blocks game vibe coded">
+                    <li class="item" data-added="2025-09-22" data-tags="tetris puzzle blocks game vibe coded">
                         <article class="card">
-                            <img class="shot" src="img/tetris.jpg" width="640" height="400" alt="Tetris: the playing field with score, level and controls" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/tetris.jpg" width="640" height="400" alt="Tetris: the playing field with score, level and controls" loading="lazy"></div>
                             <div class="card-body">
                                 <div class="card-title-row"><h3><a href="https://tetris.sala.company">Vibe Coded Tetris</a></h3></div>
-                                <p>The world's most popular puzzle game, vibe coded from the start. Stack blocks and clear lines.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Play Tetris →</span></div>
+                                <p>The world's most popular puzzle game. Stack blocks, clear lines.</p>
+                                <ul class="tags"><li>Puzzle</li></ul>
                             </div>
                         </article>
                     </li>
@@ -677,182 +746,172 @@
 
             <!-- ── AI ────────────────────────────────────────────── -->
             <section class="group" id="ai" data-cat="ai" aria-labelledby="ai-title">
-                <h2 id="ai-title">AI</h2>
-                <p>AI in your browser, from a picture book that draws how things work to stories written from your videos and private chat, plus plain-language guides to AI itself.</p>
+                <div class="group-head">
+                    <h2 id="ai-title">AI</h2>
+                    <p>AI in your browser, plus plain-language guides to AI itself.</p>
+                </div>
                 <ul class="grid">
-                    <li class="item" data-tags="how does it work how things work explainer exploded view diagram parts engine scissors can opener zipper refrigerator house tell me why picture book kids children education learn ai claude openai image arabic language languages 3d sketchfab wikipedia">
+                    <li class="item" data-added="2026-10-27" data-tags="how does it work how things work explainer exploded view diagram parts engine scissors can opener zipper refrigerator house tell me why picture book kids children education learn ai claude openai image arabic language languages 3d sketchfab wikipedia">
                         <article class="card">
-                            <img class="shot" src="img/how.jpg" width="640" height="400" alt="How: a pair of scissors drawn on cream paper with its parts numbered 1, 2 and 3" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/how.jpg" width="640" height="400" alt="How: a pair of scissors drawn on cream paper with its parts numbered 1, 2 and 3" loading="lazy"></div>
                             <div class="card-body">
-                                <div class="card-title-row">
-                                    <h3><a href="https://how.sala.company">How — How does it work?</a></h3>
-                                    <span class="badge badge-new">New</span>
-                                </div>
-                                <p>A picture book that draws itself. Type a thing, a combustion engine, scissors, a can opener, how a house is built, and get one exploded view with the parts numbered, a few short steps, a fun fact, photos of the real thing and a 3D model to spin. In 17 languages, Arabic included, for a curious adult, a 10-year-old or an engineering student.</p>
-                                <p class="note">The gallery and shared answers open free. Making a new page uses your own OpenRouter account for the AI, a few cents a page.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Open How →</span></div>
+                                <div class="card-title-row"><h3><a href="https://how.sala.company">How — How does it work?</a></h3></div>
+                                <p>Type a thing and see how it works, pulled apart and numbered.</p>
+                                <ul class="tags"><li>17 languages</li><li>Your AI key</li></ul>
                             </div>
                         </article>
                     </li>
-                    <li class="item" data-tags="scene to story video story writer writing poem poetry screenplay prose haiku fairy tale noir ai claude camera youtube transcribe describe quill parchment scroll arabic language languages">
+                    <li class="item" data-added="2026-10-13" data-tags="scene to story video story writer writing poem poetry screenplay prose haiku fairy tale noir ai claude camera youtube transcribe describe quill parchment scroll arabic language languages">
                         <article class="card">
-                            <img class="shot" src="img/story.jpg" width="640" height="400" alt="Scene to Story: a parchment page with a gold quill logo and the words One minute of life, written as a story" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/story.jpg" width="640" height="400" alt="Scene to Story: a parchment page with a gold quill logo and the words One minute of life, written as a story" loading="lazy"></div>
                             <div class="card-body">
-                                <div class="card-title-row">
-                                    <h3><a href="https://story.sala.company">Scene to Story</a></h3>
-                                    <span class="badge badge-new">New</span>
-                                </div>
-                                <p>Record, upload or pick a YouTube clip up to a minute long. The AI watches it, reads the text on screen, listens to what people say, and writes the moment as prose, a poem or a screenplay on a parchment scroll, in any language, Arabic included.</p>
-                                <p class="note">Uses your own OpenRouter account for the AI, about $0.17 a story. Your video stays on your device.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Open Scene to Story →</span></div>
+                                <div class="card-title-row"><h3><a href="https://story.sala.company">Scene to Story</a></h3></div>
+                                <p>AI turns a one-minute video into a story, poem or screenplay.</p>
+                                <ul class="tags"><li>Your AI key</li><li>Arabic</li></ul>
                             </div>
                         </article>
                     </li>
-                    <li class="item" data-tags="webai web ai private local chat llm llama phi mistral qwen gemma tinyllama webgpu webllm offline">
+                    <li class="item" data-added="2025-09-22" data-tags="webai web ai private local chat llm llama phi mistral qwen gemma tinyllama webgpu webllm offline">
                         <article class="card">
-                            <img class="shot" src="img/webai.jpg" width="640" height="400" alt="WebAI: a chat window with a model picker" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/webai.jpg" width="640" height="400" alt="WebAI: a chat window with a model picker" loading="lazy"></div>
                             <div class="card-body">
-                                <div class="card-title-row"><h3><a href="https://webai.sala.company">WebAI — Private Browser AI Chat</a></h3></div>
-                                <p>Chat with open models such as Llama, Phi, Mistral, Qwen and Gemma, running on your own device. Nothing you type leaves your browser.</p>
-                                <p class="note">Needs a browser with WebGPU, such as recent Chrome or Edge.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Open WebAI →</span></div>
+                                <div class="card-title-row"><h3><a href="https://webai.sala.company">WebAI — Private AI Chat</a></h3></div>
+                                <p>Chat with open models that run on your own device.</p>
+                                <ul class="tags"><li>Private</li><li>Needs WebGPU</li></ul>
                             </div>
                         </article>
                     </li>
-                    <li class="item" data-tags="harmony suno ai music song prompt builder lyrics">
+                    <li class="item" data-added="2026-07-31" data-tags="harmony suno ai music song prompt builder lyrics">
                         <article class="card">
-                            <img class="shot" src="img/harmony.jpg" width="640" height="400" alt="Harmony: the song idea form and generated prompt output" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/harmony.jpg" width="640" height="400" alt="Harmony: the song idea form and generated prompt output" loading="lazy"></div>
                             <div class="card-body">
                                 <div class="card-title-row"><h3><a href="https://harmony.sala.company">Harmony</a></h3></div>
-                                <p>A local AI co-producer for Suno: turn a rough song idea into titles, genre tags, lyric skeletons and exclude lists for Custom Mode.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Open Harmony →</span></div>
+                                <p>Turn a rough song idea into a ready Suno prompt.</p>
+                                <ul class="tags"><li>Music</li></ul>
                             </div>
                         </article>
                     </li>
-                    <li class="item" data-tags="learn ai how artificial intelligence neural networks language models explainer education">
+                    <li class="item" data-added="2025-09-28" data-tags="learn ai how artificial intelligence neural networks language models explainer education">
                         <article class="card">
-                            <img class="shot" src="img/understand.jpg" width="640" height="400" alt="How AI Works: the opening page, AI Explained" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/understand.jpg" width="640" height="400" alt="How AI Works: the opening page, AI Explained" loading="lazy"></div>
                             <div class="card-body">
                                 <div class="card-title-row"><h3><a href="https://understand.sala.company">How AI Works</a></h3></div>
-                                <p>Plain-language explanations and illustrations of AI, from rule-based systems to neural networks and large language models.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Open How AI Works →</span></div>
+                                <p>AI explained in plain language, from rules to large language models.</p>
+                                <ul class="tags"><li>Read</li></ul>
                             </div>
                         </article>
                     </li>
-                    <li class="item" data-tags="ai tools collection directory resources websites experiments free">
+                    <li class="item" data-added="2025-09-22" data-tags="ai tools collection directory resources websites experiments free">
                         <article class="card">
-                            <img class="shot" src="img/ai.jpg" width="640" height="400" alt="AI Tools Collection: a table of AI websites and what they're best for" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/ai.jpg" width="640" height="400" alt="AI Tools Collection: a table of AI websites and what they're best for" loading="lazy"></div>
                             <div class="card-body">
                                 <div class="card-title-row"><h3><a href="https://ai.sala.company">AI Tools Collection</a></h3></div>
-                                <p>A curated directory of AI websites and tools, grouped by what they do and whether you can use them free.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Open AI Tools →</span></div>
+                                <p>A curated directory of AI sites, and which ones are free.</p>
+                                <ul class="tags"><li>Directory</li></ul>
                             </div>
                         </article>
                     </li>
                 </ul>
             </section>
 
-            <!-- ── More ──────────────────────────────────────────── -->
-            <section class="group" id="more" data-cat="more" aria-labelledby="more-title">
-                <h2 id="more-title">More</h2>
-                <p>A retro radio and TV, a drawing toy, small tools, writing and the store.</p>
+            <!-- ── Watch & listen ────────────────────────────────── -->
+            <section class="group" id="watch" data-cat="watch" aria-labelledby="watch-title">
+                <div class="group-head">
+                    <h2 id="watch-title">Watch &amp; listen</h2>
+                    <p>Radio, TV and music in retro sets.</p>
+                </div>
                 <ul class="grid">
-                    <li class="item" data-tags="radio internet radio online radio stations stream streaming player shortwave fm am retro vintage music news talk jazz classical rock pop electronic somafm radio browser m3u pls icecast shoutcast songs now playing favorites sleep timer free">
+                    <li class="item" data-added="2026-10-16" data-tags="radio internet radio online radio stations stream streaming player shortwave fm am retro vintage music news talk jazz classical rock pop electronic somafm radio browser m3u pls icecast shoutcast songs now playing favorites sleep timer free">
                         <article class="card">
-                            <img class="shot" src="img/radio.jpg" width="640" height="400" alt="radio.sala.company: a black 10-band shortwave portable with a lit tuning dial, rotary BAND, TUNING and VOLUME knobs and slide switches, beside a station guide whose working stations are marked On air" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/radio.jpg" width="640" height="400" alt="radio.sala.company: a black 10-band shortwave portable with a lit tuning dial, rotary BAND, TUNING and VOLUME knobs and slide switches, beside a station guide whose working stations are marked On air" loading="lazy"></div>
                             <div class="card-body">
-                                <div class="card-title-row">
-                                    <img class="card-icon" src="img/radio-icon.svg" width="28" height="28" alt="">
-                                    <h3><a href="https://radio.sala.company">radio.sala.company</a></h3>
-                                    <span class="badge badge-new">New</span>
-                                </div>
-                                <p>Free internet radio in a 10-band shortwave portable. Tens of thousands of stations from Radio Browser, SomaFM and community lists: search them all, or browse Near me, News, Jazz and more.</p>
-                                <p class="note">It checks which stations are on air before you click, shows the song or show that's playing, and reconnects dropped streams on its own. Favorites and the songs you heard stay in your browser.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Open the radio →</span></div>
+                                <div class="card-title-row"><h3><a href="https://radio.sala.company">radio.sala.company</a></h3></div>
+                                <p>Free internet radio in a retro shortwave set, with the song that's playing.</p>
+                                <ul class="tags"><li>Phone</li><li>Favorites</li></ul>
                             </div>
                         </article>
                     </li>
-                    <li class="item" data-tags="m3u tv video live tv television channels iptv iptv-org playlist m3u8 hls stream streaming player retro cable guide wood vintage news sports movies music kids favorites free">
+                    <li class="item" data-added="2026-10-16" data-tags="m3u tv video live tv television channels iptv iptv-org playlist m3u8 hls stream streaming player retro cable guide wood vintage news sports movies music kids favorites free">
                         <article class="card">
-                            <img class="shot" src="img/video.jpg" width="640" height="400" alt="video.sala.company: a 70s wood-panel TV showing color bars and a VCR-style status display, beside a blue cable TV guide of numbered channels with signal bars" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/video.jpg" width="640" height="400" alt="video.sala.company: a 70s wood-panel TV showing color bars and a VCR-style status display, beside a blue cable TV guide of numbered channels with signal bars" loading="lazy"></div>
                             <div class="card-body">
-                                <div class="card-title-row">
-                                    <img class="card-icon" src="img/video-icon.svg" width="28" height="28" alt="">
-                                    <h3><a href="https://video.sala.company">video.sala.company</a></h3>
-                                    <span class="badge badge-new">New</span>
-                                </div>
-                                <p>Free live TV in a 70s wood-panel TV with an 80s cable guide. About 11,000 public channels from iptv-org, by country and category, or load your own M3U playlist.</p>
-                                <p class="note">Signal bars warn which channels are slow or dead before you click, and a broken stream switches to a backup source on its own. Favorites, ratings and recently watched stay in your browser.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Open video.sala.company →</span></div>
+                                <div class="card-title-row"><h3><a href="https://video.sala.company">video.sala.company</a></h3></div>
+                                <p>About 11,000 free live TV channels in a 70s wood-panel TV.</p>
+                                <ul class="tags"><li>Your M3U</li><li>Favorites</li></ul>
                             </div>
                         </article>
                     </li>
-                    <li class="item" data-tags="artograph spirograph drawing draw art gears wheel ring pen pattern rosette spiral toy creative svg png recipes layers">
+                    <li class="item" data-added="2026-02-19" data-tags="ipod music player classic mp3 audio browser">
                         <article class="card">
-                            <img class="shot" src="img/artograph.jpg" width="640" height="400" alt="Artograph: a spirograph pattern of teal, violet and coral loops beside one-tap recipes and numbered steps for picking a ring and a wheel" loading="lazy">
-                            <div class="card-body">
-                                <div class="card-title-row">
-                                    <h3><a href="https://art.sala.company">Artograph</a></h3>
-                                    <span class="badge badge-new">New</span>
-                                </div>
-                                <p>A Spirograph in your browser. Start from a one-tap recipe, or pick a ring, a wheel and a pen hole and watch it roll. Drag around the paper to turn the wheel yourself.</p>
-                                <p class="note">Every wheel previews its pattern. Rosettes, layers you can hide or recolor, gear clicks and an optional real-toy wobble. Save as PNG or SVG, or share as a link.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Open Artograph →</span></div>
-                            </div>
-                        </article>
-                    </li>
-                    <li class="item" data-tags="secret emoji hidden message steganography unicode encode">
-                        <article class="card">
-                            <img class="shot" src="img/secret.jpg" width="640" height="400" alt="Secret Emoji Messenger: encode and decode panels with an emoji picker" loading="lazy">
-                            <div class="card-body">
-                                <div class="card-title-row"><h3><a href="https://secret.sala.company">Secret Emoji Messenger</a></h3></div>
-                                <p>Hide a secret message inside an emoji with invisible Unicode characters, then paste it anywhere.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Open Secret Emoji →</span></div>
-                            </div>
-                        </article>
-                    </li>
-                    <li class="item" data-tags="ipod music player classic mp3 audio browser">
-                        <article class="card">
-                            <img class="shot" src="img/music.jpg" width="640" height="400" alt="iPod Classic Player: a white iPod with a click wheel" loading="lazy">
+                            <div class="shot-wrap"><img class="shot" src="img/music.jpg" width="640" height="400" alt="iPod Classic Player: a white iPod with a click wheel" loading="lazy"></div>
                             <div class="card-body">
                                 <div class="card-title-row"><h3><a href="https://music.sala.company">iPod Classic Player</a></h3></div>
-                                <p>A faithful iPod Classic in your browser. Load your own MP3s and scroll with the click wheel.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Open iPod Player →</span></div>
-                            </div>
-                        </article>
-                    </li>
-                    <li class="item" data-tags="newsletter blog articles technology business ai crypto substack read writing early wake up club">
-                        <article class="card">
-                            <img class="shot" src="img/substack.jpg" width="640" height="400" alt="Early Wake Up Club newsletter on Substack" loading="lazy">
-                            <div class="card-body">
-                                <div class="card-title-row"><h3><a href="https://mutawa.substack.com">Early Wake Up Club</a></h3></div>
-                                <p>A newsletter on technology, business and AI, from the AI chip race to crypto and big tech.</p>
-                                <ul class="sublinks" aria-label="Recent articles">
-                                    <li><a href="https://mutawa.substack.com/p/the-trillion-dollar-club">The Trillion Dollar Club</a></li>
-                                    <li><a href="https://mutawa.substack.com/p/from-mining-bitcoin-to-powering-chatgpt">From Mining Bitcoin to Powering ChatGPT</a></li>
-                                    <li><a href="https://mutawa.substack.com/p/the-great-ai-chip-war-how-china-and">The Great AI Chip War</a></li>
-                                </ul>
-                                <div class="actions"><span class="btn" aria-hidden="true">Read the newsletter →</span></div>
-                            </div>
-                        </article>
-                    </li>
-                    <li class="item" data-tags="store shop buy ebooks books sci-fi fiction ai guides business children sala company">
-                        <article class="card">
-                            <img class="shot" src="img/store.jpg" width="640" height="400" alt="The Sala Company store with ebook listings" loading="lazy">
-                            <div class="card-body">
-                                <div class="card-title-row"><h3><a href="https://www.sala.company">Sala Company Store</a></h3></div>
-                                <p>Ebooks from Sala Company: sci-fi thrillers like <em>The Boy Who Defied the Machine</em>, AI guides, business and children's books.</p>
-                                <div class="actions"><span class="btn" aria-hidden="true">Visit the store →</span></div>
+                                <p>Play your own MP3s on a click wheel.</p>
+                                <ul class="tags"><li>Your files</li></ul>
                             </div>
                         </article>
                     </li>
                 </ul>
             </section>
 
-            <p id="no-results" aria-live="polite">No projects match your search. Try a different keyword or show all categories.</p>
+            <!-- ── Create ────────────────────────────────────────── -->
+            <section class="group" id="create" data-cat="create" aria-labelledby="create-title">
+                <div class="group-head">
+                    <h2 id="create-title">Create</h2>
+                    <p>Toys for drawing and making.</p>
+                </div>
+                <ul class="grid">
+                    <li class="item" data-added="2026-10-14" data-tags="artograph spirograph drawing draw art gears wheel ring pen pattern rosette spiral toy creative svg png recipes layers">
+                        <article class="card">
+                            <div class="shot-wrap"><img class="shot" src="img/artograph.jpg" width="640" height="400" alt="Artograph: a spirograph pattern of teal, violet and coral loops beside one-tap recipes and numbered steps for picking a ring and a wheel" loading="lazy"></div>
+                            <div class="card-body">
+                                <div class="card-title-row"><h3><a href="https://art.sala.company">Artograph</a></h3></div>
+                                <p>A Spirograph in your browser. Save as PNG or SVG.</p>
+                                <ul class="tags"><li>Phone</li><li>Share link</li></ul>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="item" data-added="2025-09-25" data-tags="secret emoji hidden message steganography unicode encode">
+                        <article class="card">
+                            <div class="shot-wrap"><img class="shot" src="img/secret.jpg" width="640" height="400" alt="Secret Emoji Messenger: encode and decode panels with an emoji picker" loading="lazy"></div>
+                            <div class="card-body">
+                                <div class="card-title-row"><h3><a href="https://secret.sala.company">Secret Emoji Messenger</a></h3></div>
+                                <p>Hide a message inside an emoji, then paste it anywhere.</p>
+                                <ul class="tags"><li>Fun</li></ul>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+
+            <p id="no-results" aria-live="polite">Nothing matches that yet. Try another word, or show all categories. More apps are on the way.</p>
+
+            <!-- ── Newsletter, store and about ───────────────────── -->
+            <div class="extras">
+                <section class="extra feature" aria-labelledby="newsletter-title">
+                    <h2 id="newsletter-title">Early Wake Up Club</h2>
+                    <p>A newsletter on technology, business and AI, from the AI chip race to crypto and big tech.</p>
+                    <ul aria-label="Recent articles">
+                        <li><a href="https://mutawa.substack.com/p/the-trillion-dollar-club">The Trillion Dollar Club</a></li>
+                        <li><a href="https://mutawa.substack.com/p/from-mining-bitcoin-to-powering-chatgpt">From Mining Bitcoin to Powering ChatGPT</a></li>
+                        <li><a href="https://mutawa.substack.com/p/the-great-ai-chip-war-how-china-and">The Great AI Chip War</a></li>
+                    </ul>
+                    <p class="go"><a href="https://mutawa.substack.com">Read the newsletter →</a></p>
+                </section>
+                <section class="extra" aria-labelledby="store-title">
+                    <h2 id="store-title">The store</h2>
+                    <p>Ebooks from Sala Company: sci-fi thrillers like <em>The Boy Who Defied the Machine</em>, AI guides, business and children's books.</p>
+                    <p class="go"><a href="https://www.sala.company">Visit the store →</a></p>
+                </section>
+                <section class="extra" aria-labelledby="vibe-title">
+                    <h2 id="vibe-title">Vibe coded</h2>
+                    <p>Almost everything here was built by describing it to an AI and refining it together, rather than written line by line.</p>
+                    <p class="go"><a href="#about">About and FAQ →</a></p>
+                </section>
+            </div>
 
             <!-- ── About / FAQ: plain text for readers and search engines ── -->
-            <section class="about" aria-labelledby="about-title">
+            <section class="about" id="about" aria-labelledby="about-title">
                 <h2 id="about-title">About Sala Company</h2>
                 <p>Sala Company makes free web apps that run right in your browser: a live world news feed, market heatmaps for crypto, currencies, metals, energy, US stock ETFs and government bonds, browser games from vibe coded arcade classics to Rizq, a roguelike set in Kuwait, a private AI chat that runs on your own device, How, a picture book that draws how any thing works, Scene to Story, which writes a story from a one-minute video, Artograph, a Spirograph drawing toy, video.sala.company, free live TV channels in a retro TV set, and radio.sala.company, free internet radio in a retro shortwave radio. Nothing to install, and no account to create (except How and Scene to Story, which use your own OpenRouter account for the AI). Almost everything here was vibe coded from the start: built by describing it to an AI and refining it together, rather than written line by line.</p>
 
@@ -901,16 +960,116 @@
             showTheme(next);
         });
 
-        // ── Toolbar gets a bottom border once it sticks ──
-        const toolbar = document.getElementById('toolbar');
-        const sentinel = document.createElement('div');
-        toolbar.before(sentinel);
-        new IntersectionObserver(([e]) => toolbar.classList.toggle('stuck', !e.isIntersecting)).observe(sentinel);
-
-        // ── Filters and search ──
+        const items   = [...document.querySelectorAll('.item')];
         const groups  = [...document.querySelectorAll('.group')];
         const filters = [...document.querySelectorAll('.filter')];
-        const whatsNew = document.getElementById('whats-new');
+        const DAY = 86400000;
+        const age = item => (Date.now() - Date.parse(item.dataset.added)) / DAY;
+        const link = item => item.querySelector('h3 a');
+
+        // ── App count in the hero, the search box and on each filter ──
+        document.getElementById('app-count').textContent = items.length + ' free apps';
+        document.getElementById('search').placeholder = 'Search ' + items.length + ' apps, games and tools…';
+        filters.forEach(btn => {
+            const n = btn.dataset.filter === 'all' ? items.length : document.querySelectorAll('#' + btn.dataset.filter + ' .item').length;
+            const span = document.createElement('span');
+            span.className = 'n';
+            span.textContent = n;
+            btn.append(' ', span);
+        });
+
+        // ── New badge: on for 30 days after data-added ──
+        items.forEach(item => {
+            if (age(item) > 30) return;
+            const badge = document.createElement('span');
+            badge.className = 'badge badge-new';
+            badge.textContent = 'New';
+            item.querySelector('.shot-wrap').append(badge);
+        });
+
+        // ── Just added: anything from the last 45 days, newest first ──
+        const fresh = items.filter(i => age(i) <= 45).sort((a, b) => b.dataset.added.localeCompare(a.dataset.added)).slice(0, 10);
+        if (fresh.length) {
+            const shelf = document.getElementById('shelf');
+            const dateFmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short' });
+            fresh.forEach(item => {
+                const a = document.createElement('a');
+                a.href = link(item).href;
+                const img = document.createElement('img');
+                img.src = item.querySelector('.shot').getAttribute('src');
+                img.alt = '';
+                img.width = 172; img.height = 172;
+                img.loading = 'lazy';
+                const name = document.createElement('span');
+                name.className = 'name';
+                name.textContent = link(item).textContent.split(' — ')[0];
+                const meta = document.createElement('span');
+                meta.className = 'meta';
+                meta.textContent = item.closest('.group').querySelector('h2').textContent.replace('Live right now', 'Live data') + ' · ' + dateFmt.format(new Date(item.dataset.added));
+                a.append(img, name, meta);
+                const li = document.createElement('li');
+                li.append(a);
+                shelf.append(li);
+            });
+            document.getElementById('fresh').hidden = false;
+        }
+
+        // ── Featured carousel: dots, arrows, and a slow auto-advance that pauses on hover, focus or reduced motion ──
+        const slides = [...document.querySelectorAll('.slide')];
+        const dots = document.getElementById('dots');
+        let current = 0, timer = null;
+        function show(i) {
+            current = (i + slides.length) % slides.length;
+            slides.forEach((s, n) => {
+                s.classList.toggle('on', n === current);
+                s.inert = n !== current;
+                s.querySelector('img').loading = 'eager';
+            });
+            [...dots.children].forEach((d, n) => d.setAttribute('aria-current', String(n === current)));
+        }
+        slides.forEach((s, n) => {
+            const d = document.createElement('button');
+            d.type = 'button';
+            d.className = 'dot';
+            d.setAttribute('aria-label', 'Show ' + s.querySelector('.slide-name').textContent);
+            d.addEventListener('click', () => { show(n); stop(); });
+            dots.append(d);
+        });
+        document.getElementById('prev').addEventListener('click', () => { show(current - 1); stop(); });
+        document.getElementById('next').addEventListener('click', () => { show(current + 1); stop(); });
+        document.getElementById('carousel-nav').hidden = false;
+        const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        function start() { if (!still && !timer) timer = setInterval(() => show(current + 1), 6000); }
+        function stop() { clearInterval(timer); timer = null; }
+        const carousel = document.querySelector('.carousel');
+        carousel.addEventListener('mouseenter', stop);
+        carousel.addEventListener('mouseleave', start);
+        carousel.addEventListener('focusin', stop);
+        show(0);
+        start();
+
+        // ── Sala News: the top breaking story, from the feed news.sala.company already publishes ──
+        fetch('https://news.sala.company/breaking.json')
+            .then(r => r.ok ? r.json() : Promise.reject())
+            .then(data => {
+                const top = data.stories && data.stories[0];
+                if (!top || !top.title) return;
+                const text = document.querySelector('#breaking span:last-child');
+                text.textContent = top.title;
+                const small = document.createElement('small');
+                const n = (top.sources || []).length;
+                small.textContent = (n > 1 ? 'Breaking · ' + n + ' sources' : 'Breaking') + (top.source ? ' · ' + top.source : '');
+                text.append(small);
+            })
+            .catch(() => {});
+
+        // ── Surprise me: open a random app ──
+        document.getElementById('surprise').addEventListener('click', () => {
+            location.href = link(items[Math.floor(Math.random() * items.length)]).href;
+        });
+
+        // ── Filters and search ──
+        const freshSection = document.getElementById('fresh');
         let activeCategory = 'all';
         let searchQuery    = '';
 
@@ -928,7 +1087,7 @@
                 group.hidden = shown === 0;
                 total += shown;
             });
-            whatsNew.hidden = activeCategory !== 'all' || !!searchQuery;
+            freshSection.hidden = !fresh.length || activeCategory !== 'all' || !!searchQuery;
             document.getElementById('no-results').style.display = total === 0 ? 'block' : 'none';
         }
 
@@ -940,17 +1099,23 @@
             });
         });
 
-        document.getElementById('search').addEventListener('input', (e) => {
+        const search = document.getElementById('search');
+        search.addEventListener('input', (e) => {
             searchQuery = e.target.value.trim().toLowerCase();
             applyFilters();
+        });
+        // Searching from the top of the page jumps down to the results
+        search.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') document.getElementById('apps').scrollIntoView({ behavior: still ? 'auto' : 'smooth' });
         });
 
         // ?q=… in the address (e.g. go.sala.company/?q=heat) starts with that search, as the site's structured data promises
         const q = new URLSearchParams(location.search).get('q');
         if (q) {
-            document.getElementById('search').value = q;
+            search.value = q;
             searchQuery = q.trim().toLowerCase();
             applyFilters();
+            document.getElementById('apps').scrollIntoView();
         }
     </script>
 <!-- GoatCounter analytics (not loaded on localhost; paths are prefixed with the host so all *.sala.company apps share one dashboard) -->
