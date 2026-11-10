@@ -21,10 +21,11 @@ python3 -m http.server 8000
   - `data-added` drives behavior automatically: the **New** badge (30 days after the date) and the **Just added** row (cards added in the last 45 days). **Beta** badges are written by hand.
   - Search matches card titles, text and `data-tags`; `?q=<term>` in the URL pre-applies a search (also declared as the `WebSite` SearchAction in JSON-LD).
   - Counts (the "N free apps" pill, search placeholder, filter counts) are computed from the cards at runtime, so don't hard-code them.
-  - The Sala News card fetches the top headline from `https://news.sala.company/breaking.json` and falls back to its static text if that fails.
+  - Live strip (`#pulse`, under the hero): the top headline from `https://news.sala.company/breaking.json` and prices from `https://heat.sala.company/pulse.json` (BTC, ETH, gold, Brent; under 1 KB, written by heat's `scripts/pulse.mjs` every 10 minutes). Refreshed every 2 minutes while the tab is visible. Its static text and links stay if either feed fails, so it works without JavaScript. The same headline fills the Sala News card.
+  - **More** row (`#more`): older or simpler pieces in smaller horizontal cards. Each card there carries its own `data-cat` so the category filters and counts still include it; the script reads `item.dataset.cat || section's data-cat`.
   - Featured hero carousel: `.slide` links that work without JS; JS auto-advances every 6s, pausing on hover/focus/reduced motion.
   - Theme: follows the system; the theme button cycles Auto/Light/Dark and stores the choice in `localStorage` key `theme` (read early in `<head>` to avoid flashes).
-- `img/<project>.jpg`: 640x400 card screenshots (`rates.jpg` is used only in structured data). `img/radio-icon.svg` and `img/video-icon.svg` are small inline title icons.
+- `img/<project>.jpg`: 640x400 card screenshots (`rates.jpg` is used only in structured data). Prefer a close-up of the app's best moment (gameplay, the picker, a result) over a whole-screen shot, which turns to unreadable text at card size: render at 2x and crop. `img/radio-icon.svg` and `img/video-icon.svg` are small inline title icons.
 - `fonts/inter-latin.woff2`: self-hosted Inter (no Google Fonts calls).
 - `favicon.svg`, `favicon-48.png`, `favicon.ico`, `apple-touch-icon.png`, `og-image.png` (1200x630 link preview).
 - `robots.txt`, `sitemap.xml`.
