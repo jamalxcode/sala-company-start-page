@@ -403,7 +403,13 @@
         .shot-wrap { position: relative; }
         .shot { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top center; background: var(--surface-2); }
         .wide .shot { aspect-ratio: 16 / 7; }
-        .shot-wrap .badge-new { position: absolute; top: 10px; left: 10px; }
+        .shot-wrap .badge-new { position: absolute; top: 10px; left: 10px; z-index: 1; }
+        /* Hover-to-play: a muted 4-second loop over the screenshot, added by the script on hover or keyboard focus */
+        .shot-wrap .preview { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; opacity: 0; transition: opacity .25s ease; pointer-events: none; }
+        .shot-wrap .preview.on { opacity: 1; }
+        .play-hint { position: absolute; right: 10px; bottom: 10px; z-index: 1; display: inline-flex; align-items: center; gap: 5px; padding: 4px 9px 4px 7px; border-radius: 999px; background: rgba(10,10,14,.72); color: #fff; font-size: 0.7rem; font-weight: 700; letter-spacing: .02em; pointer-events: none; transition: opacity .2s; }
+        .play-hint svg { width: 10px; height: 10px; fill: currentColor; }
+        .card:hover .play-hint, .card:focus-within .play-hint { opacity: 0; }
 
         .card-body { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 16px; flex: 1; }
         .card-title-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
@@ -764,7 +770,7 @@
                 <ul class="grid">
                     <li class="item" data-added="2026-10-17" data-tags="last marine standing fps first person shooter doom freedoom chocolate doom retro 90s classic demons marine guns levels episodes webassembly">
                         <article class="card">
-                            <div class="shot-wrap"><img class="shot" src="img/last.jpg" width="640" height="400" alt="Last Marine Standing: a pistol aimed down a stone corridor above the classic health, ammo and armor status bar" loading="lazy"></div>
+                            <div class="shot-wrap" data-preview="vid/last.mp4"><img class="shot" src="img/last.jpg" width="640" height="400" alt="Last Marine Standing: a pistol aimed down a stone corridor above the classic health, ammo and armor status bar" loading="lazy"></div>
                             <div class="card-body">
                                 <div class="card-title-row"><h3><a href="https://last.sala.company">Last Marine Standing</a></h3></div>
                                 <p>A classic 90s shooter: 36 levels with full sound and music.</p>
@@ -784,7 +790,7 @@
                     </li>
                     <li class="item" data-added="2026-10-17" data-tags="heli attack helicopter shooter scramble cobra arcade retro side-scrolling cave boss power-ups chiptune game vibe coded">
                         <article class="card">
-                            <div class="shot-wrap"><img class="shot" src="img/heli.jpg" width="640" height="400" alt="Heli Attack: a helicopter fires over green hills as missiles launch from a plateau" loading="lazy"></div>
+                            <div class="shot-wrap" data-preview="vid/heli.mp4"><img class="shot" src="img/heli.jpg" width="640" height="400" alt="Heli Attack: a helicopter fires over green hills as missiles launch from a plateau" loading="lazy"></div>
                             <div class="card-body">
                                 <div class="card-title-row"><h3><a href="https://heliattack.sala.company">Heli Attack</a></h3></div>
                                 <p>A retro cave shooter with six stages, a gunship boss and chiptunes.</p>
@@ -794,7 +800,7 @@
                     </li>
                     <li class="item" data-added="2026-10-17" data-tags="sand digger dig dug digging desert dunes arcade retro bedouin lizard cobra slingshot pots tunnels classic game vibe coded">
                         <article class="card">
-                            <div class="shot-wrap"><img class="shot" src="img/sand.jpg" width="640" height="400" alt="Sand Digger: a boy in a keffiyeh slings a pebble at a stunned lizard in a sand tunnel while a cobra rears up in the shaft" loading="lazy"></div>
+                            <div class="shot-wrap" data-preview="vid/sand.mp4"><img class="shot" src="img/sand.jpg" width="640" height="400" alt="Sand Digger: a boy in a keffiyeh slings a pebble at a stunned lizard in a sand tunnel while a cobra rears up in the shaft" loading="lazy"></div>
                             <div class="card-body">
                                 <div class="card-title-row"><h3><a href="https://sand.sala.company">Sand Digger</a></h3></div>
                                 <p>Tunnel the dunes, sling the lizards and dodge the cobra's venom.</p>
@@ -804,7 +810,7 @@
                     </li>
                     <li class="item" data-added="2026-10-17" data-tags="yeti penguin climbing platformer arcade retro snowball seal ice ladders barrels classic game vibe coded">
                         <article class="card">
-                            <div class="shot-wrap"><img class="shot" src="img/yeti.jpg" width="640" height="400" alt="Yeti: a penguin jumps a snowball on icy ledges while a yeti throws snowballs from the top" loading="lazy"></div>
+                            <div class="shot-wrap" data-preview="vid/yeti.mp4"><img class="shot" src="img/yeti.jpg" width="640" height="400" alt="Yeti: a penguin jumps a snowball on icy ledges while a yeti throws snowballs from the top" loading="lazy"></div>
                             <div class="card-body">
                                 <div class="card-title-row"><h3><a href="https://yeti.sala.company">Yeti</a></h3></div>
                                 <p>Climb the ice and rescue a chick from a snowball-throwing yeti.</p>
@@ -814,7 +820,7 @@
                     </li>
                     <li class="item" data-added="2026-02-19" data-tags="rubik cube 3d puzzle game three.js react">
                         <article class="card">
-                            <div class="shot-wrap"><img class="shot" src="img/cube.jpg" width="640" height="400" alt="A 3D Rubik's Cube in the browser" loading="lazy"></div>
+                            <div class="shot-wrap" data-preview="vid/cube.mp4"><img class="shot" src="img/cube.jpg" width="640" height="400" alt="A 3D Rubik's Cube in the browser" loading="lazy"></div>
                             <div class="card-body">
                                 <div class="card-title-row"><h3><a href="https://cube.sala.company">3D Rubik's Cube</a></h3></div>
                                 <p>Scramble, turn and solve a cube in 3D, with hints when you're stuck.</p>
@@ -824,7 +830,7 @@
                     </li>
                     <li class="item" data-added="2025-09-22" data-tags="breakout brick breaker arcade retro game vibe coded power-ups bosses levels">
                         <article class="card">
-                            <div class="shot-wrap"><img class="shot" src="img/breakout.jpg" width="640" height="400" alt="Breakout 2.0: neon bricks, gold bricks and several balls in play above a paddle firing rockets" loading="lazy"></div>
+                            <div class="shot-wrap" data-preview="vid/breakout.mp4"><img class="shot" src="img/breakout.jpg" width="640" height="400" alt="Breakout 2.0: neon bricks, gold bricks and several balls in play above a paddle firing rockets" loading="lazy"></div>
                             <div class="card-body">
                                 <div class="card-title-row"><h3><a href="https://breakout.sala.company">Vibe Coded Breakout</a></h3></div>
                                 <p>76 levels in 4 worlds, with boss fights, rockets and Multi-Ball.</p>
@@ -834,7 +840,7 @@
                     </li>
                     <li class="item" data-added="2025-09-22" data-tags="galactic defender space shooter galaga arcade game vibe coded">
                         <article class="card">
-                            <div class="shot-wrap"><img class="shot" src="img/galactic.jpg" width="640" height="400" alt="Galactic Defender: a green ship fires up the screen at red enemy fighters, score 100 in wave 1" loading="lazy"></div>
+                            <div class="shot-wrap" data-preview="vid/galactic.mp4"><img class="shot" src="img/galactic.jpg" width="640" height="400" alt="Galactic Defender: a green ship fires up the screen at red enemy fighters, score 100 in wave 1" loading="lazy"></div>
                             <div class="card-body">
                                 <div class="card-title-row"><h3><a href="https://galacticdefender.sala.company">Galactic Defender</a></h3></div>
                                 <p>A Galaga-inspired space shooter. Blast through the waves.</p>
@@ -1135,6 +1141,52 @@
             badge.textContent = 'New';
             item.querySelector('.shot-wrap').append(badge);
         });
+
+        // ── Hover-to-play: game cards with data-preview play a muted 4-second loop while the pointer is over them or
+        //    the card has keyboard focus. Only on devices with a real hover (not phones), never with reduced motion or
+        //    Save-Data, and each video downloads only on first hover. ──
+        const canPreview = matchMedia('(hover: hover) and (pointer: fine)').matches
+            && !matchMedia('(prefers-reduced-motion: reduce)').matches
+            && !(navigator.connection && navigator.connection.saveData);
+        if (canPreview) {
+            document.querySelectorAll('.shot-wrap[data-preview]').forEach(wrap => {
+                const card = wrap.closest('.card');
+                const hint = document.createElement('span');
+                hint.className = 'play-hint';
+                hint.setAttribute('aria-hidden', 'true');
+                hint.innerHTML = '<svg viewBox="0 0 10 10"><path d="M2 1l7 4-7 4z"/></svg>Preview';
+                wrap.append(hint);
+                let video = null;
+                const play = () => {
+                    if (!video) {
+                        video = document.createElement('video');
+                        video.className = 'preview';
+                        video.muted = true; video.loop = true; video.playsInline = true;
+                        video.setAttribute('aria-hidden', 'true');
+                        video.preload = 'auto';
+                        // MP4 (H.264) plays everywhere; the WebM copy is for browsers built without H.264
+                        for (const [src, type] of [[wrap.dataset.preview, 'video/mp4'], [wrap.dataset.preview.replace(/\.mp4$/, '.webm'), 'video/webm']]) {
+                            const source = document.createElement('source');
+                            source.src = src; source.type = type;
+                            video.append(source);
+                        }
+                        video.addEventListener('playing', () => video.classList.add('on'));
+                        wrap.insertBefore(video, wrap.querySelector('.badge-new, .play-hint'));
+                    }
+                    video.play().catch(() => {});
+                };
+                const stop = () => {
+                    if (!video) return;
+                    video.classList.remove('on');
+                    video.pause();
+                    video.currentTime = 0;
+                };
+                card.addEventListener('pointerenter', play);
+                card.addEventListener('pointerleave', stop);
+                card.addEventListener('focusin', play);
+                card.addEventListener('focusout', stop);
+            });
+        }
 
         // ── Just added: anything from the last 45 days, newest first ──
         const fresh = items.filter(i => age(i) <= 45).sort((a, b) => b.dataset.added.localeCompare(a.dataset.added)).slice(0, 10);

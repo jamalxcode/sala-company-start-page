@@ -26,6 +26,7 @@ python3 -m http.server 8000
   - Featured hero carousel: `.slide` links that work without JS; JS auto-advances every 6s, pausing on hover/focus/reduced motion.
   - Theme: follows the system; the theme button cycles Auto/Light/Dark and stores the choice in `localStorage` key `theme` (read early in `<head>` to avoid flashes).
 - `img/<project>.jpg`: 640x400 card screenshots (`rates.jpg` is used only in structured data). Prefer a close-up of the app's best moment (gameplay, the picker, a result) over a whole-screen shot, which turns to unreadable text at card size: render at 2x and crop. `img/radio-icon.svg` and `img/video-icon.svg` are small inline title icons.
+- `vid/<game>.mp4` + `vid/<game>.webm`: 4-second muted hover-to-play loops (640x400, no audio; H.264 MP4 first, VP9 WebM as a fallback for browsers without H.264; under ~200 KB each). A card opts in with `data-preview="vid/<game>.mp4"` on its `.shot-wrap`; the script adds the video on first hover or keyboard focus, only on devices with a real hover, and never with reduced motion or Save-Data, so phones never download them.
 - `fonts/inter-latin.woff2`: self-hosted Inter (no Google Fonts calls).
 - `favicon.svg`, `favicon-48.png`, `favicon.ico`, `apple-touch-icon.png`, `og-image.png` (1200x630 link preview).
 - `robots.txt`, `sitemap.xml`.

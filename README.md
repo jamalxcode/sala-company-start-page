@@ -10,6 +10,7 @@ The start page for all of Sala Company's browser projects: live world news, mark
 
 Keep this list to the last month or so. On the page, the **Just added** row and the **New** badges come from each card's `data-added` date on their own, so there is nothing to update there by hand.
 
+- **Hover-to-play game previews:** hovering a game card (or tabbing to it) plays a 4-second muted loop of real gameplay over the screenshot: Last Marine Standing, Heli Attack, Sand Digger, Yeti, the Rubik's Cube, Breakout and Galactic Defender. Each loop downloads only on first hover (about 25–190 KB); phones, reduced motion and Save-Data get the still screenshot only.
 - **Start page, livelier:** a *Live* strip under the hero shows the top breaking headline from Sala News and BTC, ETH, gold and Brent prices from Heat (its new `pulse.json`), refreshed every 2 minutes. Radio and video are now called Sala Radio and Sala Video, their screenshots and Galactic Defender's and Tetris's are close-ups of the real app, Tetris, How AI Works and AI Tools Collection moved to a smaller **More** row, the About text is shorter, the questions fold open, and phones see the carousel on the first screen.
 - **radio.sala.company, updated:** a new Finder-style station picker. Collections → Countries → Genres → Stations, so you reach your favorite among thousands in a few taps, or search all of Radio Browser by name. Favorites became 18 presets, and presets or a whole list can be shared as a link. Now featured first in the carousel.
 - **video.sala.company, updated:** the same kind of picker for about 12,000 channels from iptv-org and Free-TV, narrowed by language, country and genre. On iPhone, iPad and Mac Safari the AirPlay button sends a channel to an Apple TV; channels and playlists can also be shared as a link or copied for VLC. Featured second in the carousel (Artograph left it).
@@ -109,6 +110,12 @@ These sit in the footer cards, not in the app grid.
    ```
    msedge --headless=new --hide-scrollbars --window-size=1280,800 --virtual-time-budget=10000 --screenshot=shot.png https://example.sala.company
    ```
+   **Preview loop (games, optional):** record about 10 seconds of real play (Playwright's `recordVideo` at 960×600 works; Yeti's CPU mode, Breakout's `?demo` and Last Marine Standing's attract-mode demos play themselves), cut a 4-second 16:10 window around the action and encode it without audio:
+   ```
+   ffmpeg -ss <start> -t 4 -i rec.webm -vf "crop=W:H:X:Y,scale=640:400:flags=lanczos,fps=30,format=yuv420p" -c:v libx264 -profile:v high -preset slow -crf 29 -an -movflags +faststart vid/<game>.mp4
+   ffmpeg -i vid/<game>.mp4 -c:v libvpx-vp9 -b:v 0 -crf 36 -row-mt 1 -an vid/<game>.webm
+   ```
+   Then add `data-preview="vid/<game>.mp4"` to the card's `.shot-wrap`. Keep each file under ~200 KB (raise `-crf` for busy games).
 3. **Structured data:** add the project to the `ItemList` in the JSON-LD at the top of `index.html`, in page order, and update `numberOfItems`.
 4. **What's new:** add a line to this README. To put it in the carousel, swap one of the hero's `.slide` links for it.
 5. **Dates:** set `dateModified` in the JSON-LD and `lastmod` in `sitemap.xml` to today.
